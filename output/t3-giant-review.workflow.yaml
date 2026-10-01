@@ -1,0 +1,105 @@
+version: 1
+name: t3-giant-review
+description: >-
+  Coordinated 3-reviewer deep review (T3) of one giant coding-agent subject.
+  Scout maps the repo and splits lanes; three lane reviewers score only their own
+  dimensions against frozen anchors; integrator dedupes findings, resolves
+  disagreements, and owns the total score. Read-only static review, never execute the subject.
+params:
+  subject: null
+  subject-dir: null
+nodes:
+  - id: scout
+    description: >-
+      Read-only static scout of the agent harness at {{params.subject-dir}} (subject {{params.subject}}).
+      NEVER execute the subject code. First read the census row for {{params.subject}} in
+      /workspace/experiments/agent-study/output/census.json and the frozen anchor excerpts in
+      /workspace/experiments/agent-study/output/anchors/anchor-excerpts.md.
+      Write map.md (into the run dir) containing: (1) an area split into exactly three lanes with
+      concrete file/dir lists per lane: lane-core (agent loop, state/context model, module boundaries,
+      sessions/resume/rewind), lane-safety (permission system, sandbox, injection defense,
+      tests/CI/verification culture, crash behavior), lane-econ (compaction, prompt-cache discipline,
+      orchestration/subagents/workflows, interop MCP/ACP/IDE/headless, docs/DX);
+      (2) provenance verdict (upstream vs fork vs rename-clone vs leaked-snapshot, with file:line evidence);
+      (3) top-risk areas reviewers must not miss; (4) suspected god-files and where the real core loop lives.
+    accept:
+      files: ["map.md"]
+  - id: reviewer-core
+    dependsOn: ["scout"]
+    inputs: {"repo-map": "{{nodes.scout}}"}
+    maxRuntimeMins: 60
+    description: >-
+      Lane reviewer for {{params.subject}}: score ONLY architecture (weight 15) and operability (weight 10),
+      0-10 strictly against the anchors in
+      /workspace/experiments/agent-study/output/anchors/anchor-excerpts.md (0 absent / 2 misleading-broken /
+      4 happy-paths-only / 6 solid-one-standard-design-tested / 8 defended-properties-enforced-and-tested /
+      10 field-defining). Read map.md from the scout node, then READ THE ACTUAL CODE (core loop, state model,
+      session/resume paths), not just docs. Read-only; never execute the subject. Before scoring answer in one
+      sentence: which anchor subject is this closer to, and why. Every score claim needs file:line evidence;
+      README claims are not evidence. Write two files into the run dir:
+      f-core.jsonl (one JSON finding per line with fields id, subject, concept, kind, title, evidence,
+      impact, effort_for_us, confidence, one_why; id "{{params.subject}}-c1" upward; concept canonical-kebab:
+      grep /workspace/experiments/agent-study/output/findings/ for close matches before coining one;
+      kind one of unique|portable|nuance|anti-pattern|safety-hole|license-risk; impact high|med|low;
+      effort_for_us S|M|L|XL)
+      and r-core.md (at most 6 summary lines plus supporting detail; name strongest and weakest observed
+      dimension with evidence).
+    accept:
+      files: ["f-core.jsonl", "r-core.md"]
+  - id: reviewer-safety
+    dependsOn: ["scout"]
+    inputs: {"repo-map": "{{nodes.scout}}"}
+    maxRuntimeMins: 60
+    description: >-
+      Lane reviewer for {{params.subject}}: score ONLY safety-enforcement (weight 10) and verification
+      (weight 15) strictly against the anchors in
+      /workspace/experiments/agent-study/output/anchors/anchor-excerpts.md. Read map.md from the scout node,
+      then read the actual permission/sandbox code, injection defenses, test suites (do the tests prove
+      properties or just existence?), CI workflows, fuzzing/evals if present, and crash behavior.
+      Read-only; never execute the subject. Before scoring answer in one sentence: which anchor subject is
+      this closer to, and why. Every claim needs file:line evidence. Write into the run dir:
+      f-safety.jsonl (same finding schema as the study rubric, ids "{{params.subject}}-s1" upward) and
+      r-safety.md (at most 6 summary lines plus detail; note honesty about what the safety model does NOT
+      enforce).
+    accept:
+      files: ["f-safety.jsonl", "r-safety.md"]
+  - id: reviewer-econ
+    dependsOn: ["scout"]
+    inputs: {"repo-map": "{{nodes.scout}}"}
+    maxRuntimeMins: 60
+    description: >-
+      Lane reviewer for {{params.subject}}: score ONLY token-economy (weight 10), orchestration (weight 10),
+      interop (weight 10), docs-dx (weight 5) strictly against the anchors in
+      /workspace/experiments/agent-study/output/anchors/anchor-excerpts.md. Read map.md from the scout node,
+      then read compaction code, prompt-cache discipline, subagent/workflow/queue machinery (resumability,
+      budgets, crash recovery), MCP/ACP/headless contract, IDE surfaces, import paths from rival harnesses,
+      install/onboarding/error-message quality. Read-only; never execute the subject. Before scoring answer
+      in one sentence: which anchor subject is this closer to, and why. Every claim needs file:line evidence.
+      Write into the run dir: f-econ.jsonl (same finding schema, ids "{{params.subject}}-e1" upward) and
+      r-econ.md (at most 6 summary lines plus detail).
+    accept:
+      files: ["f-econ.jsonl", "r-econ.md"]
+  - id: integrator
+    dependsOn: ["reviewer-core", "reviewer-safety", "reviewer-econ"]
+    inputs: {"core": "{{nodes.reviewer-core}}", "safety": "{{nodes.reviewer-safety}}", "econ": "{{nodes.reviewer-econ}}"}
+    maxRuntimeMins: 45
+    description: >-
+      Integrate the T3 review of {{params.subject}}. Read r-core.md, r-safety.md, r-econ.md and the three
+      f-*.jsonl from upstream nodes. (1) Merge findings into merged-findings.jsonl in the run dir, deduped by
+      concept (keep the stronger evidence; if lanes coined different ids for one concept, keep one canonical
+      kebab id and record the alias in the record). (2) Resolve score disagreements between the three reviewers
+      explicitly in prose. (3) You own the total: score the remaining dimensions yourself with code evidence:
+      originality (weight 10; verify the idea is real in code, not marketing) and durability (weight 5; from
+      census metadata: commit cadence, contributors, license, institutional backing). Weighted total:
+      architecture 15, verification 15, safety-enforcement 10, token-economy 10, orchestration 10, interop 10,
+      operability 10, originality 10, durability 5, docs-dx 5. Bands: S at least 88 AND no dimension below 5 on
+      safety-enforcement or verification; A 78-87; B 65-77; C 45-64; D under 45. Rule: a sync-fork derivative
+      must not outrank its upstream; archived/dead caps at B, record any demotion in calibration notes, never
+      silent. Outputs: run-dir files subjects-{{params.subject}}.md and scores-{{params.subject}}.json AND
+      copies at /workspace/experiments/agent-study/output/subjects/{{params.subject}}.md and
+      /workspace/experiments/agent-study/output/scores/{{params.subject}}.json. Report must name strongest and
+      weakest dimensions with evidence. JSON fields: subject, tier (T3), lane_scores (all ten dimensions),
+      weighted_total, band, closest_anchor, strongest_dimension, weakest_dimension, provenance,
+      calibration_notes. Read-only; never execute the subject.
+    accept:
+      files: ["merged-findings.jsonl", "subjects-{{params.subject}}.md", "scores-{{params.subject}}.json"]

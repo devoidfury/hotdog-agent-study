@@ -1,0 +1,24 @@
+{
+  "subject": "codebuff",
+  "tier": "T2",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 7.5,
+    "verification": 5,
+    "safety-enforcement": 6,
+    "token-economy": 8,
+    "orchestration": 6.5,
+    "interop": 7,
+    "operability": 6.5,
+    "originality": 7.5,
+    "durability": 6,
+    "docs-dx": 5.5
+  },
+  "weighted_total": 66.0,
+  "band": "B",
+  "closest_anchor": "crush - funded company monorepo, solid single-standard designs; gap is that crush's tests run in CI while codebuff's 151.8k-LOC corpus is inert in the public tree",
+  "strongest_dimension": "token-economy",
+  "weakest_dimension": "docs-dx",
+  "provenance": "original; disclosed-private-mirror. Single squashed commit dfa45d2 'Sync public snapshot from freebuff-private'; CONTRIBUTING.md:3 states the private repo is source of truth and PRs are hand-ported; pr-hygiene.yml:124-131 mechanically enforces the mirror boundary. Agent substance (loop, compaction plane, tools, trust gate, SDK) IS in-tree - unlike openhands, the core is scoreable. Process plane (history, contributors, CI matrix incl. the scripts/ci/test-with-guard.ts described at docs/testing.md:32 but absent from the tree) is out-of-tree. Remote-verified GitHub API 2026-09-30: pushed_at 2026-09-30T15:10Z, not archived, Apache-2.0, 13,009 stars - census commits=1/contributors=1 are export artifacts.",
+  "calibration_notes": "Boundary recount 66.0 B vs provisional 67.0; B floor held with 1.0 margin, entirely from token-economy 9->8. VERIFICATION 5 CONFIRMED (not 4): 553 files/151,832 LOC property-asserting corpus (compact-request-budget.test.ts:47 invariants; compact-context-loop.test.ts drives real loopAgentSteps asserting model-visible history; context-pruner-parity.test.ts fails dual-copy drift; only 1 test file imports the absent @codebuff/internal), sampled strong, but public CI runs build+binary-smoke only (ci.yml:35-55) and the root ci script is build-only (package.json:29); no eval workflow wired, no fuzzing. GENERAL RULE established (test mass without execution): mass buys corpus-quality credit on the 4-to-5 axis; only execution crosses 5-to-6 regardless of size; an executed build+smoke layer raises confidence not rung (claw-code-agent row: property corpus + zero CI = 5); out-of-tree CI claims are zero-credit/zero-blame; broken-as-configured (amazon-q ledger) sits ABOVE never-runs because a defective gate still gates. MIRROR COVARIATE: disclosed-private-mirror marker applied, inverted from openhands - implementation in-tree gets full in-tree scoring, process plane gets zero credit/zero blame; durability capped at 6 (remote-verified activity + 13k stars + funded product creditable; bus factor/governance unassessable from a squashed mirror), operability 6.5 scored on shipped surface only (chat-history resume screen, process-diagnostics.ts:1-25 watchdog snapshot, BYOK/usage). TOKEN-ECONOMY 8 not 9: cache-expiry-gated opportunistic trigger (promptCacheGapMs compact-history.ts:1035-1060, evaluateCompactionTrigger :1066-1110, per-model TTL policy compaction-policy.ts:21-63) + model->mechanical->no-op ladder with tested never-fail-the-turn invariant (run-agent-step.ts:1195-1197, model-compaction.test.ts:357, compact-context-loop.test.ts:202,250) + usage-anchored accounting (token-counter.ts:6-7) + ephemeral cache_control (common/src/util/messages.ts:60) + cache-churn-aware MCP name hashing (mcp.ts:24-33) = 8 on the strength of in-tree readable tests (zero blame for non-execution). 9 barred: the tuning measurements cite a private file (freebuff-costs.knowledge.md per compaction-policy.ts:47-62), no test executes publicly, and plane depth below codex-9 (no image budgets, no pre/post-compact hooks, no fresh-window tier, no warming). ERRATA: 8-ceiling on verification respected; >5k product-file rule clean (only 5,207-LOC freebuff-models.ts data blob, zero-credit/zero-blame generated). No calibration impact on the 80+ count."
+}

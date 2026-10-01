@@ -1,0 +1,23 @@
+{
+  "subject": "binharic-cli",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 5,
+    "verification": 3,
+    "safety_enforcement": 5,
+    "token_economy": 3,
+    "orchestration": 4,
+    "interop": 4,
+    "operability": 4,
+    "originality": 5,
+    "durability": 2,
+    "docs_dx": 4
+  },
+  "weighted_total": 40.0,
+  "band": "D",
+  "closest_anchor": "nanocoder (60.5, C): same shape (solo-authored TS/Ink TUI, agent loop fused into UI state store, real-but-partial safety machinery, test corpus needing correction), but a full band lower - nanocoder's specs import production code and its sandbox/ACP surfaces are real, while binharic's headline loop-control, permissions, and checkpoint layers are unreachable from the shipped loop (src/agent/core/state.ts:544 vs src/agent/core/agents.ts:33)",
+  "strongest_dimension": "architecture (5) - clean per-tool module boundaries (src/agent/tools/definitions/*) despite the store-fused loop",
+  "weakest_dimension": "verification (3) - 37/88 test files never import src; tautological and replica assertions hide the phantom-safety problem (most consequential; durability 2 is numerically lowest)",
+  "provenance": "original (template-scaffolded from habedi/template-typescript-project per GitHub API template_repository; not a fork of any studied agent, no rule (a) constraint). Shallow clone: local HEAD 2025-10-16 = remote main; remote develop ahead; GitHub pushed_at 2025-11-01 remote-verified (~11 months quiet at study date, not dead>12mo, no archived cap).",
+  "calibration_notes": "Census: non_test_loc 18,221 inflated - src TS/tsx is ~10,573 wc lines; package-lock.json (7,105 lines) appears counted. head_date understates remote by 2 weeks (2025-11-01). test_loc 10,601 overstates effective verification: 37 of 88 test files never import src (replica/tautology tests). No demotions applied; D derived from rubric, not a cap; not within 2 pts of 45 boundary."
+}

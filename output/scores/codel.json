@@ -1,0 +1,23 @@
+{
+  "subject": "codel",
+  "tier": "T0 (census said T1; dead >12mo confirmed via remote pushed_at 2024-04-29, shallow clone was masking it)",
+  "lane_scores": {
+    "architecture": 3,
+    "verification": 0,
+    "safety-enforcement": 2,
+    "token-economy": 1,
+    "orchestration": 4,
+    "interop": 2,
+    "operability": 3,
+    "originality": 5,
+    "durability": 0,
+    "docs-dx": 3
+  },
+  "weighted_total": 23.0,
+  "band": "D",
+  "closest_anchor": "n/a - is anchor",
+  "strongest_dimension": "originality",
+  "weakest_dimension": "verification (tied with durability)",
+  "provenance": "original (semanser/codel), AGPL-3.0; go module name still github.com/semanser/ai-coder (project rename, not clone).",
+  "calibration_notes": "D-anchor: agent-shaped product with no harness - NextTask oracle, zero tests, unauthenticated container-spawning API. Census suggested_tier T1 was wrong: shallow clone hid inactivity; remote check confirmed abandonment, rule (b) dead-cap applies (moot at 23.0)."
+}

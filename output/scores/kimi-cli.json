@@ -1,0 +1,23 @@
+{
+  "subject": "kimi-cli",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 8,
+    "safety_enforcement": 6,
+    "token_economy": 7,
+    "orchestration": 8,
+    "interop": 8,
+    "operability": 8,
+    "originality": 8,
+    "durability": 3,
+    "docs_dx": 8
+  },
+  "weighted_total": 73.0,
+  "band": "B",
+  "closest_anchor": "cline -- docs-heavy multi-surface product with tested tool-call-bound approval and nothing underneath, journal-backed sessions, and a core separated from its UI hosts; kimi-cli exceeds cline on ACP/flow orchestration but lacks its test mass",
+  "strongest_dimension": "orchestration",
+  "weakest_dimension": "durability",
+  "provenance": "original (not a fork). Apache-2.0; NOTICE:1-12 discloses one Codex-derived skill file. Predecessor of kimi-code (TS rewrite by same team), NOT a fork of it: klips/klip-11-kimi-code-rename.md, packages/kimi-code tombstone + tests/core/test_kimi_code_tombstone.py, pyproject.toml:4 archived description, TS-parity telemetry comments at soul/approval.py:39-43 and soul/kimisoul.py:827. Shallow clone: census contributors=1/commits=1 are artifacts; remote shows 11429 stars and archived:true (pushed_at 2026-09-22).",
+  "calibration_notes": "Rule (b) applies: archived (remote-verified archived:true, SECURITY.md no-fixes) caps at B; not binding since 73.0 is already within B. Rule (a): kimi-cli is the upstream-lineage predecessor of kimi-code, not a sync-fork; synthesis should still sanity-check sibling ranking. Census correction: non_test_loc 130707 includes web SPA TypeScript (~22k), generated web/package-lock.json (~16k counted as JSON code), and docs Markdown; Python agent core (src + packages) is ~53.4k LOC. Verification held at 8 per errata ceiling: no in-CI model evals (tests_ai path-filtered but no workflow runs it) and no fuzzing. No boundary risk (73.0 >2 from 78 and 65)."
+}

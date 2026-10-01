@@ -1,0 +1,45 @@
+{
+  "subject": "goose",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 8,
+    "safety-enforcement": 5,
+    "token-economy": 8,
+    "orchestration": 8,
+    "interop": 9,
+    "operability": 8,
+    "originality": 8,
+    "durability": 4,
+    "docs-dx": 8
+  },
+  "dimension_weights": {
+    "architecture": 15,
+    "verification": 15,
+    "safety-enforcement": 10,
+    "token-economy": 10,
+    "orchestration": 10,
+    "interop": 10,
+    "operability": 10,
+    "originality": 10,
+    "durability": 5,
+    "docs-dx": 5
+  },
+  "weighted_total": 73,
+  "band": "B",
+  "closest_anchor": "cline",
+  "strongest_dimension": "interop",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "original/upstream: Block donation to the Agentic AI Foundation (Linux Foundation), transfer documented in-repo at documentation/blog/2026-04-07-goose-moves-to-aaif/index.md:11,23-25, corroborated by Cargo.toml:13-15 (authors AAIF, repository aaif-goose/goose), census provenance_flag 'original' and rename_clone_suspect false; remote https://github.com/aaif-goose/goose at head 04ed836 (2026-09-25), version 1.52.0, Apache-2.0",
+  "calibration_notes": [
+    "Band B (73) is arithmetic, not a cap: no rule engaged. Provenance is upstream (not a sync fork), so the fork-must-not-outrank-upstream rule does not apply; the project is active (head commit 4 days before review) and not archived, so the dead-project B-cap does not apply. Recorded explicitly per the never-silent rule.",
+    "No cross-lane numeric conflicts existed (lanes own disjoint dimensions). Disagreements resolved in prose in subjects-goose.md: whole-subject closest anchor is cline, overriding the econ lane's lane-scoped 'codex' (codex stays the mechanism anchor for the four econ dimensions and verification, but its sandbox-backed safety rungs dominate the distance); scout's 'no rewind' claim corrected by core's truncate evidence (term.rs:299, manage_sessions.rs:224); prior inventory report /data/samples/reports/goose.md ('no prompt caching') contradicted by code (cache_semantics.rs) and excluded as stale.",
+    "Findings merge: 28 records (7 core + 9 safety + 12 econ), deduped by concept with zero collisions; no aliases needed. Adjacent pairs kept distinct and cross-referenced via 'related': c6/e9 (foreign import vs headless contract), c7/e4 (panic containment vs scheduler recovery), c4/s3 (journal confirmation idempotency vs fail-closed permission algebra). The default-off discount is counted once per dimension: architecture 7 absorbs goose-c2, safety 5 absorbs goose-s1/s8, docs-dx 8 absorbs goose-e10.",
+    "Originality 8 (integrator, code-verified, not marketing): goose-agent crate genuinely has no dependency on goose (crates/goose-agent/Cargo.toml:12-27) and runs a real load-step-apply loop (machine.rs:158-175); LLM permission judge untrusted-data discipline in prompt text (permission_judge.rs:66-68) with injection test (:228-247); per-(provider,model) CacheSemantics as declared data (cache_semantics.rs:12-46); ACP client direction verified via 'impl Provider for AcpProvider' (acp/provider.rs:677); rival CLIs spawned as persistent provider children (claude_code.rs:255). Held below 9 because the flagship engine is default-off (state_machine/mod.rs:72-75, GOOSE_STATE_MACHINE never set in CI) and much of the rest is high-quality assembly of known patterns.",
+    "Durability 4 (integrator, census metadata): Apache-2.0; strongest institutional backing in the cohort (AAIF/Linux Foundation, anchored alongside MCP and AGENTS.md); active head (2026-09-25) with PR #12522 implying deep high-volume history; version 1.52.0. One point docked because the shallow census clone (1 commit, stars null) makes commit cadence and contributor breadth unmeasurable, and the governance transition (block -> AAIF, 2026-04) is only ~6 months old at review time.",
+    "Test-density dispute settled against the scout: the 4% ratio used the inflated 882k census denominator (documentation/ 311MB + ui/ included); honest engine-side ratio ~11-12%. Verification stays at 8 per the frozen errata (no fuzzing/sanitizers/coverage gate; model sweep self-declared non-gating at model-toolcall-conformance.yml:8-12), not because of density.",
+    "Interop 9 retains the econ caveat: roaming/telegram edge quality unverified by any lane; the log-only egress inspector (goose-s5) was scored as a safety-enforcement failure and deliberately not double-counted against interop.",
+    "S-band floor note: safety-enforcement 5 and verification 8 both meet the 'no dimension below 5' floor, but the total (73) is far below 88, so the floor never binds; if a future re-review lifts the total, the safety 5 must be re-examined first.",
+    "A-boundary sensitivity: reaching 78 (A) would require safety-enforcement near 8 (approval default-on plus a layer beneath it) or architecture at 9 (state machine shipped as default); neither exists in the tree at 04ed836."
+  ]
+}

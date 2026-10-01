@@ -1,0 +1,23 @@
+{
+  "subject": "molt",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 8,
+    "safety_enforcement": 6,
+    "token_economy": 8,
+    "orchestration": 4,
+    "interop": 5,
+    "operability": 5,
+    "originality": 8,
+    "durability": 3,
+    "docs_dx": 7
+  },
+  "weighted_total": 62.0,
+  "band": "C",
+  "closest_anchor": "crush",
+  "strongest_dimension": "verification",
+  "weakest_dimension": "durability",
+  "provenance": "original (census flag unchallenged); manifest molt-desktop is the repo name, CLI ships as @solvyx/molt; shallow clone -- no activity claims made; Apache-2.0 file and manifest agree",
+  "calibration_notes": "No fork/upstream rule applies. Verification held at 8 per errata ceiling (no in-CI model evals, no fuzzing; window e2e excluded from CI per check.yml:19-20 comment). Architecture docked for engine.ts 5452-LOC core god-file per errata >5k rule. census test_loc 21087 undercounted: test/ alone is 27,483 across 67 files. 62.0 is 3.0 below the 65 B-boundary -- not a flagged boundary, but a one-point raise on orchestration or interop would cross it; synthesis eyes open. Identity: no collision with listed confusion pairs."
+}

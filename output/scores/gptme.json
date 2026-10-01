@@ -1,0 +1,23 @@
+{
+  "subject": "gptme",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 8,
+    "safety_enforcement": 7,
+    "token_economy": 8,
+    "orchestration": 7,
+    "interop": 8,
+    "operability": 8,
+    "originality": 8,
+    "durability": 7,
+    "docs_dx": 8
+  },
+  "weighted_total": 76.0,
+  "band": "B",
+  "closest_anchor": "pi - same philosophy (single-vision CLI agent, hooks/extensions own policy, honest no-overclaim security, branch-based session model), but cline-like surface breadth (webui/Tauri/MCP+ACP+A2A) and no pi-grade loop/product separation or cache warming",
+  "strongest_dimension": "token_economy",
+  "weakest_dimension": "architecture",
+  "provenance": "original (census flag confirmed; remote gptme/gptme not a fork, org-owned, pushed_at 2026-09-29). Shallow clone: census contributors=1/commits=1 are artifacts, not evidence of single-maintainer or inactivity.",
+  "calibration_notes": "No rule (a) applicable (not a fork). No demotions. Boundary flag: 76.0 is within 2 pts of A (78). Verification held at 8 despite evals-in-CI existing (eval-ci.yml:85-96) because the gate is continue-on-error (:28) and skipped on fork PRs - informational, not enforcing; errata 9-rung not cleared. Safety held at 7: enforcement machinery is real and tested (sandbox.py, guardrails.py, trust.py TOFU) but the deep layers are opt-in (sandbox default none, guardrails default shadow, screening default warn) - above nanocoder's 5 (its fail-open was a bug-shaped default; gptme's are documented, denylist+confirm still bind by default) and below cline/pi's 6-plus baseline only because of the breadth of tested enforcement below the approval gate. Census LOC sanity OK (cloc total 381k code; tests/ 149.8k); contributors field corrected as shallow artifact."
+}

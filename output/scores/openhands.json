@@ -1,0 +1,23 @@
+{
+  "subject": "openhands",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 9,
+    "safety_enforcement": 5,
+    "token_economy": 4,
+    "orchestration": 6,
+    "interop": 8,
+    "operability": 7,
+    "originality": 8,
+    "durability": 9,
+    "docs_dx": 8
+  },
+  "weighted_total": 72.0,
+  "band": "B",
+  "closest_anchor": "cline - a product surface consuming an out-of-process core with test-heavy culture; more radically than cline, the core (agent-server) is entirely another repo, making this a pure control-center shell",
+  "strongest_dimension": "verification",
+  "weakest_dimension": "token_economy",
+  "provenance": "original. Census manifest @openhands/agent-canvas is honest: the flagship All-Hands-AI/OpenHands repo (renamed OpenHands/OpenHands, redirect verified via GitHub API 2026-09-29: TypeScript primary, 89,472 stars, pushed 2026-09-29, MIT) IS now Agent Canvas - a React/Electron control center driving the out-of-tree openhands-agent-server 1.49.6 (pinned in config/defaults.json) plus ACP agents (Claude Code/Codex/Gemini). Not a fork; rule (a) n/a.",
+  "calibration_notes": "Shell-subject: agent loop/compaction/action-policy are out-of-tree and earned zero credit; tree not punished for core's flaws either - synthesis should treat in-tree agent presence as a covariate when ranking. Census test_loc 149,921 undercount: actual ~195.3k (695 files/168,497 LOC in __tests__/ + 46/14,671 e2e + 64/12,142 colocated in src); non_test_loc ~160k incl. 42,502-LOC generated src/i18n/translation.json blob; contributors=1/commits=1 are shallow-clone artifacts (remote-verified active). Verification 9 justified by workflow file:line evidence for scripted-provider E2E on main (mock-llm-e2e.yml:90-134) and live-LLM E2E on PRs (ci.yml:265-276); if synthesis reads the anchor errata strictly (scored evals required), demote to 8 => 70.5, band unchanged. No boundary risk (72.0)."
+}

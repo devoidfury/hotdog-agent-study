@@ -1,0 +1,23 @@
+{
+  "subject": "keen-code",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 7,
+    "safety_enforcement": 6,
+    "token_economy": 7,
+    "orchestration": 6,
+    "interop": 6,
+    "operability": 6,
+    "originality": 7,
+    "durability": 4,
+    "docs_dx": 7
+  },
+  "weighted_total": 63.0,
+  "band": "C",
+  "closest_anchor": "crush (69.0): same Go single-binary shape, same tested-approval-nothing-underneath safety rung and CI rigor; below crush on orchestration/operability/durability, above on token-economy",
+  "strongest_dimension": "token_economy",
+  "weakest_dimension": "durability",
+  "provenance": "original (manifest github.com/mochow13/keen-code matches upstream remote; MIT license file; no fork flag). Census corrected: test_loc 0 -> 35,876 (109 colocated *_test.go); non_test_loc 79,071 -> 28,409 actual Go non-test (64,285 total incl. tests). Shallow clone (1 commit) but head 2026-09-25 is recent; no activity claims made either direction. No name collision handled (distinct from code/codex subjects).",
+  "calibration_notes": "No demotions. 63.0 sits 2.0 below the B floor (65) - boundary-risk flag for synthesis. Verification 7 not 8 per errata ceiling (no in-CI evals/fuzzing). Safety 6 exact rung fit, not rounded up for the good guard: permitted bash has nothing underneath and project allow-list skips even dangerous prompts (documented)."
+}

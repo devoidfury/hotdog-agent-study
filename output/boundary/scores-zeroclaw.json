@@ -1,0 +1,24 @@
+{
+  "subject": "zeroclaw",
+  "tier": "T3",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 8,
+    "safety-enforcement": 7.5,
+    "token-economy": 7.5,
+    "orchestration": 8,
+    "interop": 8,
+    "operability": 8,
+    "originality": 8,
+    "durability": 7,
+    "docs-dx": 9
+  },
+  "weighted_total": 77.5,
+  "band": "B",
+  "closest_anchor": "codex - the only non-codex subject with a tested enforcement layer beneath the approval gate, a journal-grade session store, and cache-key-level provider engineering; but no individual codex rung is earned, and at 77.5 the subject sits just below pi's 78.5 on the ladder",
+  "strongest_dimension": "docs-dx",
+  "weakest_dimension": "architecture",
+  "provenance": "original - origin remote https://github.com/zeroclaw-labs/zeroclaw.git matches Cargo.toml:9 repository; full 5,412-commit history from 2026-02 (not shallow, no rename/import markers); NOTICE declares the single spec-derived module src/verifiable_intent/; rule (a) not applicable",
+  "calibration_notes": "DEMOTION A->B (77.5): single delta vs the T3 integrator is verification 8.5->8 - the merge-gating CI eval (crates/zeroclaw-eval/tests/regression_suite.rs:21 via ci.yml:814 into required gate :1305) is scripted replay against a stubbed ModelProvider (replay.rs:1-3), the same design that pins codex at the frozen 8; the standing verification-ceiling errata applies verbatim (no in-CI model evals, no fuzzing - fuzz/fuzz_targets/* never run, 0 grep hits in .github/workflows, 3/5 targets fuzz serde). All nine other dimensions independently reproduced at the main scores with own file:line evidence. Census errata confirmed: measured production 591,948 / inline-test 543,372 / standalone 41,534 vs census 1,063,392/34,710 - Rust inline #[cfg(test)] blindness, filed as zeroclaw-b3. Declared residual (carried, not docked): rpc/dispatch.rs resume-auth surface, tools/delegate.rs escalation routing."
+}

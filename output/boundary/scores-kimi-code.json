@@ -1,0 +1,24 @@
+{
+  "subject": "kimi-code",
+  "tier": "T2",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 8,
+    "safety-enforcement": 6,
+    "token-economy": 7,
+    "orchestration": 8,
+    "interop": 8,
+    "operability": 8,
+    "originality": 8,
+    "durability": 8,
+    "docs-dx": 8
+  },
+  "weighted_total": 77.0,
+  "band": "B",
+  "closest_anchor": "cline - engine-as-package consumed by thin hosts with tested approvals and nothing underneath; kimi edges cline on originality (parsed-command policy, event-sourced state) and ACP, trails on durability evidence; same band ceiling",
+  "strongest_dimension": "originality",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "MoonshotAI/kimi-code, MIT, own product repo. packages/pi-tui is a governed VENDORED FORK of earendil-works/pi subtree packages/tui pinned at 53816d7dcc5ebe3a0eedec3cd07196c3a66d83fd (2026-09-14, UPSTREAM.md:10-16) with keep/absorbed intent cards and its own CI job - treated as a library dependency, not lineage; rule (a) N/A since kimi-code is not a pi derivative. Checked for inherited god-files: pi's oversized product files (interactive-mode.ts 6852, agent-session.ts 4023) were NOT vendored; vendored pi-tui max file is editor.ts 2625; kimi's large files (kimi-tui.ts 4238, sdk-rpc-client-v2.ts 2889) are kimi-authored, and kimi-tui.ts is under the ERRATA 5k product-surface threshold.",
+  "calibration_notes": "Architecture 7->8: the provisional docking reason (v1/v2 dual-engine migration) is stale at HEAD - no v1 engine package exists; KIMI_CODE_LEGACY_FLAG is read by nothing in source (grep: zero hits); remaining traces are a phantom CI job (ci.yml:72-88) and kimi-cli DATA migration (migration-legacy). Kept at 8, not 9, per ERRATA (kimi-tui.ts 4238 product-TUI surface, sdk-rpc-client-v2.ts 2889, dead legacy CI job). Verification held at 8 per ERRATA ceiling: no in-CI model evals anywhere (workflows grep: zero hits; the verification-9 blocking line is confirmed ABSENT); the only CI fuzzing is the deterministic fixed-seed parser fuzz inside the blocking sharded test job (ci.yml:36,49 + packages/tree-sitter-bash/test/fuzz.test.ts:3-10) - component-only, insufficient to break the three-anchor 8 ceiling; further docked within 8 by minidb excluded from all CI (vitest.config.ts:8) and test-windows disabled (ci.yml:93). Safety 6 = exact cline/pi/crush 'tested approval, nothing underneath' rung; fail-closed on unanalyzable bash in default mode (dangerous-command-ask.ts:145) but zero sandbox machinery. No silent demotions."
+}

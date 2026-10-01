@@ -1,0 +1,24 @@
+{
+  "subject": "agentty",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 8,
+    "safety_enforcement": 7,
+    "token_economy": 8,
+    "orchestration": 7,
+    "interop": 8,
+    "operability": 8,
+    "originality": 8,
+    "durability": 5,
+    "docs_dx": 8
+  },
+  "weighted_total": 76.5,
+  "band": "B",
+  "closest_anchor": "pi",
+  "closest_anchor_why": "Solo-authored opinionated single-binary TUI agent with a property-spec test corps and deep honest in-repo docs; agentty exceeds pi on enforced safety (probed, tested OS sandbox vs pi's deliberate none) and trails it on session-tree extensibility and community durability.",
+  "strongest_dimension": "verification",
+  "weakest_dimension": "durability",
+  "provenance": "original (census flag accepted): not a fork; the four git submodules (maya, acp-cpp, mcp-cpp, rag-cpp) are the same author's own libraries and are unchecked-out in this snapshot. MIT license file present. Shallow clone (1 commit) - activity verified via CHANGELOG (36 releases, 0.9.13 dated 2026-09-27, daily cadence), not asserted from HEAD.",
+  "calibration_notes": "Census test_loc 46242 exact to cloc; non_test_loc 106217 suspect-high (own src+include ~=73k cloc-code, 127.7k raw; figure likely includes submodule trees or raw lines - does not change tier assignment by dispatcher). commits=1/contributors=1: commits is a shallow artifact, solo-maintainer plausibly real (same author across repo + submodules). Boundary risk: 76.5 within 1.5 of the A boundary (78); verification carries bounded fuzz (ci.yml:476) + TSan, which technically meets the errata 9-gate, but fuzzing is smoke-grade over two harnesses and there are no in-CI model evals, so 8 held. No calibration demotions applied."
+}

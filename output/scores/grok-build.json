@@ -1,0 +1,23 @@
+{
+  "subject": "grok-build",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": 8.5,
+    "verification": 8,
+    "safety-enforcement": 7,
+    "token-economy": 9,
+    "orchestration": 8.5,
+    "interop": 8,
+    "operability": 9,
+    "originality": 9,
+    "durability": 7,
+    "docs-dx": 8
+  },
+  "weighted_total": 82.75,
+  "band": "A",
+  "closest_anchor": "codex - unanimous across all three lanes: infrastructure-first token economy (three compaction families = codex tiers, cache-key-gated reuse with a wire-conformance test, no-LLM budget layers), kernel enforcement genuinely beneath the approval layer, and journaled deterministic orchestration all mirror codex's shape; pi's extension-first minimalism is absent. Gap to codex 88.5 S is safety-enforcement 10-vs-7 (default-on enforcement + per-call egress approval), verification tied at the 8-ceiling; grok-build leads codex on operability evidence and docs-dx 8-vs-7",
+  "strongest_dimension": "token-economy (9, tied on points with operability and originality; picked because its evidence is infrastructure no anchor has, all integrator-re-verified in source: two-pass background compaction prefire with prefix-fingerprint invalidation, compaction.rs:59-66,179-190; parent-prefixed side calls replaying the parent's prompt_cache_key with tools attached only to align the byte-identical prefix, side_call.rs:102-131; wire-tested cache-key discipline, conversation.rs:2265-2305)",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "original (official xAI/SpaceXAI monorepo transparency export; upstream_remote https://github.com/xai-org/grok-build matches census; SOURCE_REV 036a5d8348cd744767cd0b08518ab17bf608fa7f; README.md:36-38; LICENSE 'Copyright 2023-2026 SpaceXAI'; Apache-2.0 file + manifest; declared+attributed tool-layer ports of openai/codex and sst/opencode handlers per THIRD_PARTY_NOTICES.md:16-42, undeclared-identifier grep = 0; shallow single-commit clone - contributors=1 is a census artifact, not bus factor)",
+  "calibration_notes": "No demotions: provenance original so rule (a) inapplicable (and moot - 82.75 < codex 88.5, and the attributed tool-layer ports do not make this codex-derived); head 2026-09-23 (6 days pre-run) so rule (b) archived/dead cap inapplicable. A-band 82.75: held under S by safety-enforcement 7 (kernel sandbox off by default 18-sandbox.md:5, profile-parse-failure fails to OFF config/mod.rs:1481-1484, macOS child-net no-op lib.rs:92-94, no per-call egress gate) and verification 8 (anchors' errata ceiling: zero fuzzers in 79 manifests, no evals, CI invisible in mirror; method declared = in-repo harness evidence, affirmative CI signal sandbox/Cargo.toml:28). docs-dx 8 exceeds codex-7 deliberately (11,147-line shipped guide + drift gate config_docs/mod.rs:254 vs codex 206-line stubs), held below pi-9 by internals-doc absence (SECURITY.md 6 lines, no architecture doc). Durability 7 docked from codex-9: strongest-class institutional backing (xAI) but zero visible maintenance surface in the artifact and closed governance (CONTRIBUTING.md: no external PRs); remote cadence check could justify 8-9. Originality 9 = codex-par, honestly bounded: 4 lane-unique claims re-verified in code, but 2 have non-anchor corpus prior art (confine-or-refuse-startup: agentty, forge-norvialabs; fork-cache-alignment: waveloom) and the overall shape is codex-lineage executed deeper than field-redefined. Distribution check: 7/87 scored at 80+ (8%), calibration intact. Findings: 43 -> 42 merged; c11+s10 -> faux-provider-testing (s10 evidence kept); renames to canonical: e1->compaction-tiering, e6->fork-cache-alignment, e8->workflow-resume-journal, e11->scheduled-agent-runs (aliases recorded in records). Flagged for future pass: leader/hub multi-process trust boundary (sandbox disables leader mode rather than confining it, pager-bin/main.rs:1358-1372)."
+}

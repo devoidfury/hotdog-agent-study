@@ -1,0 +1,34 @@
+{
+  "subject": "zeroclaw",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 8.5,
+    "safety-enforcement": 7.5,
+    "token-economy": 7.5,
+    "orchestration": 8,
+    "interop": 8,
+    "operability": 8,
+    "originality": 8,
+    "durability": 7,
+    "docs-dx": 9
+  },
+  "weighted_total": 78.25,
+  "band": "A",
+  "closest_anchor": "codex",
+  "strongest_dimension": "docs-dx",
+  "weakest_dimension": "architecture",
+  "provenance": "original (upstream = itself, github.com/zeroclaw-labs/zeroclaw; full non-shallow history, no clone markers; one NOTICE-declared spec-derived module src/verifiable_intent based on agent-intent/verifiable-intent)",
+  "calibration_notes": [
+    "Weighted total 78.25 = sum(score*weight)/10 on a uniform 0-10 dimension scale (weights sum to 100). S-band floor condition (safety-enforcement>=5, verification>=5) met at 7.5/8.5 but total is below 88.",
+    "Closest anchor per all three lanes independently: codex-shape (turn-step decomposition, rollout journal, enforcement layer under the approval gate, byte-stability cache engineering) without earning codex rungs: conditional sandbox, drop-only compaction, no MCP server/SDK/queue.",
+    "Census corrections in force: test_loc understated ~15x (measured ~529k inline #[cfg(test)] LOC vs census 34,710); production ~550-650k LOC, not the census 1.06M. No score uses the census ratio (finding zeroclaw-s12, map.md sec 0).",
+    "Sync-fork rule not applicable: provenance original, no upstream to outrank. Archived/dead cap not applicable: HEAD 2026-09-26, ~380-760 commits/month. No demotion taken; recorded here per the never-silent clause.",
+    "Verification held at 8.5, not 9+: the CI eval gate is scripted replay of 8 traces with the model stubbed (live/capability suites 'planned', evals/README.md:5-6) and fuzz targets unwired in all 32 workflows with 3/5 fuzzing serde itself (zeroclaw-s9, zeroclaw-s10); anchor errata forbid crediting replay as model evals.",
+    "Durability (integrator-scored): cadence decaying 756->469->392->383 commits/month Jun-Sep 2026; 497 contributors, top author ~12% of commits; MIT/Apache-2.0 dual; zero demonstrated institutional backing (community 'zeroclaw-labs', viral launch Feb 2026); governance hygiene (NOTICE disclosure, excision incident log, 32-workflow CI, SLSA docs) keeps it at 7 rather than lower.",
+    "Originality (integrator-scored) verified in code, not marketing: generation fencing (session_queue.rs:16-21, dispatch.rs:4228), provenance sidecar (session_store.rs:64-75), image-placeholder cache breakpoint (anthropic.rs:44-47), SAFE_ENV_VARS rival-CLI adapters (coding_cli.rs:9-21). Capped at 8: core chassis is independent reproduction of codex patterns (c1), loud breadth (firmware, 30+ channels) adds surface not ideas (e14).",
+    "Weakest-dimension tie note: architecture and durability both score 7; architecture is named weakest because it carries 15x the weight and its evidence (50.8k-LOC orchestrator c2, 1,585-line loop fn c4, constructor telescope c3, 19.2k composition root c10) is defect-grade, while durability's 7 is youth/decay risk at weight 5.",
+    "Declared residual certification gaps (no score impact unless a future pass finds a hole): delegate.rs escalation routing incl. Grok-alias relaxation (schema.rs:3004); full 28.7k-line dispatch.rs resume-auth surface; per-channel turn economy in the 50.8k orchestrator; cache byte-stability through the retry layer; zerocode/tauri/web internals; live ACP conformance (read-only mandate).",
+    "Findings merged from 38 lane records to 36: zeroclaw-c9+zeroclaw-s13 -> zeroclaw-crash-recovery-middleware; zeroclaw-e6+zeroclaw-s7 -> zeroclaw-subagent-policy-containment. Canonical records carry aliases[] and both lane evidence."
+  ]
+}

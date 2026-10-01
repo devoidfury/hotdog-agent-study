@@ -1,0 +1,23 @@
+{
+  "subject": "amazon-q-developer-cli",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 7,
+    "safety_enforcement": 6,
+    "token_economy": 5,
+    "orchestration": 6,
+    "interop": 7,
+    "operability": 7,
+    "originality": 7,
+    "durability": 8,
+    "docs_dx": 7
+  },
+  "weighted_total": 65.0,
+  "band": "B",
+  "closest_anchor": "crush (69.0): same funded-org terminal agent at the tested-approval-nothing-underneath safety rung, single-strategy compaction, sqlite sessions, mid-band orchestration; Q's 65.0 correctly below crush (no loop detection, dual-tree migration, char-based context math), above crush on checkpoints/hooks/OAuth-MCP",
+  "strongest_dimension": "durability",
+  "weakest_dimension": "token-economy",
+  "provenance": "original (aws/amazon-q-developer-cli, not a fork; GitHub template_repository field is repo-creation boilerplate only). Shallow clone (1 commit, HEAD 2026-04-23); remote-verified active: pushed_at 2026-08-24, archived=false.",
+  "calibration_notes": "Census corrections: test_loc 1015 -> ~16.2k (129 inline cfg(test) files, 512 test fns, 14,947 inline LOC + 1,259 tests/ LOC); non_test_loc 197,695 conflates ~203k smithy-generated SDK LOC across amzn-* crates, hand-written core ~77k (argues T1-sized, tier kept as dispatched). contributors=1/commits=1 are shallow artifacts. Rule (b) not applied (remote active). Total lands exactly on the B floor (65.0) - boundary-risk; if the CI command excluding absent crate fig_desktop-fuzz is a confirmed broken gate, verification 7->6.5 drops to 64.25 (C). Institutional durability honestly 8, not 9: active remote + funded team but only 5 public workflows vs codex/cline 9-rung."
+}

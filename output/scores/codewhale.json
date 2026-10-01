@@ -1,0 +1,23 @@
+{
+  "subject": "codewhale",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 8,
+    "safety_enforcement": 7,
+    "token_economy": 8.5,
+    "orchestration": 9,
+    "interop": 9,
+    "operability": 8,
+    "originality": 8,
+    "durability": 7,
+    "docs_dx": 8
+  },
+  "weighted_total": 78.0,
+  "band": "A",
+  "closest_anchor": "codex (S 88.5) - all three lanes independently converge on codex proximity: codex-shaped typed execpolicy with live kernel denial tests, codex 9-rung orchestration rebuilt plus ACP and /import-claude surfaces codex lacks, codex-class faux-provider test corps; lacks codex's default-on all-platform kernel enforcement and architectural discipline",
+  "strongest_dimension": "interop",
+  "weakest_dimension": "architecture",
+  "provenance": "rename-clone (honest self-rebrand of DeepSeek-TUI by the same author Hmbown): LICENSE:3 retains 'DeepSeek-TUI Contributors', crates/app-server/src/lib.rs:38-39 states 'CodeWhale began life as DeepSeek-TUI', updater migrates pre-rebrand binaries (update.rs:1048), CHANGELOG spans 6,600+ PRs of continuous pre-rename history. Census flag 'original' corrected. Secondary attributed ports: COMPACT_PROMPT from Codex templates (compaction.rs:174-186), frame_rate_limiter from openai/codex, device_code from pi-mono (THIRD_PARTY_NOTICES.md), prefix_cache 'inspired by Reasonix's Pillar 1' (prefix_cache.rs:1). MIT license file present, attribution retained - no license-risk finding",
+  "calibration_notes": "Rule (a) uncheckable: upstream DeepSeek-TUI not in corpus/unscored, no-outrank ceiling cannot bind; per open-interpreter reversal precedent no policy demotion for the honest rename itself, recorded here never silent. Rule (b) not triggered: remote archived:false, pushed_at 2026-09-30 (review day), hyperactive. Census corrections carried: provenance original->rename-clone; test_loc 61,627 -> ~278.7k test-like (inline modules, crush/cline errata pattern); contributors 1 = shallow artifact (remote long tail, owner ~90% commit dominance). Integrator-owned dimensions: originality 8 (survival-contract-schema, compile-enforced protocol parity, FleetDenialGuard content-hashed anti-gaming all verified real in code; docked from 9 for attributed-derived DNA - compaction prompt from codex, cache pillar from Reasonix - matching the corpus 8-rung qwen/opencode/hermes occupy; nuance added: survival_contract.rs is cfg(test) documentation, live enforcement in last_round.rs:349-402). Durability 7 (same-day push, ~10-day release cadence, 6,600+ PRs, 41k stars/3.5k forks, MIT clean, 31 CI workflows; docked for zero institutional backing and ~90% solo-owner commit dominance plus mid-life brand pivot). BAND SENSITIVITY flagged: 78.0 exactly on the A floor within 2 pts of the B cut; swing = my durability 7 (6 -> 77.5 B, 8 -> 78.5), secondary swing token-economy 8.5-vs-9; boundary re-review recommended per gptme/kimi-code precedent. Merged 35 lane findings -> 34 (dedup c7+s12 -> crash-recovery-middleware with aliases); docs-dx 8 resolution: dual-tree dock is for the paper trail ('Copied verbatim' comment refers to a lint attribute; moved modules verified single-copy on disk), architecture credit c3 stands - same seam, no double-count. Distribution: 4/18 at 80+ (22.2%), under 25% line."
+}

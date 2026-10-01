@@ -1,0 +1,24 @@
+{
+  "subject": "kilocode",
+  "tier": "T3",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 9,
+    "safety-enforcement": 7,
+    "token-economy": 7.5,
+    "orchestration": 7.5,
+    "interop": 8,
+    "operability": 8,
+    "originality": 7,
+    "durability": 8,
+    "docs-dx": 8
+  },
+  "weighted_total": 78.5,
+  "band": "A",
+  "closest_anchor": "pi",
+  "strongest_dimension": "verification",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "divergent-fork:opencode",
+  "calibration_notes": "A floor crossed (+0.5 over provisional 77.5); verification-9 FLAGGED (release-blocking Harbor smoke gate publish.yml:584-606/smoke-test.yml:116 = acceptance-grade 2-task eval, qualifies per blocking-only rule and prime-agent/openhands precedent class, ranked bottom of ledger). Band-turn sensitivity disclosed: verif->8 gives 77.0 B; verif->8 AND arch->7.5 gives 77.5 = exact provisional match. DOCTRINE RULING: shipped-default doctrine does NOT force sub-6 - default posture binds tested approvals (bash '*'=ask + readable allowlist, agent/index.ts:52-53) so 6-rung is earned; opt-in jail adds +1 via three mechanical gates (fail-closed enable+exec, enforcement tests in CI incl. macOS seatbelt confinement on PR matrix, non-deceptive disclosure). SECURITY.md understates the shipped jail (docs defect, finding b3, no rung collapse; no runtime-lie). Rule (a) checked: divergent-fork outranks opencode 77.0 on demonstrated divergence; no upstream code credited above opencode's own rungs. Shallow clone honored; remote ls-remote HEAD 490246ec ahead of snapshot -> active."
+}

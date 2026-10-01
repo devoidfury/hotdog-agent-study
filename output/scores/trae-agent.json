@@ -1,0 +1,23 @@
+{
+  "subject": "trae-agent",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 5,
+    "safety_enforcement": 3,
+    "token_economy": 2,
+    "orchestration": 3,
+    "interop": 4,
+    "operability": 4,
+    "originality": 6,
+    "durability": 6,
+    "docs_dx": 5
+  },
+  "weighted_total": 44.0,
+  "band": "D",
+  "closest_anchor": "crush (69.0): same small honest single-loop + tool-layer shape with CI-backed tests, but none of crush's permission service, loop detection, resume, or LSP/MCP depth; clearly above codel by virtue of a real loop (base_agent.py:163) and below nanocoder on every story-breadth axis",
+  "strongest_dimension": "architecture",
+  "weakest_dimension": "token_economy",
+  "provenance": "original (census correct): this IS the known ByteDance upstream (origin == upstream_remote https://github.com/bytedance/trae-agent), MIT, not a fork, rule (a) n/a. Vendored bits attributed (bash_tool.py:1-9 Anthropic MIT; trae_agent.py:187-193 aider Apache-2.0) - compatible, no license risk. Shallow clone: commits:1/contributors:1 are artifacts; remote check shows 12,121 stars, not archived, pushed_at 2026-02-05 (~8mo quiet, under the 10-month dead-claim bar).",
+  "calibration_notes": "Census LOC sane (cloc Python 9,822 total incl. ~1,312 test code vs census 9964/1312). Boundary-risk: 44.0 is within 2 pts of the 45 C/D cut; sensitivity is verification 5->6 (tools/CLI tests are real behavior tests but the loop itself is untested - zero execute_task coverage - and Makefile:42 skips ollama/openrouter/google suites in CI); a lift would give 45.5 = C. No rule (a)/(b) demotions applied. Identity hygiene: only /data/samples/agents/trae-agent + its manifest used."
+}

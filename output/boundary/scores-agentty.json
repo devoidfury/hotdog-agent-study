@@ -1,0 +1,24 @@
+{
+  "subject": "agentty",
+  "tier": "T2",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 9,
+    "safety-enforcement": 7,
+    "token-economy": 8,
+    "orchestration": 7,
+    "interop": 7,
+    "operability": 8,
+    "originality": 8,
+    "durability": 6,
+    "docs-dx": 8
+  },
+  "weighted_total": 77.5,
+  "band": "B",
+  "closest_anchor": "codex: only cohort shape with kernel enforcement on the default path plus comparable CI rigor; agentty brings codex-grade verification method (fuzz + sanitizers + compile-time proofs) on a solo budget with codex-grade coverage gaps (no Windows backend, shared egress) that hold safety at 7",
+  "strongest_dimension": "verification - two oracled in-repo property fuzzers (12 invariants, frozen_invariant_fuzz.cpp:22-38, scrollback_wire_fuzz.cpp:8-17) replayed deterministically in the blocking ctest gate (ci.yml:192, AgenttyTests.cmake:234-235), curated regression persistence (midrun_* suite), blocking ASan/UBSan+TSan matrix (ci.yml:278,319), and an exhaustive 48-cell compile-time trust-matrix proof that fails the build (policy.hpp:120-146)",
+  "weakest_dimension": "durability - solo maintainer (bus factor 1), shallow clone; offset by near-daily releases (CHANGELOG 0.9.12->0.9.13 in 24h), 5-distro packaging, SECURITY_AUDIT.md",
+  "provenance": "independent boundary re-review, 2026-09-30; fresh full-rubric read; subjects/scores/findings for agentty NOT read. Snapshot caveats: submodules maya/mcp-cpp/acp-cpp/rag-cpp absent (fuzz-smoke harness bodies evidence-limited); .git/shallow honored (activity from CHANGELOG artifacts, not history)",
+  "calibration_notes": "verification 9 CLEAN per smelt bar with nuance: fuzz-smoke job (ci.yml:476) itself is crash-only+bounded (sanitizer abort oracle, 5000/20000 iterations, ci.yml:515-516), the qualifying oracled fuzzing is in-repo and runs in the blocking build-test gate; seed persistence is maintainer-curated (found seeds -> committed midrun_* regression tests), no automated corpus-append. Ledger entry #6, ranked smelt > agentty > prime-agent > ouroboros > gemini-cli > openhands. Sanitizer coverage capped to the labeled subset by the prebuilt maya renderer ODR constraint (ci.yml:206-211) - a structural ceiling, docked in prose, not by demotion. Safety 7 per shipped-default doctrine: sandbox Auto by default (main.cpp:728,1259), capability probe not which (sandbox.cpp:84-100, issue #21 fixed), honest degradation banner, Ask profile default (main.cpp:1659); under 8 for shared netns, no Windows backend, unbundled bwrap. Architecture errata >5k check passes (largest 3,595); 9 declined - wiring fusion (main.cpp 1,864 + cmd_factory.cpp 2,622), directory-level layering. A floor NOT crossed: 77.5 B FINAL; sensitivity docs-9 = 78.0 exactly on floor, rejected."
+}

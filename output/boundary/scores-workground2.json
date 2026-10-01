@@ -1,0 +1,24 @@
+{
+  "subject": "workground2",
+  "tier": "T3",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 7.5,
+    "verification": 8,
+    "safety-enforcement": 7,
+    "token-economy": 8.5,
+    "orchestration": 8.5,
+    "interop": 8,
+    "operability": 8.5,
+    "originality": 7.5,
+    "durability": 6,
+    "docs-dx": 8
+  },
+  "weighted_total": 78.25,
+  "band": "A",
+  "closest_anchor": "codex - cache-first prompt discipline, durable crash-correct orchestration, default-on OS jail beneath the approvals, ACP+MCP protocol surface; structural lineage confirmed by the committed session log naming upstream repository_url esengine/deepseek-reasonix (upstream-hardening-complete-execution-log-2026-07-10.txt:2355), whose own anchor was codex",
+  "strongest_dimension": "token-economy",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "independent boundary re-review, HEAD 2939139 (shallow; remote verified via GitHub API: pushed_at 2026-09-26, created 2026-07-11, not archived, 0 forks); protocol + frozen anchors + errata read first; T3 subjects/workground2.md read for calibration only, no scores copied; /data/samples/agents/deepseek-reasonix consulted solely for the originality double-count control",
+  "calibration_notes": "all ten scores land on the T3 values via an independent evidence path - not deference: each tie/marginal dimension was re-derived (operability 8.5 contested then upheld on fenced saves save.go:441-475 + leases session_lease.go:14-31 + tested conflicts save_test.go:76,125; durability 6 over 5 on remote-verified activity + governance scaffolding; verification 8 ceiling enforced by own greps: 0 func Fuzz repo-wide, e2e-bot evals manual-comment-triggered and report-only). One factual correction against the T3 originality audit: the cache-impact CI gate (cache-impact.yml + check-cache-impact.sh) is NOT in the upstream tree (zero cache-impact hits upstream) - wg2 is its origin, netting zero because own-invention range still fails the 8 bar. Rule (a) non-binding for this divergent fork and moot (78.25 < upstream 86.0). Boundary verdict A by 0.25; deciding dimension operability - 8.5->8 would give 77.75 (B)"
+}

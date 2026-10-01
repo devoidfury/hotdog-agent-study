@@ -1,0 +1,23 @@
+{
+  "subject": "agentless",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 2,
+    "safety_enforcement": 3,
+    "token_economy": 5,
+    "orchestration": 4,
+    "interop": 3,
+    "operability": 4,
+    "originality": 8,
+    "durability": 1,
+    "docs_dx": 5
+  },
+  "weighted_total": 42.0,
+  "band": "D",
+  "closest_anchor": "codel (23.0, D): like codel it has no agentic loop, no permissions, no compaction, and zero self-tests/CI; it lifts above codel via enforced validation gates, deliberate context/cache discipline, and a field-defining pipeline design, but never gains harness machinery to reach the crush rung",
+  "strongest_dimension": "originality",
+  "weakest_dimension": "durability",
+  "provenance": "original (census upstream_remote matches local origin https://github.com/OpenAutoCoder/Agentless); not a fork; no identity collision in corpus; MIT license file confirmed",
+  "calibration_notes": "Rule (b) applied: dead >12mo remote-verified (GitHub API pushed_at 2024-12-22T19:29:31Z, all branches; shallow local clone with single commit, so HEAD alone not trusted); cap at B is non-binding at 42.0. Rule (a) N/A. Census corrections: non_test_loc 34068 overstated ~4x -- 32,032-line classification/swebench_lite_classifications.csv counted as code, real Python is 8,630 LOC; test_loc 1398 wrong semantics -- agentless/test/* is the SWE-bench run harness (~1.9k LOC), self-test LOC = 0; T0 tier criterion (dead >12mo) met, T1 run per dispatcher. Score sanity: between devon 33.5 (D) and auto-code-rover 45.5 (C), consistent with agentless having zero tests/CI vs ACR's CI-tested tooling."
+}

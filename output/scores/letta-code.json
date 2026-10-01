@@ -1,0 +1,23 @@
+{
+  "subject": "letta-code",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 8.5,
+    "safety-enforcement": 5.5,
+    "token-economy": 7,
+    "orchestration": 8,
+    "interop": 8,
+    "operability": 8,
+    "originality": 8,
+    "durability": 8,
+    "docs-dx": 7
+  },
+  "weighted_total": 75.25,
+  "band": "B",
+  "closest_anchor": "cline - weighted dimension-distance 4.75 (crush 7.25, pi 11.75, codex 14.75, nanocoder 14.75): thin client over centralized state, cline-equal orchestration/interop (8/8), cline's no-cache-discipline token rung (7), cline's off-repo docs problem (7); letta beats cline only on verification (8.5 vs 8, gating live-model scenario evals in CI, ci.yml:376-442) and loses on architecture (7 vs 8, six client turn loops across three hosts) and safety (5.5 vs 6, default mode auto-allows every tool, mode.ts:10). Cline's 76.5 B-ceiling stays 1.25 above and keeps its meaning",
+  "strongest_dimension": "verification (8.5, study-first): gating live-model tool-calling scenario evals across 8 models x 3 output formats in PR CI (ci.yml:376-442, integrator-verified job definitions; headless-scenario.ts:157,368-427) plus a CI meta-checker that makes any test file no shard claims a build error (check-test-coverage.cjs:116) over a 869-file/228.9k-LOC corps; held under 9 by zero fuzzing and string-only kernel-sandbox tests (no test ever executes sandbox-exec/bwrap)",
+  "weakest_dimension": "safety-enforcement (5.5, between nanocoder-5 and cline-6): shipped default auto-allows all tools (mode.ts:10,109-112), PermissionRequest hooks inert under that default (checker.ts:864), kernel jail opt-in for agent shells (sandbox-gate.ts:37), zero network-egress control by design (bwrap.ts:22), fail-open with no backend on Windows (availability.ts:129-135); the half-rung above nanocoder is the default-active, non-bypassable cross-agent memory guard (cross-agent-guard.ts:19-21) plus fail-closed memory-subagent confinement - which protect agent memory, not the user's machine",
+  "provenance": "original (letta-ai/letta-code; scout remote check 2026-09-29: created 2025-10-25, not a fork, ~51 contributors, 3,480 stars, pushed_at same-day-fresh), Apache-2.0 LICENSE verified in tree by integrator; sample clone shallow (1 commit, HEAD 1cab1b7 2026-09-26). Three honest imports: verbatim competitor system prompts (src/agent/prompts/source_{claude,codex,gemini}.md, documented in prompts/README.md), pi-ai provider library for the local backend (@earendil-works/pi-ai; compaction estimator ported with enumerated deviations, local-context-estimate.ts:4-22), patched vendored ink via scripts/postinstall-patches.js:1",
+  "calibration_notes": "No demotions: rule (a) inapplicable (original, not a sync-fork); rule (b) inapplicable (alive - HEAD 2026-09-26, pushed 2026-09-29). Census errata adopted and recorded (test_loc 1,126 -> 228,893 across 869 *.test.ts; contributors/commits 1 = shallow artifact; non_test_loc inflated by vendor/build artifacts - src-only numbers govern). Fractions kept (5.5/8.5) per hermes interop-8.5 precedent; integer floor would give 74.0 - B either way, interpolation cannot cross a band boundary. Scout-vs-lane overrides recorded not silent: six client turn loops (not scout's three); ACP conflict resolved by direct read (AGENTS.md:965 = cross-repo downstream publish, zero in-repo implementation, e11 stands). Verification 8.5 vs the held-at-8 hermes precedent is evidence-consistent: hermes's CI canaries were provider schema-drift, letta's are full live-model agent scenarios - the literal evals-in-CI ceiling-breaker, docked from 9 by sentinel assertions and the untested kernel last mile. Merge: 32 records (10+10+12), zero cross-lane concept collisions, 9 renames to corpus-canonical ids with aliases, 5 kind normalizations. Distribution unchanged: no 80+ added (4/17 = 23.5%). Report: subjects/letta-code.md; findings: merged-findings.jsonl (run dir)"
+}

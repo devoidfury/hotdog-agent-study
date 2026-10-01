@@ -1,0 +1,23 @@
+{
+  "subject": "kode-cli",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 7,
+    "safety_enforcement": 6,
+    "token_economy": 7,
+    "orchestration": 7,
+    "interop": 8,
+    "operability": 7,
+    "originality": 7,
+    "durability": 5,
+    "docs_dx": 7
+  },
+  "weighted_total": 70.5,
+  "band": "B",
+  "closest_anchor": "cline: broad-interop TS agent with a tested approval-policy chokepoint and a non-default OS sandbox; kode flips cline's default to YOLO but back-fills with a classifier-triggered LLM bash gate cline lacks; numerically crush-band",
+  "strongest_dimension": "architecture",
+  "weakest_dimension": "durability",
+  "provenance": "census says original; dispatcher lore says cline-lineage fork -- code says neither. Zero cline markers (attempt_completion/ClineProvider/condense/shadow-git all 0 hits); instead Claude-Code-internal artifacts in readable TS: USER_TYPE==='ant' gates (engine/query-executor.ts:22, ai/llm/anthropic/client.ts:97), USER_TYPE==='SWE_BENCH' retry profile (ai/llm/retry.ts:5), USER_TYPE==='external' log branches (logging/log/jsonLog.ts:173), plus claude-shaped vocabulary (canUseTool, ToolUseQueue barrier, plan mode, PreToolUse permissionDecision hooks). Descends from Claude-Code internals (same org's anon-kode route), not cline; no in-corpus upstream, so rule (a) not applicable. Apache-2.0 (LICENSE + manifest). License-risk finding filed on origin because the repo's self-granted Apache cannot clear a possibly-deobfuscated provenance; portables are concept-level.",
+  "calibration_notes": "No demotions; 70.5 mid-B, nearest band edge (65) is >2 pts away, no boundary-risk flag. Census corrections: test_loc understated (measured 27,450 lines across 221 *.test.ts(x) files vs 23,069 census); contributors:1 is a shallow-clone artifact, no dead/low-activity claim made (head 2026-08-28 recent, within 10 months). Verification capped at 7 per errata: real test corps but no in-CI evals, no fuzzing, and provider integration tests silently skip without API keys (integration-cli-flow.test.ts:17-21) -- below the anchors' 8 rung. Safety capped at 6: machinery under the approvals (OS sandbox, LLM gate, bypass safety floor) exists and is tested but is opt-in while ACTUAL_DEFAULT_MODE='yolo' (permissionModeState.ts:7); unlike nanocoder(5) the default is honestly disclosed (README.md:46) and deny-rules beat yolo (engine.ts:344-351), so 6 not 5. YOLO default filed as autonomous-confirm-failopen nuance."
+}

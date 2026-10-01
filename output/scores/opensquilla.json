@@ -1,0 +1,23 @@
+{
+  "subject": "opensquilla",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 8,
+    "safety-enforcement": 5.5,
+    "token-economy": 9,
+    "orchestration": 8.5,
+    "interop": 8.5,
+    "operability": 8,
+    "originality": 8,
+    "durability": 6,
+    "docs-dx": 9
+  },
+  "weighted_total": 77.5,
+  "band": "B",
+  "closest_anchor": "codex (mechanism anchor: only one whose compaction tiers, durable queue + restart recovery, MCP-both-sides and versioned protocol it matches; profile distance cline 8.0 < pi 11.0 < crush 11.5 < codex 13.0 < nanocoder 17.0; default posture is the nanocoder errata shape)",
+  "strongest_dimension": "token-economy (9) - three-tier compaction with no-LLM emergency window (runtime.py:12807), replay-projected budgets (compaction.py:804-811), proven-prefix keepalive + in-loop cache-break monitor (prompt_cache_keepalive.py:53, agent.py:9689) exceeding every anchor; docs-dx ties numerically at 9 but on volume + two spot-checks",
+  "weakest_dimension": "safety-enforcement (5.5) - deepest tested kernel-jail stack in the corpus (bwrap+seccomp/seatbelt/Windows ACL+WFP) shipped switched off for the owner (sandbox/config.py:95, opensquilla.toml.example:512-532), docs claim a Safe default the code contradicts (docs/sandbox-security.md:8), injection refusal path dead (origin_trace never populated; tools/dispatch.py:419-441)",
+  "provenance": "original (scout verdict upheld; census upstream_remote points at legacy org - canonical home TokenRhythm/opensquilla per update_check.py:58-61 LEGACY_V1 constant; org migration, not fork). Remote at review time: fork:false, archived:false, created 2026-05-06, pushed_at 2026-09-30 (day of run), 7065 stars/576 forks, Apache-2.0. Census contributors=1 is a depth-1 artifact: contributors API shows 1245 commits on dominant account + ~25-account tail.",
+  "calibration_notes": "Upper-B 77.5, 0.5 under the A floor: becomes A only via architecture (6.8k-line _turn_generator, agent.py:5829-12650, 2x codex's worst residual) or safety-enforcement (nanocoder-ERRATA default-posture pin at 5.5); flagged as a within-2-pts boundary case for Phase 3 per protocol. Verification 8 = frozen ERRATA ceiling, agreed by two lanes from independent evidence (no in-CI eval/fuzz; llm_router_acc excluded from all three CI pytest invocations ci.yml:1150/1305/1594). Rule checks recorded, no demotion taken: sync-fork outrank not triggered (original, fork:false); archived/dead B-cap not applied (archived:false, pushed day of run). Integrator-scored dimensions: originality 8 - DB-enforced epoch fencing + ingress receipts (storage.py:138/1511-9544, :1018-1035), guest-forced-SAFE principal boundary under owner-Full (boot.py:4208-4211), cache-break monitor (agent.py:9689), self-budgeted compaction (compaction.py:1376/410/1030), refusal-to-boot on schema-ahead (migrator.py:532) all verified in code; docked from 9 because the two flagship claims fail the reality test (router accuracy never evaluated in CI, self-learning already removed CHANGELOG.md:14; injection refusal cannot fire) and the chassis is codex-by-aspiration (bitfun precedent). Durability 6 - real institutional backing (TokenRhythm org, Authenticode, docker/wheelhouse/signed-desktop release pipelines, nightly CI, SECURITY.md + pinned-audit CI) at maximum cadence (pushed day of run), held down by 5-month age, effectively-1 bus factor (1245 commits on one account, young low-count tail, funding unverified): nanocoder 4 < bitfun 5 < opensquilla 6 < pi 7. Docs-honesty disagreement resolved: security-doc contradiction (sandbox-security.md:8, approvals doc vs CHANGELOG.md:416-418) priced once, in safety-enforcement, not double-charged to docs-dx. Dual-path fact (half-landed turn_runner split) docked dimension-locally by both lanes; merged as one concept in-flight-loop-decomposition with aliases opensquilla-c3/opensquilla-e19; token-economy explicitly not docked for it."
+}

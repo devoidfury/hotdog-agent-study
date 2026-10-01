@@ -1,0 +1,24 @@
+{
+  "subject": "grinta-coding-agent",
+  "tier": "T2",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 8,
+    "safety-enforcement": 7,
+    "token-economy": 7,
+    "orchestration": 7,
+    "interop": 7,
+    "operability": 8,
+    "originality": 7,
+    "durability": 6,
+    "docs-dx": 8
+  },
+  "weighted_total": 74.0,
+  "band": "B",
+  "closest_anchor": "pi - solo-maintainer local-first agent, loop/state separated from product surfaces, tested-but-default-off enforcement, compaction craft, honest SECURITY posture; grinta above pi on CI breadth and opt-in OS jail machinery, below on community, interop surface, and originality spread",
+  "strongest_dimension": "architecture (8, protocol-first 461-LOC orchestrator coordinator with zero >2k non-test source files - corpus-cleanest tree; held at 8 for forwarder-mixin sprawl and dual-Orchestrator naming collision, orchestrator.py:3-6,44-50)",
+  "weakest_dimension": "durability (6, remote-verified active pushed_at 2026-09-29 with MIT/PyPI/governance docs, but solo owner, 31 stars, 8 months - shallow clone honored per codel lesson)",
+  "provenance": "original (josephsenior/Grinta-Coding-Agent), MIT, shallow clone - remote-verified active and not archived; rules (a)/(b) n/a",
+  "calibration_notes": "Boundary recount 74.0 B vs provisional 78.5 A; A floor NOT crossed. Headline claim fails twice over: (1) mutmut 3.8.0 has NO failure semantics for surviving mutants - run() returns None, exits non-zero only on harness errors (clean tests :995, stats :334, association :865 of mutmut-3.8.0 __main__.py), no fail-under option exists, no threshold script in repo - so mutation-testing.yml:38 can never turn red on a mutant; (2) scope is 4,198 LOC / 218,066 non-test backend LOC = 1.92% (pyproject.toml:328-332), job name honestly says 'reliability modules'. Label-gated DeepSWE eval (run-eval.yml:4-10) = fire-and-forget workflow_dispatch to out-of-tree private repo + Slack + comment (:112-138), trigger job always green, release trigger fires POST-publish - decoration, not a release property per the gptme blocks-on-failure rule; contrast prime-agent behavioral-evals.yml:430. Third leg integration-runner.yml always skips: required assets backend/evaluation/agent_eval_pack.py and evaluation/integration_tests/scripts/run_infer.sh absent from tree (:31-44,:57-64) - OpenHands-lineage CI skeleton. VERIFICATION-9 LEDGER: grinta NOT admitted; ledger stays openhands (flagged)/prime-agent/smelt/gemini-cli. Verification 8 stands on its own mass: 162,279 test LOC/716 files, blocking coverage floor 74 (py-tests.yml:338), 14-job cross-OS matrix, 3-OS CLI e2e, bandit/pip-audit/codeql. ERRATA applied: >5k-LOC product-file rule vacuous (max file 1,555), arch held at 8 on mixin-sprawl grounds not file size; 8-ceiling = no fuzzing, no blocking evals. Safety 7 per hermes/deepagents precedent (tested blocking approval default-on + confine-or-refuse OS jail sandboxing.py:205-208 opt-in; docked for analyzer-exception -> declared/LOW failover security_enforcement.py:526-541, the inverse of deepagents' fail-closed classifier-unavailable). Rival-subscription-transport ruled license-risk, NOT safety-hole (ToS/usage-terms exposure borne by end user; no enforcement advertised-but-inert; distinct from claurst-2 oauth-client-impersonation which actively spoofs provider gates). Distribution: grinta at 74.0 does not touch the 80+ count."
+}

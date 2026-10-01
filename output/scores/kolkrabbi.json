@@ -1,0 +1,23 @@
+{
+  "subject": "kolkrabbi",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 9,
+    "verification": 8,
+    "safety_enforcement": 7,
+    "token_economy": 7,
+    "orchestration": 8,
+    "interop": 7,
+    "operability": 8,
+    "originality": 8,
+    "durability": 5,
+    "docs_dx": 8
+  },
+  "weighted_total": 77.0,
+  "band": "B",
+  "closest_anchor": "pi: solo-vision provider-agnostic agent with the loop separated from every surface and exemplary safety honesty; kolkrabbi exceeds pi on CI-enforced architecture gates and kernel-tested (opt-in) sandboxing, trails on cache discipline and interop breadth",
+  "strongest_dimension": "architecture",
+  "weakest_dimension": "durability",
+  "provenance": "original (census flag unchallenged): module github.com/onembyte/kolkrabbi, solo contributor, Apache-2.0 file present, no upstream-sync machinery, no corpus near-namesake",
+  "calibration_notes": "No demotions. CENSUS CORRECTIONS: test_loc 1256 -> 67548 (442 colocated *_test.go, ~2147 test funcs); non_test_loc 141596 -> ~55164 actual non-test Go (census swallowed docs/site/spec markdown); true size is T1-band by LOC rule, reviewed at dispatched T2 depth. Shallow clone (1 commit): no activity claims made; head_date 20 days old, remote check not required. BOUNDARY: 77.0 within 2 of 78/A; safety 7 (opt-in jail + word-match floor) and token-economy 7 (no cache-write discipline) held deliberately."
+}

@@ -1,0 +1,23 @@
+{
+  "subject": "hax",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 8,
+    "safety_enforcement": 3,
+    "token_economy": 7,
+    "orchestration": 6,
+    "interop": 5,
+    "operability": 7,
+    "originality": 7,
+    "durability": 4,
+    "docs_dx": 8
+  },
+  "weighted_total": 65.0,
+  "band": "B",
+  "closest_anchor": "crush (69.0): same shape -- native single-binary agent, hook-separated loop, behavior-level tests, unusually strict multi-OS CI, honest scope -- but crush ships an enforcing permission service and loop detection, which hax deliberately omits, so hax sits a notch below crush and above nanocoder",
+  "strongest_dimension": "verification",
+  "weakest_dimension": "safety_enforcement",
+  "provenance": "original (census concurs; MIT LICENSE file; upstream github.com/OleksandrChekhovskyi/hax; no fork/rename flags; no similarly-named subject in corpus)",
+  "calibration_notes": "Boundary: 65.0 exactly on the B/C line -- safety_enforcement 3 is the swing (prompt-only restraint but exemplary honesty and no misleading surface: between codel-2 and nanocoder-5). Verification held at 8 per errata ceiling (ASan+TSan+BSD-QEMU matrix exceeds crush's -race rung, but no evals-in-CI/fuzzing). Census correction: test_loc 39,917 undercounts -- git-tracked tests/*.c = 117 files / 47,776 LOC plus Python e2e; tier T1 unaffected. Contributors 2 is true but 377/378 commits are one author; bus factor 1 keeps durability at 4 (5 tags, Homebrew+AUR, HEAD 6 days old keep it off 3). No rule (a); no archived cap (active)."
+}

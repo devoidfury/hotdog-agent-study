@@ -1,0 +1,23 @@
+{
+  "subject": "codemachine-cli",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 0,
+    "safety_enforcement": 1,
+    "token_economy": 2,
+    "orchestration": 7,
+    "interop": 7,
+    "operability": 6,
+    "originality": 7,
+    "durability": 3,
+    "docs_dx": 4
+  },
+  "weighted_total": 42.5,
+  "band": "D",
+  "closest_anchor": "codel (verification/safety profile: zero tests, actively-stripped engine protections), though machinery is real (guarded FSM, recovery detection, MCP transition gate) so orchestration ambition is crush-like",
+  "strongest_dimension": "orchestration (tied with interop and originality at 7)",
+  "weakest_dimension": "verification",
+  "provenance": "original (census flag confirmed; GitHub API fork:false; upstream_remote is its own repo moazbuilds/CodeMachine-CLI; pushed_at 2026-02-25 matches shallow HEAD; not archived; Apache-2.0 file+manifest match)",
+  "calibration_notes": "No rule applied. test_loc 0 confirmed correct (no test files anywhere; empty bun test suite). ~7 months dormant remote-verified -- stale but under the 12mo dead bar, so no archived cap. Score is 2.5 below the C floor; boundary-sensitive to orchestration 7-vs-8 arguments (recovery design is unproven, which is why it stays 7)."
+}

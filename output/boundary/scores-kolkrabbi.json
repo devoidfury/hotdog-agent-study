@@ -1,0 +1,24 @@
+{
+  "subject": "kolkrabbi",
+  "tier": "T2",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 9,
+    "verification": 8,
+    "safety_enforcement": 7,
+    "token_economy": 8,
+    "orchestration": 7,
+    "interop": 7,
+    "operability": 8,
+    "originality": 7,
+    "durability": 6,
+    "docs_dx": 9
+  },
+  "weighted_total": 77.0,
+  "band": "B",
+  "closest_anchor": "pi",
+  "strongest_dimension": "architecture",
+  "weakest_dimension": "orchestration",
+  "provenance": "original; solo-vision, Apache-2.0",
+  "calibration_notes": "Boundary recount matches provisional 77.0 exactly (4th exact-match boundary). Architecture 9 held: gates block in CI (guardrails job ci.yml:59-63, zero continue-on-error repo-wide), arch-as-data with bidirectional-rot ratchet now EMPTY (internal/arch/layers.go:242), zero-god-file verified by measurement (max non-test .go = 1692 LOC internal/engine/agent.go), single RunTurn core shared by all surfaces (cli/run.go:382, slash.go:333); errata >5k-LOC docking inapplicable. Verification 8 per errata ceiling: 6 fuzz targets seed-only (no -fuzz step, no corpus, zero fuzz refs in workflows/scripts), KolkBench pre-registered with a failed model-pilot but no comparative run (bench/README.md Status) and no CI wiring, weekly live smoke opt-in and passes-without-key (smoke.yml:3-14) - no verification-9 ledger entry. Safety 7 per hermes precedent: hardline floor binds all tiers incl full-auto and is tested (permission.go:79-81, permission_test.go:79), kernel Landlock+Seatbelt escape-tested on both CI OSes, but jail default-off opt-in (config.go:53-56, settings.go:65) keeps it under 8; honesty ('floor, not a perimeter', docs/plan/13:317) credited, not double-counted. A floor NOT crossed; B-ceiling plateau member."
+}

@@ -1,0 +1,23 @@
+{
+  "subject": "plandex",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 3,
+    "safety_enforcement": 4,
+    "token_economy": 7,
+    "orchestration": 6,
+    "interop": 3,
+    "operability": 8,
+    "originality": 8,
+    "durability": 1,
+    "docs_dx": 7
+  },
+  "weighted_total": 55.0,
+  "band": "C",
+  "closest_anchor": "crush: Go client/server split with server-side plan/session state and approval-gated exec with no sandbox underneath; plandex separates loop/policy/state better but collapses on verification and interop",
+  "strongest_dimension": "operability",
+  "weakest_dimension": "durability",
+  "provenance": "original (GitHub API fork:false, remote plandex-ai/plandex); MIT license; shallow clone remote-verified: pushed_at 2025-10-03 (361 days at review), not archived, cloud wind-down commits at HEAD",
+  "calibration_notes": "Rule (b) NOT applied: dead duration 361 days < 12mo per remote check (would trip 2026-10-03); single-contributor wind-down flagged to synthesis instead. Census LOC corrected: 74,240 non-test / 2,511 test actual vs 87,141 / 2,408 census; T1 tier unchanged. Lands below nanocoder (60.5) on verification (3) + interop (3) despite arch/originality 7-8; 8+ on originality credited only for tree-sitter ellipsis edits with defending tests."
+}

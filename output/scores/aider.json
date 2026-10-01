@@ -1,0 +1,81 @@
+{
+  "subject": "aider",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": {
+      "score": 6,
+      "weight": 15,
+      "weighted": 9.0,
+      "lane": "core"
+    },
+    "verification": {
+      "score": 6,
+      "weight": 15,
+      "weighted": 9.0,
+      "lane": "safety"
+    },
+    "safety-enforcement": {
+      "score": 5,
+      "weight": 10,
+      "weighted": 5.0,
+      "lane": "safety"
+    },
+    "token-economy": {
+      "score": 7,
+      "weight": 10,
+      "weighted": 7.0,
+      "lane": "econ"
+    },
+    "orchestration": {
+      "score": 5,
+      "weight": 10,
+      "weighted": 5.0,
+      "lane": "econ"
+    },
+    "interop": {
+      "score": 5,
+      "weight": 10,
+      "weighted": 5.0,
+      "lane": "econ"
+    },
+    "operability": {
+      "score": 6,
+      "weight": 10,
+      "weighted": 6.0,
+      "lane": "core"
+    },
+    "originality": {
+      "score": 7,
+      "weight": 10,
+      "weighted": 7.0,
+      "lane": "integrator"
+    },
+    "durability": {
+      "score": 6,
+      "weight": 5,
+      "weighted": 3.0,
+      "lane": "integrator"
+    },
+    "docs-dx": {
+      "score": 9,
+      "weight": 5,
+      "weighted": 4.5,
+      "lane": "econ"
+    }
+  },
+  "weighted_total": 60.5,
+  "band": "C",
+  "closest_anchor": "pi",
+  "strongest_dimension": "docs-dx",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "Original upstream snapshot of Aider-AI/aider main @ 5dc9490bb (describe v0.86.3.dev-53, HEAD 2026-05-22), working tree clean; 13,138 commits / 199 contributors; origin remote + manifest aider-chat + continuous tag history per scout section 2; MCP/ACP absence native to this tree (git log --all -S mcp finds only binary-asset byte matches). Not a fork, rename-clone or leak; the sync-fork-must-not-outrank-upstream rule cannot fire.",
+  "calibration_notes": [
+    "Census artifact corrected study-wide: census test_loc 76,130 is the website doc tree (76,272 LOC); verification and all corpus claims use the recount 12,381 test LOC / 473 tests / 41 files (scout section 0; adopted by both scoring lanes).",
+    "docs-dx 9 carries a mass caveat: the 84-page doc tree includes website/blog/benchmark prose; LOC-weighted cross-subject comparisons of this metric will mislead against pi's denser engineering docs (aider has no internals/session-format counterpart).",
+    "Dedup: 28 lane findings -> 26 merged. aider-c8 folded into aider-e2 (concept overflow-hard-stop, econ record stronger, alias recorded); aider-c4 folded into aider-e1 (canonical concept equality-guarded-background-summarizer, alias recorded). aider-c7/aider-s4 and aider-c6/aider-e7 deliberately kept distinct (persistence vs orchestration, revert mechanism vs enforcement gates).",
+    "Reconciliations: overflow-hard-stop impact med(core)->high(econ) resolved high; safety's crush-8-style crash gloss resolved to operability 6 (no recover middleware, aider-e7); per-lane anchor placements kept per-dimension, overall closest anchor pi (econ call).",
+    "Integrator-scored dimensions: originality 7 verified in code (repomap.py:365-543 networkx pagerank over tree-sitter tag graph, base_coder.py:125-201 registry factory with dialect-switch re-summarization, chat_chunks.py:5-44, watch.py:70, io.py:867) - real ideas, but scaffolding conventional and signature ideas absorbed into band defaults. Durability 6 from metadata: Apache-2.0, 13,138 commits, 199 contributors, Aider-AI org + release CI; docked for 96% commit concentration in one author (12,614/13,138 across 3 aliases) and H1-2026 cadence down ~62% vs H2-2025.",
+    "No demotions applied: not a sync fork, not archived/dead at snapshot (HEAD 4 months stale at run date is flagged in durability, not capped). Band C is computed, not adjusted: 60.5 = sum(score/10 * weight) with weights summing to 100; S-band conditions moot, verification sits at 5-line but not below.",
+    "Weakest dimension is a three-way numeric tie at 5 (safety-enforcement, orchestration, interop); safety-enforcement named as weakest on risk grounds (absence of enforcement underlies the injection and auto-approval failure modes, aider-s1/s3/s5/s6)."
+  ]
+}

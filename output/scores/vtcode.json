@@ -1,0 +1,38 @@
+{
+  "subject": "vtcode",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 8,
+    "safety-enforcement": 7,
+    "token-economy": 8.5,
+    "orchestration": 8.5,
+    "interop": 8.5,
+    "operability": 8,
+    "originality": 8,
+    "durability": 5,
+    "docs-dx": 8
+  },
+  "weighted_total": 76.0,
+  "band": "B",
+  "closest_anchor": "codex",
+  "strongest_dimension": "token-economy",
+  "weakest_dimension": "durability",
+  "provenance": "original (vinhnx/VTCode, fork:false remote-verified, created 2025-08-29; aggressively codex-derived design with attributed Apache-2.0 codex ports -- providers/ollama.rs:3, sandbox policy 'following the Codex model' at vtcode-config/src/core/sandbox.rs:61, AGENTS.md workflow consulting openai/codex; MIT OR Apache-2.0, THIRD-PARTY-NOTICES present; solo author vinhnx ~98% of ~7,590 commits)",
+  "calibration_notes": [
+    "Weighted total 76.0 = sum(score*weight)/10 on a uniform 0-10 dimension scale (weights sum to 100). S-gate irrelevant on totals; safety-enforcement 7 and verification 8 both clear the >=5 floor.",
+    "Closest anchor resolved over a lane split: core anchored architecture nearer crush-7 (three parallel turn engines at turn_loop.rs:790 / vtcode-core runner/execute.rs / vtcode-acp handlers.rs:478, agreement-by-comment at tool_shaping.rs:44-46), safety and econ anchored their bands on codex; the subject-level read is codex because the design DNA is codex-attributed throughout (provenance) and several mechanisms reach codex-plus (Anthropic edit ladder compaction/mod.rs:856-892, digest-verified audit packs src/cli/session_store.rs:69-91) -- what vtcode never earns is codex's defaults and completeness (sandbox off, no egress boundary, no cost budgets, no SDK/MCP-server). Score neighbour is cline 76.5 B; vtcode lands just under it honestly: cline's architecture 8 / durability 9 outweigh vtcode's token-economy +1.5 and safety +1 leads.",
+    "Scout's nanocoder-rung flag REJECTED (upheld lane-safety): sandbox-off is not fail-open -- approval is forced for inline interpreters and dangerous commands (sandbox_runtime.rs:84-93, tests sandbox_runtime_tests.rs:49-133), command_might_be_dangerous fail-closes on un-unwrappable input (dangerous_commands.rs:21,614-619). This adjudication underpins safety-enforcement 7.",
+    "Cross-lane handoff resolved: econ's acp-trust-default (Zed workspace trust defaults FullAuto, config/acp.rs:31-37) folded into safety 7's wrong-defaults deduction, no second dock; scout's 'two safety trees' concern resolved as re-exports (vtcode-core/src/sandboxing/mod.rs:1-5) and not scored.",
+    "Docs-phantom family counted once per dimension: CostBudget phantom (c5, ARCHITECTURAL_INVARIANTS.md:269, zero code hits) and dead prefire tier with shipping docs claim (e3, PROMPT_CACHING_GUIDE.md:93) drive the single docs-dx 9->8 dock (e12 consolidation); the spend-bound absence is docked once in orchestration 8.5 (e4); s5 (unwired untrusted_data.rs fence) is a code-level safety hole, distinct axis, kept separate.",
+    "Verification 8 at the ERRATA ceiling (sixth confirmation): 9,890 #[test] + 325 #[tokio::test] property assertions, nextest ci profile, clippy -D warnings -- but zero CI workflows run the 5 differential fuzz targets (grep fuzz .github/workflows/ empty) and the in-CI tool-eval is environment smoke (tool-eval.yml:63-71, scripts/test_tools_e2e.sh cargo check + which rg). Cheapest path past the ceiling: cargo fuzz run against the existing 9-seed corpus in CI.",
+    "Originality 8 (integrator-scored, claims verified in code this pass): Anthropic-native edit ladder real at compaction/mod.rs:856-892 (corpus-unique, no other subject references clear_thinking); audit-pack digest verify real with MODIFIED/MISSING/NEW reporting (src/cli/session_store.rs:69-91); inline-interpreter approval split real and recursive (dangerous_commands.rs:69-96); include_str! single-artifact config docs real (settings_interactive/docs.rs:7); PromptCheckpointLease + redo navigation real (snapshots/native.rs:19-41). Capped at 8: attributed-codex DNA, flagship prefire tier dead (consumer without producer), two phantom guarantees.",
+    "Durability 5 (integrator-scored): hyperactive cadence (pushed 2026-09-29 = review day, 406 releases in 13 months) and clean MIT OR Apache-2.0 licensing, but ~98% solo commit dominance (7,453/~7,590 by vinhnx) incl. a throwaway-looking contributor account (44 commits), personal account with zero institutional backing, modest adoption (858 stars/90 forks), CHANGELOG backfill anomaly (2,147 headers predate repo creation), and a self-graded QUALITY_SCORE.md maintained by the same AI workflow that produced the phantoms. Between nanocoder-4 (has SECURITY.md with CI-verified controls, honest sandbox omission) and pi-7 (community, coherent stated posture).",
+    "Rules: (a) n/a -- provenance original, no upstream; codex ports are attributed and not a sync-fork lineage. (b) n/a -- active at review day, no archived/dead cap. No demotions applied; recorded per the never-silent clause.",
+    "Band sensitivity: 76.0 is within 2 pts of the A cut (78), but the single-dimension swing ceiling is 77.5 (architecture 6->7) and the most favorable lone durability revision gives 77.0 -- no lone change reaches A; robust B, boundary-noted (precedent codewhale 78.0 flagged, gptme 76.0).",
+    "Census corrections carried (never silent): test_loc 39,384 is the inline-#[cfg(test)] miss again (1,062 files; upper bound ~256k lines; same errata family as crush/cline/nanocoder/zeroclaw); contributors:1 is a shallow-clone artifact (remote ~10 accounts); manifest_file package.json is a red herring -- real manifest is Cargo.toml.",
+    "Findings merged 30 -> 30 (zero cross-lane concept collisions; disjoint lanes held). Six re-canonicalizations with aliases: e1->compaction-tiering, e2->prompt-cache-marking, e3->two-pass-background-prefire, e6->scheduled-agent-runs, e8->interop-matrix, s8->network-egress-approval (re-tagged off sandbox-delegation). Kinds normalized to schema (strength->portable, gap->anti-pattern, flag->nuance), originals kept as lane_kind.",
+    "Distribution check: 93 scored subjects, 7 at 80+ (7.5%), well under the 25% line; vtcode 76.0 does not move it.",
+    "Flagged: weakest wall is prompt-injection defense (unwired UntrustedDataFrame fence zero call sites, full-auto-only LLM probe swallowing errors, classifier transcript built from untrusted history); macOS kernel-denial tests never run in CI (ubuntu-only matrix); tests/cache_tests.rs + cache_e2e_tests.rs are FileCache suites, not prompt-cache suites -- later passes must not credit them."
+  ]
+}

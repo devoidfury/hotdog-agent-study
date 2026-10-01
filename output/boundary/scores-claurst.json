@@ -1,0 +1,24 @@
+{
+  "subject": "claurst",
+  "tier": "T2",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 6,
+    "safety-enforcement": 2,
+    "token-economy": 5,
+    "orchestration": 6,
+    "interop": 7,
+    "operability": 7,
+    "originality": 4,
+    "durability": 4,
+    "docs-dx": 6
+  },
+  "weighted_total": 54.0,
+  "band": "C",
+  "closest_anchor": "crush (69.0): reimplemented breadth, tested approval layer with no kernel floor; but safety lands below nanocoder's 5 (phantom sandbox + repo self-grant = codel-style 'reads misleadingly') and verification lacks crush's race-tested multi-OS rigor",
+  "strongest_dimension": "interop - ACP server (crates/acp + cli/tests/acp_smoke.rs), MCP client with oauth (crates/mcp), remote-control bridge (crates/bridge), VS Code extension with its own CI workflow (vscode-extension-ci.yml)",
+  "weakest_dimension": "safety-enforcement - /sandbox-toggle writes a setting no code reads (commands/src/sandbox.rs:137; sandbox_mode has zero consumers outside the command itself) while docs/commands.md:1183,1253 advertise functional isolation; and a repo's .claurst/settings.json self-grants permission rules (core/src/lib.rs:2003, one line below the SECURITY guards on sibling fields at :1992-2001) and hooks (merged :1963, exec'd via sh -c at core/src/lib.rs:3988-3996)",
+  "provenance": "ported-proprietary-source (repo license GPL-3.0): README.md:208-218 two-phase clean-room claim; src-rust shows no TS expression lineage - 'behavioral reimplementation, no code lineage' is the correct call - but spec/ ships leaked-tree extracts (spec/00_overview.md:3 names the local leaked checkout, file inventory :31-60; TS signature fences spec/01_core_entry_query.md:101-104; unreleased internal codenames :120-125) and the two-agent firewall is unverifiable; concepts-only porting, no code-adjacent portables",
+  "calibration_notes": "Independent re-score drops provisional 65.0 (B floor) to 54.0 (C): the band rested on safety-enforcement=4, but both named allegations confirm (phantom sandbox toggle; project-settings rule self-grant, extended by ungated project hooks). Verification ~34k test LOC (census 20.9k understates) is behavior-asserting at unit level but has no faux-provider loop tests/evals/fuzzing = 6, not band-carrying 7. Shallow clone: activity evidence-limited (single-commit history), mitigated by v0.1.7 remote tag and active release workflows. No fork/archived calibration rules apply."
+}

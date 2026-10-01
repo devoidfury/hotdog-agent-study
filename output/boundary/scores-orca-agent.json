@@ -1,0 +1,24 @@
+{
+  "subject": "orca-agent",
+  "tier": "T3",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 8,
+    "safety-enforcement": 8,
+    "token-economy": 8.5,
+    "orchestration": 9,
+    "interop": 7.5,
+    "operability": 9,
+    "originality": 8,
+    "durability": 4.5,
+    "docs-dx": 8
+  },
+  "weighted_total": 78.75,
+  "band": "A",
+  "closest_anchor": "codex - the four above-cline dimensions (safety 8, token-economy 8.5, orchestration 9, operability 9) are codex rungs absent from cline's corpus, and the lineage is declared in-repo (.boss/orca-codex-harness/architecture.md:1, context.rs:19-38 alignment comments, mentions.rs:439 .codex/plugins discovery, wire.rs:1739 codex-decode test); originality caps at 8 because the chassis is codex elaboration",
+  "strongest_dimension": "orchestration",
+  "weakest_dimension": "durability",
+  "provenance": "original (self-rename blade-deepseek->orca, residue Cargo.toml:59 + SECURITY.md:28); fork:false, created 2026-06-05, pushed_at 2026-09-30T05:05:58Z, MIT, bus-factor-1 remote-reconfirmed by this reviewer; boundary review read-only, anchors/anchor-excerpts.md incl. errata + main report for calibration context only",
+  "calibration_notes": "independent attack on both 9-rung claims passed: orchestration exhibits (runner.rs:3584 all-terminal repair test, budget_controller.rs:22-29 lease pool, subagent_recovery_contract.rs:543-552, state.rs:21-60 cache records) verified semantic and first-hand; operability exhibits (execution_journal fault-injected tests :135/:169/:353, history_contract.rs:682/754 resume-at both ways, doctor redaction) verified; verification held at 8 under frozen ceiling - s4 silent-skip confirmed real (runtime_lifecycle_contract.rs:2389-2400 non-macOS false; no macOS test job, release.yml macOS is build-only) but books as band-bottom deduction, not below-band, since broker/CLI/contract suites execute every CI; census LOC correction upheld (~240k test incl. inline mod tests); orca-runtime raw share 60.8% (main's 54% is product-only); no rule (a)/(b) trigger; A/B hinge = orchestration + verification (combined discounts -> 77.5 B, neither warranted); zero new findings"
+}

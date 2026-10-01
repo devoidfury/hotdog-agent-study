@@ -1,0 +1,24 @@
+{
+  "subject": "codewhale",
+  "tier": "T3",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 8,
+    "safety-enforcement": 7,
+    "token-economy": 8.5,
+    "orchestration": 9,
+    "interop": 9,
+    "operability": 8,
+    "originality": 8,
+    "durability": 7,
+    "docs-dx": 8
+  },
+  "weighted_total": 78.0,
+  "band": "A",
+  "closest_anchor": "codex (S 88.5) - codex-shaped typed execpolicy wired into the live loop with end-to-end denial acceptance tests, three compaction paths incl. LLM-free prune tier, SHA-pinned prefix cache, fleet/workflow journals with restart reconcile; distance to codex is the fused 87%-of-tree crate (run_turn turn_loop.rs:700-3106) and macOS-only automatic kernel sandbox, not mechanism quality",
+  "strongest_dimension": "interop",
+  "weakest_dimension": "architecture",
+  "provenance": "rename-clone: honest attribution-preserving self-rebrand of DeepSeek-TUI (LICENSE:3 retains 'DeepSeek-TUI Contributors'; crates/app-server/src/lib.rs:37-42 states it in-code; npm/deepseek-tui migration package present). Census 'original' wrong. Rule (a) uncheckable - DeepSeek-TUI not in corpus; no demotion per open-interpreter precedent. Independent boundary re-review @ 94130d9; anchors/anchor-excerpts.md only; main report read for calibration context, all scores re-derived from file:line evidence",
+  "calibration_notes": "Zero numeric disagreement with main (78.0 = 78.0, all ten dimensions equal). Boundary hinges adjudicated and held: safety 7 (kernel enforcement + live denial tests on macOS put it above the 6 'nothing underneath' rung despite Linux bwrap opt-in sandbox/mod.rs:347-349 and dormant seccomp), architecture 6 (fusion is crush-shaped at 7x but inside a boundary-gated Rust engine, not nanocoder's UI-trapped loop), token-economy 8.5 (survival-contract refusal last_round.rs:349-402 + projected post-prune recheck compaction.rs:668-669 exceed pi-8; missing codex-9 compaction hooks and image budgets), durability 7 (remote pushed_at 2026-09-30 same-day, 41k stars, but personal-account owner with ~90% commit dominance). Verification 8 held at frozen ceiling: in-CI eval legs are offline prompt-composition smoke (eval.rs:1-4 'without calling the network or any LLM endpoints') and no fuzzing anywhere. Census corrections carried (standing errata class): test_loc 61,627 -> ~261k+ (sibling tests.rs 222,850 + tests/ 38,134, 16,653 test attributes); contributors 1 = shallow artifact; provenance original -> rename-clone. No new findings - all observations map to canonical concepts already in the T3 merged-findings.jsonl; re-filing would corrupt convergence counts. Band A final."
+}

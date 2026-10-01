@@ -1,0 +1,24 @@
+{
+  "subject": "ferrum",
+  "tier": "T1",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 6.0,
+    "verification": 6.0,
+    "safety-enforcement": 6.0,
+    "token-economy": 7.0,
+    "orchestration": 5.0,
+    "interop": 7.0,
+    "operability": 6.5,
+    "originality": 7.0,
+    "durability": 4.5,
+    "docs-dx": 8.0
+  },
+  "weighted_total": 62.75,
+  "band": "C",
+  "closest_anchor": "crush",
+  "strongest_dimension": "docs-dx",
+  "weakest_dimension": "durability",
+  "provenance": "original (README.md:11 declares Pi inspiration, no code lineage; shallow clone, no activity claims made either way)",
+  "calibration_notes": "Boundary recount 62.75 C supersedes provisional 63.0 C; B floor NOT crossed (2.25 short). Zero CI verified (0 yml/yaml repo-wide) -> verification capped 6 per claw-code precedent (top of cap taken on property-test shape). Both named 1-pt swings granted (verif 5->6, safety 5->6 per shipped-default posture: grammar policy binds at default medium, fail-closed parse) and the total still misses 65. Safety held at 6: enforcement-tests-in-ci gate (keen-code) unreachable with zero CI; no kernel layer; no honesty-credit needed (binding machinery, hax doctrine rung 4+). Architecture 6 per pi-errata >5k-LOC product-file docking (agent/mod.rs 10,178 total / ~7,076 non-test fusing loop+TUI). No rule (a)/(b) applicable. CI absence charged once (verification), not double-docked in safety, per gemini-cli cross-dimension ruling."
+}

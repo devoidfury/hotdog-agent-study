@@ -1,0 +1,23 @@
+{
+  "subject": "claii",
+  "tier": "T0",
+  "lane_scores": {
+    "architecture": 3,
+    "verification": 2,
+    "safety-enforcement": 3,
+    "token-economy": 3,
+    "orchestration": 2,
+    "interop": 1,
+    "operability": 3,
+    "originality": 3,
+    "durability": 1,
+    "docs-dx": 2
+  },
+  "weighted_total": 24.0,
+  "band": "D",
+  "closest_anchor": "codel - tutorial-grade surface with no tests-that-run, no CI, and docs overclaiming behavior; claii at least has a bounded real tool loop, codel has none",
+  "strongest_dimension": "safety-enforcement",
+  "weakest_dimension": "durability",
+  "provenance": "original (agencyswarm/CLAII); no license -> pure-concepts porting only; shallow clone resolved via GitHub API: created 2025-11-15, pushed_at 2025-11-17 = 3-day burst, quiet 10mo (under 12mo bar, so no death claim; activity evidence-limited beyond that)",
+  "calibration_notes": "Census test_loc 0 kept: tests.py is a demo driver and calculator/tests.py imports nonexistent pkg.calculator - present but unrunnable, scored under verification as 2, not counted as test LOC."
+}

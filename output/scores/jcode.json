@@ -1,0 +1,34 @@
+{
+  "subject": "jcode",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": 9,
+    "verification": 8,
+    "safety-enforcement": 5,
+    "token-economy": 8.5,
+    "orchestration": 8.5,
+    "interop": 8,
+    "operability": 8.5,
+    "originality": 8.5,
+    "durability": 6,
+    "docs-dx": 7.5
+  },
+  "weighted_total": 79.25,
+  "band": "A",
+  "closest_anchor": "codex",
+  "strongest_dimension": "architecture",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "original (GitHub API: fork=false, created 2026-01-05, pushed 2026-09-29, MIT, 20.2k stars; no upstream-name remnants -- codex/claude-code mentions are session-import features; scout remote verification, census agreed)",
+  "calibration_notes": [
+    "No demotion rules fired: original (not a sync-fork derivative, so the must-not-outrank-upstream rule is inapplicable) and live/hyperactive (archived/dead B-cap inapplicable).",
+    "S-band floor check noted for completeness: safety-enforcement=5 and verification=8 are both at-or-above 5, but 79.25 is well under the 88 S threshold; lands A (78-87).",
+    "Scout-vs-reviewer conflict on safety: scout map predicted 'at best the 6-rung'; resolved to 5 per reviewer-safety's deeper evidence -- the 6-rung property (approval binds in-loop) is tested-against, pinned at tool/tests.rs:1105-1119, and the write/edit protection asymmetry (jcode-s4) is concretely exploitable.",
+    "Scout architecture flag 'agent.rs:296 std-Mutex of UI-facing state' disproved by reviewer-core at head (soft-interrupt queue, documented design, agent.rs:283-287); no architecture dock applied.",
+    "Hot self-reload recovery ledger credited in both operability (core, med confidence, execution forbidden) and orchestration (econ) -- different planes (session continuity vs crash-durable swarm coordination); cross-referenced in merged-findings.jsonl (c3<->e5), no double-count within a dimension.",
+    "Merged-findings: 27 records (8 core + 9 safety + 10 econ), zero cross-lane duplicate concepts to drop; safety lane's coarse 'permission-policy' stamp on five distinct findings retagged to canonical kebab ids with the original id kept in aliases; jcode-s9 retagged crash-classified-stop-reasons (it had borrowed c8's checkpoint-revert id while describing panic classification).",
+    "Originality 8.5 integrator-scored from direct code reads at head cc21714 (agentgrep context.rs exposure model + freshness decay, command-risk gate.rs, compaction.rs + 413-payload recovery, kv_cache_monitor.rs, import.rs byte-bounded folds, bash.rs gate wiring): mechanisms are real, not README marketing; docked from 9 because the daemon/versioned-protocol shape is the codex pattern reproduced, all originality is enhancement-level.",
+    "Durability 6 from census metadata: hyperactive cadence (created 2026-01-05, pushed 2026-09-29), MIT license, zero institutional backing, effective bus factor 1 against 597 open issues, exceptional solo community traction (20.2k stars / 2.3k forks). Contributors=1 treated as partly a shallow-clone artifact per scout caveat.",
+    "Verification scored from what tests assert and what CI runs, not census test_loc (which undercounts inline #[cfg(test)] modules).",
+    "Safety 5-vs-6 hinge recorded for future runs: fixing jcode-s3 (approval ambient-only) or jcode-s4 (write/edit asymmetry) each lifts safety-enforcement to 6 without touching anything else."
+  ]
+}

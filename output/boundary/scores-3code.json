@@ -1,0 +1,24 @@
+{
+  "subject": "3code",
+  "tier": "T1",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 7.5,
+    "safety_enforcement": 7,
+    "token_economy": 7.5,
+    "orchestration": 6.5,
+    "interop": 5,
+    "operability": 7,
+    "originality": 7.5,
+    "durability": 4,
+    "docs_dx": 7.5
+  },
+  "weighted_total": 68.0,
+  "band": "B",
+  "closest_anchor": "crush - solo-scale with real tested mechanisms (loop detection, resume, kernel-adjacent enforcement), verification below the anchors' 8-tier, distinctive design positions",
+  "strongest_dimension": "verification / token-economy / originality (7.5 each)",
+  "weakest_dimension": "interop",
+  "provenance": "original; MIT (LICENSE + threecode.nimble:5); shallow clone - no activity claims (head 4 days, evidence-limited)",
+  "calibration_notes": "Boundary recount 68.0 supersedes provisional 65.75; B floor HELD (+3.0). Safety 7 ruling: default-on kernel fence with in-CI denial tests beats the 6-rung despite (a) fence engine in pinned out-of-tree lib compiled into the same binary (box.nim:1-10 - kimi/pi-tui shape, not openhands covariate) and (b) default-open egress (sandbox.nim:82 'allow *') - both cap at 7, neither docks to 6; honest capability fail-open (threecode.nim:477-486) is the disclosed pole of the fail-open family. Anti-approval thesis IMPLEMENTED: zero confirm/approve code in tool path, fence is sole enforcement. Sensitivity range 65.75-69.0, band-stable. Verification 7.5: blocking multi-OS tests incl. kernel-denial e2e; windows runs tty only (windows.yml:143); no fuzz/evals = ERRATA 8 ceiling; reproducible-build gate credited to supply-chain only per amazon-q ledger."
+}

@@ -1,0 +1,23 @@
+{
+  "subject": "memcode",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 8,
+    "safety_enforcement": 7,
+    "token_economy": 9,
+    "orchestration": 7,
+    "interop": 8,
+    "operability": 8,
+    "originality": 8,
+    "durability": 5,
+    "docs_dx": 7
+  },
+  "weighted_total": 75.5,
+  "band": "B",
+  "closest_anchor": "cline — both pair a property-asserting test corps with a broad product surface and a hub-docked architecture, and both sit at/below the verification-8 ceiling (no in-CI evals, no fuzzing); memcode lands fractionally under cline's 76.5",
+  "strongest_dimension": "token_economy",
+  "weakest_dimension": "durability",
+  "provenance": "original (census agrees); MIT license file; internal/forks/vaxis is a documented vendored fork (41,475 LOC) with upstream version NOT recorded (forks/doc.go:8-12) — supply-chain hygiene note, not a sync-fork; no rule (a) relation to any corpus subject",
+  "calibration_notes": "Census corrected before scoring: test_loc 0 -> 82,562 (477 *_test.go); non_test_loc includes the 41.5k-LOC vendored vaxis fork (first-party non-test Go ~96.2k) — tier unaffected. Shallow clone: no activity or contributor claims made (evidence-limited durability). Verification held at 8 per errata ceiling (no evals-in-CI, no fuzzing) despite dense property tests. No demotions. 75.5 is 2.5 below the 78 A-line, outside the 2-pt boundary-report window."
+}

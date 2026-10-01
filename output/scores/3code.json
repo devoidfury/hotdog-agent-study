@@ -1,0 +1,23 @@
+{
+  "subject": "3code",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 7.5,
+    "safety_enforcement": 7,
+    "token_economy": 7,
+    "orchestration": 5,
+    "interop": 4,
+    "operability": 7,
+    "originality": 8,
+    "durability": 4,
+    "docs_dx": 8
+  },
+  "weighted_total": 65.75,
+  "band": "B",
+  "closest_anchor": "crush (69.0, B) - single-author opinionated agent whose distinctive mechanisms (kernel-first fencing with zero approvals, model-driven context folding, reproducible builds) compensate for deliberately thin orchestration/interop",
+  "strongest_dimension": "originality",
+  "weakest_dimension": "interop",
+  "provenance": "original (census agrees); github.com/capocasa/3code, MIT license file present and matches nimble; not a fork; heavy reuse of the same author's sandwall library for the kernel sandbox backends (external dep, not vendored code)",
+  "calibration_notes": "No demotions. Boundary risk: 65.75 is within 2 pts of the 65 B/C floor. Census LOC corrected: non-test .nim = 32,628 (census 42,103 mixed in generated docs HTML), test .nim = 33,085 (census 29,180 undercounted harness/probe files). Shallow clone (1 commit) but HEAD 2026-09-25 is current - no activity claims made. Verification held at 7.5: real 33k-LOC property test corps incl. full-binary PTY harness, but no in-CI evals and no fuzzing (8-ceiling per errata). Safety 7 rather than 6: kernel enforcement is default-on AND tested (cascade/traversal/wall), unlike the 6-rung 'tested approval, nothing underneath'; held below 8 because the enforcement engine lives in external sandwall and the shipped default leaves network open (allow *) with no per-action consent layer."
+}

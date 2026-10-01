@@ -1,0 +1,23 @@
+{
+  "subject": "claw-code",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 5,
+    "verification": 6,
+    "safety_enforcement": 4,
+    "token_economy": 4,
+    "orchestration": 6,
+    "interop": 6,
+    "operability": 6,
+    "originality": 6,
+    "durability": 3,
+    "docs_dx": 7
+  },
+  "weighted_total": 53.5,
+  "band": "C",
+  "closest_anchor": "nanocoder (60.5, C) -- real-but-fail-open safety machinery, solo-operator churn, behavior-asserting tests, god-file-dominated tree; claw-code lands below it on a 19.8k-LOC CLI god file, a misdescribed sandbox fallback, and lossy LLM-free compaction",
+  "strongest_dimension": "docs_dx",
+  "weakest_dimension": "safety_enforcement",
+  "provenance": "port-derived:claude-code (self-declared) -- census 'original' is WRONG. src/__init__.py:1 'Python porting workspace for the Claude Code rewrite effort'; src/parity_audit.py:7,12-69 1:1 module map of the claude-code TS tree; committed surface snapshots of the proprietary tree under src/reference_data/ ('mirrored from archived TypeScript path'); crate rusty-claude-cli. The TS snapshot itself is gitignored/absent; no verbatim proprietary prompt text found in the Rust tree, so this is derivation-of-architecture-and-surface (claurst/crab-code family), not an in-tree leaked snapshot. MIT grant cannot clear derivation; concepts-only for us.",
+  "calibration_notes": "Census corrections: non_test_loc 127,586 -> ~108.4k measured (104,547 rust non-test + 3,856 py non-test; md blobs likely counted); test_loc 11,125 -> 12,104 (11,410 rust tests/ + 694 py). commits/contributors (1/1) are shallow artifacts: PARITY.md:9 logs 292 commits/3 authors at 2026-04-03; remote-verified pushed_at 2026-08-16, not archived -- no dead claim, no rule (b) cap. T2 stands (>100k). No calibration demotions; total well inside C band (8.5 above 45, 11.5 below 65)."
+}

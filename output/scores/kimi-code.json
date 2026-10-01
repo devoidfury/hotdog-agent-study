@@ -1,0 +1,23 @@
+{
+  "subject": "kimi-code",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 8,
+    "safety_enforcement": 6,
+    "token_economy": 8,
+    "orchestration": 8,
+    "interop": 8,
+    "operability": 8,
+    "originality": 8,
+    "durability": 8,
+    "docs_dx": 8
+  },
+  "weighted_total": 76.5,
+  "band": "B",
+  "closest_anchor": "cline (76.5, B ceiling): broad interop surface, tested approvals with nothing underneath, huge behavior-asserting test corps capped by no evals/fuzzing, and docking factors from a mid-flight tree migration; kimi's loop rigor and cache discipline lean codex-ward but the missing OS sandbox and v1/v2 dual-engine debt hold it at the same cline-shaped ceiling",
+  "strongest_dimension": "originality",
+  "weakest_dimension": "safety_enforcement",
+  "provenance": "original (MoonshotAI, MIT). One documented vendored fork: packages/pi-tui from earendil-works/pi subtree packages/tui pinned at 53816d7dcc5ebe3a0eedec3cd07196c3a66d83fd (UPSTREAM.md, intent-card governance, MIT/MIT). Not a sync-fork derivative of pi the agent; rule (a) not applicable. Distinct from kimi-cli (separate Python project) - no facts imported from it.",
+  "calibration_notes": "Census LOC sane (test 357k matches my per-dir recount; contributors=1/commits=1 are shallow-clone artifacts, head_date fresh, no dead/active assertions). No demotions. Verification capped at 8 per errata (no in-CI evals, no fuzzing; Windows matrix disabled ci.yml:93). Boundary risk: 1.5 below the 78 A line - architecture 7 vs 8 is the swing call (dual v1/v2 engine migration debt vs cline precedent). Safety 6 rung: approvals bind and are tested but zero OS-level enforcement (no seatbelt/bwrap/landlock/seccomp anywhere in src)."
+}

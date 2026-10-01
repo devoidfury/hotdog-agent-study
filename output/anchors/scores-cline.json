@@ -1,0 +1,23 @@
+{
+  "subject": "cline",
+  "tier": "T2 (anchor; census suggests T3)",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 8,
+    "safety-enforcement": 6,
+    "token-economy": 7,
+    "orchestration": 8,
+    "interop": 8,
+    "operability": 8,
+    "originality": 7,
+    "durability": 9,
+    "docs-dx": 8
+  },
+  "weighted_total": 76.5,
+  "band": "B",
+  "closest_anchor": "n/a - is anchor",
+  "strongest_dimension": "verification (8, tied with orchestration/interop/operability)",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "original (cline/cline), Apache-2.0, full history 350 contributors",
+  "calibration_notes": "Census test_loc=39k is badly wrong: 792 *.test.ts files total 255,600 LOC (census pattern evidently missed *.test.ts). Dispatcher expected A; evidence caps at 76.5: approval-only safety (no OS sandbox), no prompt-cache discipline, evals present but not wired to CI. B-ceiling reference subject."
+}

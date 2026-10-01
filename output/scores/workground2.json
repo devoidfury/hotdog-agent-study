@@ -1,0 +1,23 @@
+{
+  "subject": "workground2",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": 7.5,
+    "verification": 8,
+    "safety-enforcement": 7,
+    "token-economy": 8.5,
+    "orchestration": 8.5,
+    "interop": 8,
+    "operability": 8.5,
+    "originality": 7.5,
+    "durability": 6,
+    "docs-dx": 8
+  },
+  "weighted_total": 78.25,
+  "band": "A",
+  "closest_anchor": "codex",
+  "strongest_dimension": "token-economy",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "declared-divergent-fork:deepseek-reasonix (README.md:155 self-declares; 84 hash-identical files, 51 path-remapped; behavior-reimplementation per upstream-hardening-execution-record-2026-07-10.txt:7; forked from the 1.x line, upstream runs 2.x). Census provenance_flag unknown -> resolved. Also a committed-leak hygiene flag: Codex Desktop session JSONL with product prompts/tool schemas at repo root (no proprietary product source embedded -> no rule-3 treatment). Upstream deepseek-reasonix = 86.0/A; protocol rule (a) binds only sync-forks and a divergent fork may outrank on merit, but the merged total 78.25 sits below the parent on evidence, so the cap is moot under either reading; KiddPhenix<->esengine relationship unresolved from local data.",
+  "calibration_notes": "Census test_loc 44k wrong ~5.6x: measured 246,516 LOC / 696 *_test.go (scout correction adopted; same errata class as crush/cline/nanocoder/reasonix). No demotions or promotions applied, nothing silent: rule (a) not binding (divergent fork; total also numerically under the 86.0 parent), rule (b) not triggered (head 5 days pre-run, live CHANGELOG, dependabot). Double-counting control vs the upstream review: integrator inheritance audit (cache-impact.yml, e2e-bot.yml, cache_shape.go, InFlightTurnMeta all present in the reasonix tree) removed lineage-shared mechanisms from wg2 originality credit -> originality 7.5 despite six lane-unique findings; verified wg2-own: error-keyed+write-success loop guards (agent.go:2349-2362, storm_test.go), RunHub receipts/reconciliation (hub.go:13-31), Codex-as-provider NormalizeInvocation (provider/cli/cli.go:466-478), compactStuck ladder config. Durability 6: active + governance files (CODEOWNERS/SECURITY/CONTRIBUTING) but solo personal repo, no institutional backing, committed session-log/binary hygiene leaks, 278MB .git; contributors=1 shallow-clone caveat honored, personal-repo read stands. A/B boundary: 78.25 is 0.25 above the band floor -> recorded boundary-sensitive (pending-decisions class), no re-review triggered. Cross-subject coherence: every dimension <= upstream reasonix's matching score with named evidence (verification 8 vs 9 on zero fuzz targets; safety 7 vs 8 on unwrapped-with-warning vs refuse). Distribution check: below reasonix 86.0 / gemini-cli 84.5 / codex-infinity 83.5; 80+ rate unchanged. Lane disagreements resolved explicitly in subjects-workground2.md (anchor call cline-vs-codex -> codex; strongest-dimension 8.5 tie -> token-economy on corpus exclusivity; recover()-count scope difference noted)."
+}

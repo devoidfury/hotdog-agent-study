@@ -1,0 +1,23 @@
+{
+  "subject": "codex-infinity",
+  "tier": "T0 (differential triage vs codex)",
+  "lane_scores": {
+    "architecture": 9,
+    "verification": 8,
+    "safety-enforcement": 10,
+    "token-economy": 9,
+    "orchestration": 9,
+    "interop": 9,
+    "operability": 9,
+    "originality": 8,
+    "durability": 2,
+    "docs-dx": 6
+  },
+  "weighted_total": 83.5,
+  "band": "A",
+  "closest_anchor": "codex - it is codex's tree plus a patch layer (daily-upstream-sync.sh merges openai/codex/main)",
+  "strongest_dimension": "safety-enforcement",
+  "weakest_dimension": "durability",
+  "provenance": "sync-fork:codex CONFIRMED - LICENSE/NOTICE byte-identical to upstream; core-loop drift is version lag (turn.rs 3167 vs 3125); real delta = auto-next/goals/arc-monitor layer (core/src/auto_next_prompt.rs, goals.rs, arc_monitor.rs:15-25), bm25 tool search, plugins manager, multi-provider chat endpoint",
+  "calibration_notes": "Rule (a) respected: 83.5 < upstream codex 88.5. Durability 9->2: single maintainer, personal-cron sync infra with hardcoded /home/lee paths (scripts/daily-upstream-sync.sh:4,29), contributors=1 (shallow caveat but sync script confirms solo operation). Dimensions carried from anchor where verified in-tree; not a full T2 re-derivation."
+}

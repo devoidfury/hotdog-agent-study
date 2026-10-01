@@ -1,0 +1,23 @@
+{
+  "subject": "kolega-code",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 8,
+    "safety_enforcement": 6,
+    "token_economy": 7,
+    "orchestration": 8,
+    "interop": 8,
+    "operability": 8,
+    "originality": 8,
+    "durability": 7,
+    "docs_dx": 8
+  },
+  "weighted_total": 76.5,
+  "band": "B",
+  "closest_anchor": "cline — same one-canonical-loop-serves-many-hosts shape with approval-bound-but-un-sandboxed safety and a large property-asserting test corps; kolega beats cline on workflow-resume and cache discipline, trails on published SDK and IDE breadth",
+  "strongest_dimension": "orchestration",
+  "weakest_dimension": "safety_enforcement",
+  "provenance": "original (census flag confirmed): upstream remote github.com/kolega-ai/kolega-code matches manifest; vendored _bundled_skills synced from same-org kolega-skills via scripts/sync_bundled_skills.py with Apache-2.0 skill headers; shallow clone noted - HEAD is merge of PR #696 so census contributors:1/commits:1 is a shallow artifact, not bus-factor evidence",
+  "calibration_notes": "No rule (a) applicable (not a fork). Verification capped at 8 per errata ceiling: real test corps, no in-CI model evals (eval bundle is dependency-audited only, ci.yml:237-255), no fuzzing. Boundary: 76.5 is within 2 of the 78 A-floor; held at B on the 6 safety rung (no local OS sandbox, sandbox/local.py:13-14; compound-command permission-rule bypass, permissions.py:299-305 + terminal_tool.py:497). License: BUSL-1.1 binds (LICENSE:1, pyproject.toml:14 agree); census 'AGPL-3.0 (file)' is a misparse of the Change-License line (LICENSE:27-29) - concepts-only, clean-room assumed."
+}

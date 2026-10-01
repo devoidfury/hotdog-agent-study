@@ -1,0 +1,23 @@
+{
+  "subject": "cursor-agent",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 4,
+    "verification": 4,
+    "safety_enforcement": 4,
+    "token_economy": 2,
+    "orchestration": 3,
+    "interop": 3,
+    "operability": 3,
+    "originality": 3,
+    "durability": 3,
+    "docs_dx": 4
+  },
+  "weighted_total": 33.5,
+  "band": "D",
+  "closest_anchor": "codel (23.0): both lack a managed agent loop and any context plane (single API-call core, overflow is an error message); cursor-agent sits above codel on working approval-tested permissions and live CI, still well below nanocoder's 60.5",
+  "strongest_dimension": "architecture (4) -- cleanest relative spot: base.py tool-contract layer and provider abstraction, despite the triplet duplication and 1243-LOC interact.py loop; tied with verification/docs-dx at 4",
+  "weakest_dimension": "token_economy (2) -- no compaction, unbounded history, phantom trim_context_history",
+  "provenance": "original (verified): standalone Python harness, NOT a wrapper of the closed cursor-agent CLI binary -- no exec/subprocess of any Cursor product; Cursor tie is branding plus an optional caller-configured OpenAI-compatible gateway (factory.py:166-196). Brand-name collision with cursor.com's cursor-agent CLI is a corpus identity hazard, not a fork. Census manifest_file null is wrong: setup.py exists (cursor-agent-tools 0.1.43).",
+  "calibration_notes": "Census test_loc 1662 understated -- actual 2753 (tests/ + root test_*.py). Shallow 1-commit clone but head 2026-09-11 fresh; no dead/archived claims, no cap rule triggered. No rule (a) exposure. D band reflects thinness (no loop plane, no context management, CI filters out most of its own suite), not abandonment. Not near a band boundary."
+}

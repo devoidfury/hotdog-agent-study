@@ -1,0 +1,24 @@
+{
+  "subject": "kolega-code",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 7.5,
+    "verification": 8,
+    "safety-enforcement": 6,
+    "token-economy": 7.5,
+    "orchestration": 8,
+    "interop": 7,
+    "operability": 8,
+    "originality": 7,
+    "durability": 5,
+    "docs-dx": 7
+  },
+  "weighted_total": 72.75,
+  "band": "B",
+  "closest_anchor": "cline - tested binding approval with no OS enforcement underneath and a large CI-blocking property corps; kolega adds a content-keyed resume journal and ACP, subtracts SDK publication and rule-matcher rigor",
+  "strongest_dimension": "orchestration (content-keyed resume journal, ~15 property tests blocking CI; equals cline's 8, no codex-style queue plane)",
+  "weakest_dimension": "durability (pre-1.0, shallow clone leaves bus factor unverifiable; SECURITY.md and org CI partially offset)",
+  "provenance": "original (kolega-ai org; no fork/leak/rename markers); license BUSL-1.1 now with Change-License to AGPL-3.0+ at 2030-08-12 - census AGPL flag was that line misparsed; concepts-only portables enforced",
+  "calibration_notes": "Boundary recount 76.5 -> 72.75, band unchanged (B), 5.25 below A floor, not dispatched-decision-relevant beyond band. Safety 6 HARD holds despite confirmed compound-command rule bypass (permissions.py:299-305 whole-command matching under bash -lc): bypass consumed the 7-headroom (no per-segment analysis, no floor under hardcoded-AUTO sub-agent delegation agent_tool.py:358-362,865-869) but the interactive chokepoint is ASK-default, deny-before-dispatch tested, fail-closed on callback error and non-TTY (runtime.py:204-210, main.py:1421-1425) - 6 rung, not 5. Verification 8 at ERRATA ceiling: 172k claim inflated ~40% by _bundled_skills package-data py (30.6k, 23.5k shipped tools) + benchmarks fixtures incl vendored click tree (13.6k); real tests ~121k/416 files; CI blocks fast suite on 4-python matrix + coverage>=45 + pre-commit + codeql; slow/integration never CI-run (run_tests.sh:57); no evals/fuzzing in CI. Orchestration 8: resume tested yes (content-not-index, FIFO, resume-of-resume, malformed-row tolerance test_orchestration.py:521-838), kill-test absent. Errata >5k product-file check passes (app.py 3526 largest). Rules: (a) n/a, (b) not triggered (HEAD 2026-09-25). Shallow clone noted.",
+  "boundary_review": true
+}

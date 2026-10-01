@@ -1,0 +1,24 @@
+{
+  "subject": "gptme",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 8,
+    "safety-enforcement": 6,
+    "token-economy": 9,
+    "orchestration": 7,
+    "interop": 8,
+    "operability": 8,
+    "originality": 8,
+    "durability": 7,
+    "docs-dx": 8
+  },
+  "weighted_total": 76.0,
+  "band": "B",
+  "closest_anchor": "cline - broad tested core, strong interop surface, architecture docked by fused large files and duplicated host paths; no pi-grade loop/surface separation, nowhere near codex crate discipline",
+  "strongest_dimension": "token-economy",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "original",
+  "calibration_notes": "Independent boundary pass, provisional 76.0 unchanged on all three swing questions. (1) verification 8 not 9: eval-ci.yml:28 job-level continue-on-error forces the check green even under branch protection; fork PRs skip evals; fast_fail heuristic (eval-ci.yml:165) reclassifies all-fail runs as skipped. ERRATA 8-ceiling applies - evals-in-CI exists as telemetry, not as a gate. (2) safety 6 not <6: no-hook auto-confirm (hooks/confirm.py:228-231) is the documented headless contract (hooks/__init__.py:127, SECURITY.md:37), interactive path never falls through (hooks/cli_confirm.py:53-160), hook crashes fail CLOSED to skip (hooks/confirm.py:268); distinguished from nanocoder's below-6 jail-to-sh fail-open; silent non-TTY no_confirm auto-switch filed separately as safety-hole (cli/main.py:1082-1088). (3) architecture 7 not 8: dual step engines chat.py:896 vs server/session_step.py:741 plus api_v2.py 4055-LOC routes+logic fusion exceed the crush-7 docking shape despite an otherwise clean hooks/tools/logmanager layer; ERRATA 5k marker is a ceiling, not 4k amnesty. Durability evidence-limited on history/bus-factor (shallow clone; census contributors=1). No demotion vs provisional; no calibration-notes entry required.",
+  "boundary_review": true
+}

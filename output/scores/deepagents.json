@@ -1,0 +1,23 @@
+{
+  "subject": "deepagents",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 8,
+    "safety_enforcement": 7,
+    "token_economy": 8,
+    "orchestration": 7,
+    "interop": 8,
+    "operability": 8,
+    "originality": 7,
+    "durability": 9,
+    "docs_dx": 8
+  },
+  "weighted_total": 76.0,
+  "band": "B",
+  "closest_anchor": "pi - harness-first codebases whose enforcement stops at tested approval policy with documented honesty about the absence below, and property-named test corps; deepagents differs via institutional backing and eval infra where pi has an authored loop and session tree",
+  "strongest_dimension": "verification",
+  "weakest_dimension": "architecture",
+  "provenance": "original (langchain-ai/deepagents, MIT). Census-corrected lineage: internal fork only from deepagents-cli at v0.1.0 within the same repo (libs/code/THREAT_MODEL.md:3); no corpus fork candidates. Shallow clone (1 commit) => contributors=1 is an artifact; activity beyond head_date 2026-09-27 not asserted.",
+  "calibration_notes": "Boundary risk: 76.0 within 2 of 78 (B->A). Census test_loc=471,723 exactly reproduced as cloc over all directories named tests; 212,273 of it is JSON data (libs/evals/tests/evals/tau2_airline/data/db.json alone = 205,192) so real test logic ~257k (250k py + 7k js) vs ~172k non-test Python code LOC - tests>prod is real, headline inflated ~45%. Verification held at 8 per errata: model evals are workflow_dispatch-only (evals.yml:36), nightly cron is CodSpeed perf only, zero fuzzing. No demotions; license clean for portables."
+}

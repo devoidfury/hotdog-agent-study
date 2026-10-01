@@ -1,0 +1,23 @@
+{
+  "subject": "tau",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 7,
+    "safety_enforcement": 6,
+    "token_economy": 7,
+    "orchestration": 3,
+    "interop": 5,
+    "operability": 6,
+    "originality": 3,
+    "durability": 4,
+    "docs_dx": 7
+  },
+  "weighted_total": 56.5,
+  "band": "C",
+  "closest_anchor": "pi -- tau self-declares as a Pi-style/Pi-compatible Python port (loop.py:1, pyproject.toml:7); same three-layer shape and comparable core discipline, but lacking pi's cache warming, session-tree depth, interop surface, and operability polish, so it sits several rungs below pi on the same ladder",
+  "strongest_dimension": "architecture (7, tied with verification and token-economy; pure 376-LOC loop with enforced layer purity: src/tau_agent/loop.py, no upward imports)",
+  "weakest_dimension": "orchestration (3; no subagents/queue/loop-detection/checkpoints in core -- tau_coding/tools.py:627-646 exec plane, subagent hits are extension comments only)",
+  "provenance": "original (census) confirmed: independent Python codebase deliberately porting pi's architecture, not a code fork; no vendored pi source found; MIT license file matches manifest; upstream github.com/huggingface/tau; shallow clone (1 visible commit, HEAD 6 days old, no activity claims made)",
+  "calibration_notes": "rule (a) not triggered (not a sync-fork of pi). Census corrections: test_loc 41827 -> 51129 (tests/**/*.py, 73 files); non_test_loc 89129 overstates code -- src/**/*.py = 57229, remainder is ~23.7k markdown/website/lock. T1 tier unaffected. Not within 2 pts of 88/78/65/45."
+}

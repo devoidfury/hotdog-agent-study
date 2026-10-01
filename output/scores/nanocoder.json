@@ -1,0 +1,23 @@
+{
+  "subject": "nanocoder",
+  "tier": "T2 (census) - effective scope ~74k non-spec + 161k spec LOC",
+  "lane_scores": {
+    "architecture": 5,
+    "verification": 7,
+    "safety-enforcement": 5,
+    "token-economy": 6,
+    "orchestration": 6,
+    "interop": 7,
+    "operability": 6,
+    "originality": 7,
+    "durability": 4,
+    "docs-dx": 7
+  },
+  "weighted_total": 60.5,
+  "band": "C",
+  "closest_anchor": "n/a - is anchor",
+  "strongest_dimension": "verification",
+  "weakest_dimension": "durability",
+  "provenance": "original (Nano-Collective/nanocoder), MIT; shallow clone, solo-collective.",
+  "calibration_notes": "Census test_loc=1057 is badly wrong: colocated *.spec.* files total ~161k LOC (census pattern missed *.spec.*). Shallow-clone contributor count noted as artifact, but independent signals (single collective, no SECURITY.md) support low durability regardless. C-anchor for 'broad surface, weak core'."
+}

@@ -1,0 +1,24 @@
+{
+  "subject": "trae-agent",
+  "tier": "T1",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 5,
+    "verification": 4,
+    "safety-enforcement": 3,
+    "token-economy": 2,
+    "orchestration": 2,
+    "interop": 4,
+    "operability": 4,
+    "originality": 3,
+    "durability": 5,
+    "docs-dx": 4
+  },
+  "weighted_total": 36.0,
+  "band": "D",
+  "closest_anchor": "nanocoder (60.5, C) rather than codel (23.0, D): same shape - single standard loop, opt-in sandbox, MCP client, mocked provider tests - but trae-agent sits below nanocoder on every verification/safety/token-economy rung the anchors document",
+  "strongest_dimension": "operability/interop (tied at 4) - real MCP client with CI-run specs (tests/utils/test_mcp_client.py) and machine-readable trajectory JSON (docs/TRAJECTORY_RECORDING.md), though no ACP/SDK/IDE surface and server/ is a Readme stub",
+  "weakest_dimension": "token-economy - append-only history (anthropic_client.py:66) with no compaction anywhere, and retry_utils.py:37 blindly retries every exception 10x (legacy_config.py:138) including deterministic context-overflow errors",
+  "provenance": "independent boundary re-review, 2026-09-30; fresh read of base_agent.py, docker_tool_executor.py, retry_utils.py, anthropic_client.py, Makefile, both CI workflows, all 10 test files; anchors/anchor-excerpts.md incl. ERRATA read; subjects/trae-agent.md, scores/trae-agent.json, findings/trae-agent.jsonl NOT read",
+  "calibration_notes": "Provisional 44.0 (D) unreachable on evidence; boundary total 36.0 (D). Verification hinge resolved against 6: core loop (base_agent.py:163-185) has zero test references, Makefile:42 permanently skips 3 of 10 test files (563/1708 LOC) via env-gated skipIf, and skipped suites are rotted (test_google_client.py:28 patches nonexistent module path) - 4, not 5, not 6. Safety 3, not 4: --docker routes exactly 3 tools into the container (base_agent.py:68) while MCP/ckg fall through to host (docker_tool_executor.py:61-65) and no approval layer exists anywhere. C floor (45) not crossed and not close. Shallow clone noted; HEAD 2026-02-05 recent, no activity inference needed."
+}

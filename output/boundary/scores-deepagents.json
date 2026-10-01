@@ -1,0 +1,24 @@
+{
+  "subject": "deepagents",
+  "tier": "T2",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 8,
+    "safety-enforcement": 7,
+    "token-economy": 8,
+    "orchestration": 8,
+    "interop": 8,
+    "operability": 7,
+    "originality": 8,
+    "durability": 9,
+    "docs-dx": 7
+  },
+  "weighted_total": 76.5,
+  "band": "B",
+  "closest_anchor": "cline - institutional monorepo with library/SDK core consumed by product hosts, approval-only safety with zero OS enforcement, heavy release CI, out-of-repo reference docs; deepagents above cline on orchestration (async Agent-Protocol subagents) and token-economy tiering, below on interop breadth and on loop ownership",
+  "strongest_dimension": "durability (9, langchain-ai backing, ~60 workflows, release-please fan-out guards, remote-verified HEAD 2026-09-27)",
+  "weakest_dimension": "architecture (7, loop is upstream create_agent at graph.py:961 - assembly credited per library-core convention - but libs/code/deepagents_code/app.py 31,203 LOC is the corpus's worst god file, 4.4x its next-largest source file)",
+  "provenance": "original (langchain-ai/deepagents), MIT, shallow clone - remote HEAD reachable (1756bbe), active; rule (a)/(b) n/a",
+  "calibration_notes": "Boundary recount 76.5 vs provisional 76.0, band B unchanged, A floor not crossed. LIBRARY-CORE CONVENTION established here (dispatcher task 1): loop-in-upstream-library subjects are scored on the in-tree assembly/product plane - no docking for the absent loop, no credit for loop-internal properties, architecture capped at 8 since separation is only auditable to the create_agent boundary; symmetric with the openhands out-of-tree-core row (zero credit, zero blame). Verification stays 8 per the verification-9 ledger rule: no CI-triggered job asserts model behavior - all eval workflows are workflow_dispatch (evals.yml:36, evals_trials.yml:31, unified_evals.yml:4, harbor.yml:29, clbench.yml:29), the only scheduled sweep is performance-only (_benchmark_nightly.yml:8-11), and eval steps that exist are continue-on-error (evals.yml:271) - weaker than gptme's unblockable gate, no blocking line exists. Q4 census fix: tests-dir JSON = 213,047 lines (tau2 db.json alone 205,192); real test-logic mass is 346,755 Python LOC, still corpus-largest and property-asserting (test_permissions.py 124 tests, faux-LLM e2e test_end_to_end.py:224+, 1,018 tests in test_app.py). Delta vs provisional: token-economy 7->8 (DeltaChannel O(N^2)->O(N) checkpoint reducer graph.py:75-77; profile-driven fraction trigger summarization.py:269-277; provider cache middleware _prompt_caching.py:37-45). Safety 7 per hermes precedent row (tested fail-closed approvals incl. classifier-unavailable -> require_human auto_mode.py:3542-3546 + failed-spec latch :451-458, default virtual FS graph.py:639, but zero shipped kernel enforcement). ERRATA >5k product-file rule at full force on app.py keeps architecture at 7; maximal single-lane fix (arch 8) lands 78.0 but is barred by the errata symmetry, so the A floor is upheld, not rounded to."
+}

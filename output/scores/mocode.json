@@ -1,0 +1,23 @@
+{
+  "subject": "mocode",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 7,
+    "safety-enforcement": 7,
+    "token-economy": 8,
+    "orchestration": 7,
+    "interop": 7,
+    "operability": 7,
+    "originality": 8,
+    "durability": 4,
+    "docs-dx": 7
+  },
+  "weighted_total": 70.5,
+  "band": "B",
+  "closest_anchor": "crush: same shape - tested binding approvals with honest non-kernel ceilings, real orchestration (resume journals/cron), MCP client, verification capped by no-model-evals-in-CI; mocode lands 1-2 above crush's 69 on token economy minus crush's loop-breaker",
+  "strongest_dimension": "token-economy (8, tied with originality)",
+  "weakest_dimension": "durability",
+  "provenance": "original (census flag; manifest mocode-ai v1.6.6, MIT, remote wanxunyang/mocode; rename_clone_suspect false; nothing in-tree suggests a sync-fork; rule (a) not engaged). Shallow clone (1 commit) - activity claims evidence-limited, but head_date 2026-09-26 is 3 days old so no archived claim either way.",
+  "calibration_notes": "No demotions. Safety 7 is conditional on the full combination (default-on fingerprint grants + fail-closed off-TTY + hash-gated skill trust + realpath path jail, all tested, plus in-source honesty that the command denylist is not a security boundary, sandbox/command.ts:1); subjects missing any leg must not read this row as license for 7. Verification held at 7 per errata ceiling discussion: real faux-provider loop tests + property tests, but no fuzzing and the 61-task model benchmark is manual-only (ci.yml:59-61 gates offline smoke only) and test density (12.5k vs 71k) sits a rung under pi. Census: non_test sane (recount 71.6k incl. evals 3.2k + rust 8.0k); test_loc ~10% under recount (11,273 vs 12,522 in tests/), minor glob/edge difference, no tier impact."
+}

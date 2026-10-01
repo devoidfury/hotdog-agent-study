@@ -1,0 +1,23 @@
+{
+  "subject": "jazz",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 8,
+    "safety_enforcement": 7,
+    "token_economy": 8,
+    "orchestration": 8,
+    "interop": 7,
+    "operability": 8,
+    "originality": 8,
+    "durability": 5,
+    "docs_dx": 8
+  },
+  "weighted_total": 76.5,
+  "band": "B",
+  "closest_anchor": "pi: provider-agnostic core consumed by thin product surfaces, spec-named colocated test corps, cache-aware compaction; jazz trades pi's session-tree/rpc elegance for orchestration breadth (park/resume, daemon, bots, peers) and lands just under pi's 78.5",
+  "strongest_dimension": "token_economy",
+  "weakest_dimension": "durability",
+  "provenance": "original per census and self-consistent manifest (jazz-ai v0.15.43, lvndry, MIT file+manifest); no fork flag, no rename suspect, no corpus name collision; no facts imported from similarly named projects",
+  "calibration_notes": "No demotions. Boundary risk: 76.5 is within 2 of the 78 A-boundary; interop held at 7 (no ACP, no MCP-server exposure) - if synthesis weighs the published plugin SDK + four bot surfaces as cline-tier 8, this crosses to A. Census corrections: test_loc 994 -> 83,139 (358 colocated *.test.ts(x); glob miss); non_test_loc 213,697 overstated vs measured 157,272 non-test ts/tsx; commits:1 is a shallow-clone artifact, head_date 2026-09-27 fresh, no activity claims made. Verification capped at 8 by the anchor errata ceiling: real test corps, no in-CI evals (no workflow references evals/), no fuzzing."
+}

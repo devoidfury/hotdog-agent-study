@@ -1,0 +1,23 @@
+{
+  "subject": "maki",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 8.0,
+    "verification": 7.5,
+    "safety_enforcement": 6.5,
+    "token_economy": 8.0,
+    "orchestration": 7.0,
+    "interop": 8.0,
+    "operability": 7.5,
+    "originality": 8.0,
+    "durability": 4.5,
+    "docs_dx": 8.0
+  },
+  "weighted_total": 74.5,
+  "band": "B",
+  "closest_anchor": "pi — single-maintainer vision harness where the core keeps only the loop and everything else is an extension layer, with exemplary tested approvals and no OS sandbox underneath; maki matches pi's compaction craft and exceeds its interop (MCP + ACP + Claude-compatible headless), trails on cache warming, session depth, and durability",
+  "strongest_dimension": "originality",
+  "weakest_dimension": "durability",
+  "provenance": "original per census (no fork flag); solo author tontinton, MIT, upstream github.com/tontinton/maki; shallow clone but HEAD 2026-09-27 is 2 days old and v0.5.5 release artifacts exist, so activity asserted from HEAD safely",
+  "calibration_notes": "census correction: test_loc 18,385 is wrong; measured ~90k (inline #[cfg(test)] ~70.1k across 231 files + Rust tests/ dirs 12.7k + Lua plugin specs 11.3k); real non-test ~114k. Tier unchanged (T2). Rule (a) N/A (not a fork); no archived cap; no demotion. Verification capped below 8 by errata ceiling (no in-CI evals/fuzzing) plus ubuntu-only test job; safety cannot reach 7+ because no OS-level enforcement exists anywhere in the tree."
+}

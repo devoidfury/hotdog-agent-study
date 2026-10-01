@@ -1,0 +1,23 @@
+{
+  "subject": "bitfun",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 7,
+    "safety-enforcement": 6,
+    "token-economy": 8,
+    "orchestration": 9,
+    "interop": 8,
+    "operability": 8,
+    "originality": 8,
+    "durability": 5,
+    "docs-dx": 8
+  },
+  "weighted_total": 74.5,
+  "band": "B",
+  "closest_anchor": "cline (weighted distance 8.0; crush 8.5, pi 12.0, nanocoder 14.0, codex 15.0) -- codex is the mechanism/aspiration anchor every 8 and 9 is shaped by, but the aggregate sits on cline's profile: 6-rung approval-only safety, ceiling-bound verification, breadth over minimalism",
+  "strongest_dimension": "orchestration",
+  "weakest_dimension": "durability",
+  "provenance": "original (GCWing/OpenBitFun, MIT file + remote license record, personal account owner, v1.0.2). Census row shallow: 1 commit / 1 contributor are depth-1-clone artifacts (single commit is merge of PR #3228); remote API at review time: fork:false, created 2026-02-02, pushed_at 2026-09-30 (day of run), archived:false, 2364 stars / 250 forks. Codex-lineage nomenclature (app-server-protocol, sdk-host, agent-runtime-ipc) is design inheritance, not code; adapters wrap codex/claude-code/opencode/pi as external harnesses. Name collision with unrelated functorz BitFun checked and cleared.",
+  "calibration_notes": "B mid-band 74.5, between crush (69.0) and cline (76.5); gap to cline is durability 5-vs-9 and architecture 7-vs-8, while bitfun outscores cline on token-economy (8v7) and orchestration (9v8). Band rules checked, not silent: sync-fork/outrank-upstream rule not triggered (original, remote fork:false -- codex kinship is design inheritance); archived/dead B-cap not applied (archived:false, pushed day of run), check recorded with no demotion taken. Frozen verification-8-ceiling holds (no fuzz/evals/coverage; subject at 7, also docked on curated -p-slice CI breadth); ERRATA >5k-LOC docking applied repeatedly to architecture (coordinator 21911 + session_manager 18984 = 41k-LOC fused hub, ~6x crush's pair) while the CI-enforced six-layer boundary linter holds the periphery at 9-grade. Integrator-scored dimensions: originality 8 -- four corpus-firsts verified in shipped code (frozen-fact interrupted-turn recovery with no-widen privilege re-resolution, session_manager.rs:8686-8696/8748-8752 + execution_engine.rs:664-668; bidirectional ACP hosting five rival harnesses, builtin_clients.rs:5-36; CI boundary linter with ~14.5k generated rules; hash-pinned provider-usage TokenAnchor), docked from 9 because the chassis is codex-by-aspiration and the novel items are invariants/integrations, not invented subsystem machinery; durability 5 -- cadence at observed maximum (pushed day of run) plus SECURITY.md/GHSA, MIT, real distribution, held down by solo personal-account ownership, 8-month history, no institutional backing (nanocoder 4 < bitfun 5 < pi 7). Scout corrections adopted and closed: risk #3 bypass_permissions flag is a hook-facing session fact, not an enforcement bypass (tool_pipeline.rs:630-652); risk #4 twin-loop downgrades to dual-abstraction nuance (runtime.rs:1690-1715 delegates); residual adversarial lead passed on: plan-map-miss-returns-Allowed at tool_pipeline.rs:1297, not scored. Census LOC corrections for the ledger: non-test 1935063 inflated by shipped mini-app assets (true src/ Rust 980536, 81k test-shaped, + ~178k TS); use 980k:81k for ratios. Weakest engineering dimension (vs scored-weakest durability) is safety-enforcement 6: zero OS containment over computer-use/terminal/SSH/relay reach + FullAccess shipped default locked by a named test + zero injection defense, offset only by tested fail-closed policy and the honesty ledger; strongest is orchestration 9, the corpus's only 9 outside the S/A anchors (codex-9 anchor set matched plus budgets-with-cached-token-discount and loop breaker codex lacks)."
+}

@@ -1,0 +1,23 @@
+{
+  "subject": "ipsupport-code",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 7.5,
+    "verification": 7.5,
+    "safety_enforcement": 7,
+    "token_economy": 7.5,
+    "orchestration": 7,
+    "interop": 7,
+    "operability": 7.5,
+    "originality": 8,
+    "durability": 4,
+    "docs_dx": 6.5
+  },
+  "weighted_total": 71.75,
+  "band": "B",
+  "closest_anchor": "crush (69.0): same single-binary TUI shape with tested approval policy, loop-detection breaker, no cache discipline and no in-CI evals; ipsupport exceeds crush on sandbox-under-tests and property-test density but stays below cline's SDK-first multi-surface architecture",
+  "strongest_dimension": "originality",
+  "weakest_dimension": "durability",
+  "provenance": "original (census agrees); module github.com/ipsupport-llc/ipsupport-code matches repo, MIT license file, no fork markers, no vendored upstream blobs, no corpus name collision; shallow clone (1 visible commit, head 2026-09-25) so no activity claims in either direction",
+  "calibration_notes": "census test_loc 350 -> actually 23,520 (46 colocated *_test.go; glob miss, crush/cline class); non_test_loc 46,949 -> 25,743 measured Go non-test; tier T1 stands. Verification capped by errata 8-ceiling (no evals-in-CI/fuzzing); architecture docked per pi errata for cmd/agent/main.go 5981 LOC product file. No rule (a), no dead-cap. Not within 2 pts of any band boundary."
+}

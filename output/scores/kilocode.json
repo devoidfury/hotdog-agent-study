@@ -1,0 +1,36 @@
+{
+  "subject": "kilocode",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": { "score": 7, "weight": 15, "weighted": 10.5, "lane": "reviewer-core" },
+    "verification": { "score": 8, "weight": 15, "weighted": 12.0, "lane": "reviewer-safety" },
+    "safety-enforcement": { "score": 7, "weight": 10, "weighted": 7.0, "lane": "reviewer-safety" },
+    "token-economy": { "score": 8, "weight": 10, "weighted": 8.0, "lane": "reviewer-econ" },
+    "orchestration": { "score": 8, "weight": 10, "weighted": 8.0, "lane": "reviewer-econ" },
+    "interop": { "score": 8, "weight": 10, "weighted": 8.0, "lane": "reviewer-econ" },
+    "operability": { "score": 8, "weight": 10, "weighted": 8.0, "lane": "reviewer-core" },
+    "originality": { "score": 8, "weight": 10, "weighted": 8.0, "lane": "integrator" },
+    "durability": { "score": 8, "weight": 5, "weighted": 4.0, "lane": "integrator" },
+    "docs-dx": { "score": 8, "weight": 5, "weighted": 4.0, "lane": "reviewer-econ" }
+  },
+  "weighted_total": 77.5,
+  "band": "B",
+  "closest_anchor": "cline",
+  "strongest_dimension": "token-economy (8; tied numerically with verification/orchestration/interop/operability/originality/docs-dx, but the one 8 with integrator-verified evidence above its anchor rung: serialized-payload preflight trigger overflow.ts:101-122 + llm.ts:159-170, byte-identical pinned prompt blocks kilocode/session/prompt.ts:391-406)",
+  "weakest_dimension": "architecture (7, tied with safety-enforcement but weight 15): shipping loop is upstream prompt.ts patched in place - 2673 LOC vs upstream 1631, 69 kilocode_change blocks incl. rewritten loop-exit predicates :1560,:1604-1617; v1+v2 session engines both live on one store (sdk.gen.ts:5047 vs :10030)",
+  "provenance": "divergent-fork:opencode (Kilo-Org/kilocode; README:161, AGENTS.md:49/175, 740 kilocode_change marker files, scout hash census vs upstream sample, script/upstream/ sync tooling + watch-opencode-releases.yml); MIT (file + manifest); shallow clone - census contributors/commits 1/1 are clone artifacts, head merge of PR #14526 on 2026-09-26",
+  "calibration_notes": [
+    "Rule (a) fork ranking: kilocode 77.5 OUTRANKS upstream opencode 77.0. Permitted because provenance is divergent-fork, not sync-fork (scout verdict with hash census + own product surface: ~67.7k Kilo-original LOC, kilo-sandbox/kilo-gateway/kilo-vscode). Differential recorded per dimension: +1 safety-enforcement (7 vs 6 - fail-closed OS jail, human-only escalation, SNI-pinned egress proxy absent upstream), +1 orchestration (8 vs 7 - durable bounded board, daemon supervision, worktree management), -1 architecture (7 vs 8 - fork-overlay loop, dual live engines, message-part.tsx 3x triplication, 6110-LOC KiloProvider; all kilocode-specific debt). Net +0.5. If reclassified as a sync-fork, cap at the upstream row.",
+    "Archived/dead cap (rule b) not applicable: head 3 days pre-run, merge of PR #14526, 34 CI workflows incl. publish + upstream-release watcher. No demotions applied; none silent.",
+    "Anchor split resolved: core=cline, safety=nanocoder, econ=pi -> adopted cline; the two weight-15 dimensions dock cline-style (dual-tree arch, verification-8 ceiling) and the score vector is nearest cline's (deltas arch -1, safety +1, token +1, originality +1, durability -1). Nanocoder retained only as the safety 5-rung contrast (fail-open exec, no SECURITY.md); pi as the token-economy rung.",
+    "Verification frozen at 8 by the anchor ceiling shared with codex/cline/pi: Harbor model evals exist in CI but fire only on publish (smoke-test.yml:18-28,110-127), no fuzz targets anywhere; check-test-ci.ts + property-asserting confinement tests (macos-confinement.test.ts:189+, shell-network.test.ts:109-136) keep 7 from being defensible instead.",
+    "safety-enforcement 7, not 8: real jail is opt-in - default posture agent.ts:137 '*':'allow' with no OS boundary, honestly declared in SECURITY.md:15-19 (but that doc never mentions the opt-in jail - finding kilocode-s8); no Windows backend (backend.ts:38-46); wildcard rulesets not always-on kernel policy.",
+    "originality 8 (integrator-owned): mechanisms verified in code, not marketing - tls-client-hello.ts:94 SNI-equality gate, proxy.ts:109-158 + destination.ts:54-76 public-only pre-resolved dial, session-resume 1816 LOC versioned rival parsers (session-resume/index.ts:8-10), claude-migration.ts:17-29 receipt + typed refusal table, script/check-workflows.ts merge-hazard allowlist, board/context.ts:26 peer-untrusted instruction. Docked from 9: core engine inherited (3045 hash-identical files per census; ~67.7k/903.7k LOC Kilo-original), flagship import path is a migration tool not a harness mechanism, ratchet/board/checkpoint concepts converge with kode-cli/codex/cline already in corpus.",
+    "durability 8 from metadata: contributors/commits 1/1 treated as shallow-clone artifacts per census caveat; cadence evidence = head merge PR #14526 (five-digit PR numbers), head_date 2026-09-26, 34 workflows, MIT, commercial backing (Kilo-Org origin, kilo-gateway billing). Cap at 8: contributor/org/bus-factor unverifiable from snapshot; fork health coupled to upstream opencode (mitigated by active sync tooling, not removed). Same treatment as the opencode integrator row.",
+    "Census artifacts logged, never scored from: contributors=1, commits=1, shallow=true. Census test_loc 662k sane (42% of non-test LOC).",
+    "Band sensitivity: 77.5 is top of B; reaching A (78) requires verification 9 (declined per errata) or architecture 8 (declined - fork-overlay + dual-engine docks named). Same posture as opencode's 77.0 row.",
+    "Findings merged 9+12+10-1=30 in merged-findings.jsonl. Cross-lane dedup: kilocode-c7 (foreign-transcript-import) == kilocode-e8 (rival-transcript-import) -> canonical kilocode-m1, alias recorded, evidence unioned, kind unique, impact high. Six lane-coined concepts realigned to existing corpus ids with aliases recorded in-record: preflight-payload-compaction->usage-measured-compact-trigger, prompt-cache-discipline->prompt-cache-marking, compaction-tiers->compaction-tiering, architecture-ratchet->architecture-contract-test, bash-pattern-gating-honest->regex-denylist, security-md-conservative-not-stale->security-posture-docs.",
+    "Dual-tree fact docked in two dimensions (architecture by core, docs-dx by econ) - same fact, different dimensions, explicitly recorded to avoid silent double-counting; no dimension docked twice.",
+    "Read-only throughout: subject never executed; integrator code reads limited to static inspection of /data/samples/agents/kilocode for the two self-owned dimensions."
+  ]
+}

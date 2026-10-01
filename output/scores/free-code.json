@@ -1,0 +1,23 @@
+{
+  "subject": "free-code",
+  "tier": "T0 (leaked-snapshot triage)",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 1,
+    "safety-enforcement": 2,
+    "token-economy": 6,
+    "orchestration": 6,
+    "interop": 7,
+    "operability": 5,
+    "originality": 0,
+    "durability": 1,
+    "docs-dx": 3
+  },
+  "weighted_total": 38.5,
+  "band": "D",
+  "closest_anchor": "codex (same design category - mature loop/permission tree); moot for a leak since none of the code is this repo's",
+  "strongest_dimension": "interop",
+  "weakest_dimension": "originality",
+  "provenance": "leaked-snapshot:claude-code CONFIRMED: package.json:1-4 'claude-code-source-snapshot' v2.1.87 'Reconstructed ... Claude Code source snapshot'; prompts.ts:452 / system.ts:9 'You are Claude Code, Anthropic's official CLI'; internal marker prompts.ts:245 Slack channel ID C07VBSHV7EV; no LICENSE; test_loc 199 vs 1,914 source files; IPFS-mirrored",
+  "calibration_notes": "Per protocol rule 3: license-risk findings, NO code-adjacent portables (proprietary, no license at all). Safety 2: upstream mechanisms present (bashPermissions.ts:1469, autoCompact via query.ts:12) but README.md:66-72 markets deliberate removal of Anthropic security-prompt overlays and managed-settings guardrails - worse posture than absence-by-honesty. No band games: 37.5 mechanical D."
+}

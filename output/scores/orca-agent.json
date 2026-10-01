@@ -1,0 +1,23 @@
+{
+  "subject": "orca-agent",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 8,
+    "safety-enforcement": 8,
+    "token-economy": 8.5,
+    "orchestration": 9,
+    "interop": 7.5,
+    "operability": 9,
+    "originality": 8,
+    "durability": 4.5,
+    "docs-dx": 8
+  },
+  "weighted_total": 78.75,
+  "band": "A",
+  "closest_anchor": "codex (weighted distance 10.75 -- exact tie with cline 10.75, pi 11.75, crush 13.25, nanocoder 18.25; resolved to codex: the four above-6-rung dimensions -- safety 8, token-economy 8.5, orchestration 9, operability 9 -- are codex rungs cline does not occupy, and the repo's own PRD declares an 'Orca Codex-Style Harness' with compaction constants aligned to codex/grok/claude and codex wire-compat tests; lane-core's cline reading covers host-consumption shape only, qualified by an 8x host-file)",
+  "strongest_dimension": "orchestration (9, numerically tied with operability; chosen because it exceeds the codex-9 anchor set on two axes -- lease-based budget engine where concurrent children can never double-spend the parent (budget_controller.rs:22-29) and phase-level input-hash workflow cache resume (--resume-from-run-id cli.rs:350-351 -> runner.rs:1083, repair test runner.rs:3584) -- while operability 9 matches the codex/pi rung with no field-defining extra)",
+  "weakest_dimension": "durability (4.5: contributors API remote-confirmed single author echoVic/2333 contributions -- not a shallow artifact; ~4-month history; personal account, no institutional backing; 509 stars/4 forks/0 subscribers; agent-heavy development; kept above nanocoder 4 by code-matching SECURITY.md, real CI matrix, npm/installer distribution and day-of-run release cadence). Weakest engineering dimension: architecture (7) on runtime_host.rs ~23.3k product LOC, 4.6x the >5k errata threshold, five-plus files over threshold, orca-runtime owning 54% of code",
+  "provenance": "original (echoVic/orca-agent; fork:false re-verified by integrator 2026-09-30; created 2026-06-05, pushed 2026-09-30T05:05Z run day, archived:false, MIT file + GitHub record). Self-rename blade->orca with residue (root package still blade-deepseek, Cargo.toml:59; SECURITY.md:28 stale advisory URL); design explicitly codex-derived (.boss/orca-codex-harness PRD) but no cloned code; agent-heavy development footprint (.trae/, .superpowers/). Census artifacts corrected: LOC split ~395k product/~240k test (census 544k/103k miscounted inline mod tests); manifest_name terminal-bench-orca was the wrong manifest picked.",
+  "calibration_notes": "A 78.75, 0.75 above the band floor -> boundary re-review candidate flagged for dispatcher (protocol: within 2 pts of a cut). Swings: verification 7.5 (strict silent-skip reading) -> 78.0 still A; orchestration 8.5 (if crash-repair contracts discounted -- as second scorer I verified runner.rs:3584 + state.rs cache records and KEPT 9) -> 78.25; both -> 77.5 B. Rule (a) sync-fork not triggered (original; codex lineage = declared design inheritance + artifact compatibility, no in-corpus upstream). Rule (b) dead-cap not applied (archived:false, pushed day of run) -- checks recorded, no demotion taken. Frozen verification-8-ceiling holds (no fuzz/property/evals in CI), verification sits at the bottom of the 8 band: every kernel-enforcement negative test is macOS-gated with no macOS CI job and Linux fail-closed tests self-skip under CI bwrap (session_server_contract.rs:10037-10048, linux.rs:769-771 vs runtime-contract.yml:67). ERRATA >5k-LOC docking applied to architecture. First study case where census contributors:1 SURVIVED remote verification (contributors API returns exactly one author) -- the shallow-artifact caveat must not be applied reflexively here; recorded as a census-semantics nuance. Integrator-scored: originality 8 (four corpus-firsts re-verified in shipped code -- append-time journal invariants with fault-injection tests execution_journal.rs:1-15 + tests :135/:169/:353/:435/:461; content-addressed summary cache summary_cache.rs:16-38; lease budget engine budget_controller.rs:22-29; workflow phase cache resume; docked from 9 for declared codex chassis and DeepSeek monoculture); durability 4.5 (nanocoder 4 < orca 4.5 < bitfun 5 < pi 7). Distribution: adds nothing to 80+ cohort; reads between qwen-code 80.0 and cline 76.5. Concept renames for convergence: durable-workflow-plane->workflow-resume-journal, interop-gaps->interop-ceilings, docs-honesty-dx->onboarding-error-dx, docs-identity-debt->unrenamed-manifest-identity; folds: vm-denylist->regex-denylist (x5), naive-glob rules->permission-policy (x6). reviewer-econ's mid-run harness-AGENTS.md notice audited: no contamination, all lane findings cite subject paths."
+}

@@ -1,0 +1,24 @@
+{
+  "subject": "auto-code-rover",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 6,
+    "safety-enforcement": 1,
+    "token-economy": 3,
+    "orchestration": 3,
+    "interop": 3,
+    "operability": 4,
+    "originality": 6,
+    "durability": 2,
+    "docs-dx": 5
+  },
+  "weighted_total": 41.5,
+  "band": "D",
+  "closest_anchor": "codel (23.0 D) over nanocoder (60.5 C): shares codel's empty safety/orchestration/interop profile; only real loop-tested verification (6) and separated small-file architecture (6) lift it off the D floor",
+  "strongest_dimension": "verification (6) / originality (6, tied) -- SBFL-as-agent-tool is census-rare and loop semantics are actually asserted",
+  "weakest_dimension": "safety-enforcement (1) -- no approval/sandbox layer at all; model-written reproducers execute on host (app/agents/agent_reproducer.py:111 -> app/task.py:431), isolation delegated to a Docker practice README:209 discourages on the eval path",
+  "provenance": "Boundary re-review of provisional 45.5 C (sensitive both directions); provisional subjects/scores/findings not read. Shallow clone; remote-verified pushed_at 2025-04-24T07:58:24Z, archived:false via GitHub API. cloc: app 6968 / test 6141 code LOC; 927MB results/ blobs excluded. License SONAR-Source-Available-1.0 -> concepts-only portables.",
+  "calibration_notes": "C floor not held: demotion to D from weighted sum alone (safety 2->1 no phantom controls; verification 7->6 existence-only coverage gate + smoke-string integration asserts at test/test_acr_command.py:402-404; token-economy 3 context-overflow log+rethrow app/model/gpt.py:238-241). Max-case one-point upgrades elsewhere still 44.0 < 45. Rule (b) archived/dead caps at B and is non-binding here (cap cannot lower a sub-B score); 17mo quiet instead feeds durability=2. Subject met T0 'dead >12mo at HEAD' triage criterion.",
+  "boundary_review": true
+}

@@ -1,0 +1,34 @@
+{
+  "subject": "opencode",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": { "score": 8, "weight": 15, "weighted": 12.0, "lane": "reviewer-core" },
+    "verification": { "score": 8, "weight": 15, "weighted": 12.0, "lane": "reviewer-safety" },
+    "safety-enforcement": { "score": 6, "weight": 10, "weighted": 6.0, "lane": "reviewer-safety" },
+    "token-economy": { "score": 8, "weight": 10, "weighted": 8.0, "lane": "reviewer-econ" },
+    "orchestration": { "score": 7, "weight": 10, "weighted": 7.0, "lane": "reviewer-econ" },
+    "interop": { "score": 8, "weight": 10, "weighted": 8.0, "lane": "reviewer-econ" },
+    "operability": { "score": 8, "weight": 10, "weighted": 8.0, "lane": "reviewer-core" },
+    "originality": { "score": 8, "weight": 10, "weighted": 8.0, "lane": "integrator" },
+    "durability": { "score": 8, "weight": 5, "weighted": 4.0, "lane": "integrator" },
+    "docs-dx": { "score": 8, "weight": 5, "weighted": 4.0, "lane": "reviewer-econ" }
+  },
+  "weighted_total": 77.0,
+  "band": "B",
+  "closest_anchor": "cline",
+  "strongest_dimension": "architecture",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "original upstream snapshot (anomalyco/opencode); MIT; HEAD b471c2b 2026-09-26 via opencode-agent[bot] PR #51538; shallow clone - remote history not locally verifiable; no crush/charmbracelet lineage (grep zero hits)",
+  "calibration_notes": [
+    "Sync-fork rule not applicable: provenance original; archived/dead cap not applicable: active mainline. No demotions applied, none silent.",
+    "Anchor split resolved: core=cline, safety=pi, econ=codex; adopted cline because the dual-tree migration docks the two weight-15 dimensions exactly as cline's does; pi is the safety-dimension rung in isolation, codex the mechanism ceiling.",
+    "V2 credit rule: V2 mechanisms credited only where verifiably mounted in the shipped binary (v2.session.prompt route, api.ts:48,80 -> handlers/session.ts:21); token and safety behavior scored on the shipping V1 path.",
+    "safety-enforcement held at 6 despite default-allow `*: allow` (agent.ts:119-135): mechanism matches declared threat model, SECURITY.md honesty mirrors pi's 6-rung; lane's '5.5 defensible' recorded not averaged.",
+    "verification frozen at 8 by the anchor ceiling (no fuzzing, no in-CI evals; shared by codex/cline/pi); stubbed ctx.ask gap (shell.test.ts:164-166) noted but not double-counted.",
+    "originality 8: event-sourced-session-core, context-epoch-cache-baseline and protocol-level-cache-budgeting verified as tested code (context-epoch.ts:39-80; cache-policy.ts:1-36; anthropic-messages.ts:234-252), docked from 9 because the shipping cache path is the V1 static 2+2 heuristic (transform.ts:358-400) and the LLM-generated approval grammar (arity.ts:14-30) is novelty pointed at a security surface.",
+    "durability 8 from metadata: census contributors/commits 1/1 treated as shallow-clone artifact; cadence evidence HEAD 3 days pre-run + five-digit PR numbers + v1.18.32 + 26 workflows + published VSCode/GitHub-Action artifacts; MIT; unverifiable contributor/org facts cap at 8.",
+    "Census artifacts logged, never scored from: test_loc 358k claimed vs ~162.5k observed (683 files); contributors/commits 1/1.",
+    "Band sensitivity: 77.0 is top of B; crossing to A (78) would require raising architecture, verification or originality past its named docking evidence - declined.",
+    "Findings merged 10+13+13-1=35; single cross-lane dedup: opencode-c9 (process-local-activity) == opencode-s13 (crash-and-durability) -> canonical opencode-m1 (crash-durability-gaps) with aliases recorded."
+  ]
+}

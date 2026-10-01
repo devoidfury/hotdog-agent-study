@@ -1,0 +1,24 @@
+{
+  "subject": "octomind",
+  "tier": "T2",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 7.5,
+    "verification": 8,
+    "safety-enforcement": 5,
+    "token-economy": 8.5,
+    "orchestration": 7.5,
+    "interop": 8,
+    "operability": 7,
+    "originality": 8.5,
+    "durability": 5,
+    "docs-dx": 8
+  },
+  "weighted_total": 74.25,
+  "band": "B",
+  "closest_anchor": "crush (69): same shape - one crate with a 2k+ orchestrator loop plus a workflow/subagent plane and no kernel-level enforcement on the default path; octomind scores above on verification (8 vs 7), token economy and docs (8 vs 6), below on safety defaults (5 vs 6) and durability (5 vs 8)",
+  "strongest_dimension": "token-economy (tied with originality) - priced fold-economics gate from real provider price ratios (decision.rs:31-70,143-146) and provider-policy-gated idle cache keepalive (cache_keepalive.rs:15-30), both property-tested (amortization_tests.rs:36-172, cache_keepalive_tests.rs:43-224)",
+  "weakest_dimension": "safety-enforcement - every layer opt-in (sandbox=false default.toml:33, authorizer=false default.toml:751, guardrails need a user-authored file), no built-in approval prompt in the tool path (tool_execution.rs:301-363), write-only read-permissive sandbox that fail-opens on old kernels (linux.rs:16-28), no SECURITY.md; nanocoder rung 5: honest machinery + wrong default = below the pi 6",
+  "provenance": "independent boundary re-review, 2026-09-30; fresh full-rubric read of decision.rs, cache_keepalive.rs, cache.rs, sandbox/*, supervisor/{gate,authorizer}, tool_execution.rs, config-templates/default.toml, ci.yml, bench/; anchors/anchor-excerpts.md + ERRATA read; subjects/octomind.md, scores/octomind.json, findings/octomind.jsonl NOT read",
+  "calibration_notes": "DEMOPTION 79.5 (A) -> 74.25 (B). Drivers: safety 5 not 6 (default posture below the pi-6 rung: zero binding enforcement shipped, no HITL approval, no security-posture doc); token-economy 8.5 not 9 (economics genuinely measured and tested, but no codex-style cache-key/prefix-identity gating and no realized-cache-hit validation; equal to jazz's rung); architecture 7.5 (no file over the errata 5k threshold - display.rs 4025 largest - but main_loop.rs:15 'orchestrates all session operations' at 2183 LOC and ChatSession god-struct core.rs:185 keep it below 8; shared-session-core reuse across TUI/ACP/websocket blocks a lower score). Shallow clone noted; activity otherwise normal. Score-distribution check: with this row the 80+ share of scored subjects drops, consistent with protocol sanity rule."
+}

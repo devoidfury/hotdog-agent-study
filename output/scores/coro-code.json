@@ -1,0 +1,23 @@
+{
+  "subject": "coro-code",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 4,
+    "safety_enforcement": 2,
+    "token_economy": 6,
+    "orchestration": 3,
+    "interop": 4,
+    "operability": 4,
+    "originality": 5,
+    "durability": 2,
+    "docs_dx": 4
+  },
+  "weighted_total": 42.0,
+  "band": "D",
+  "closest_anchor": "codel (23.0) closer than nanocoder (60.5): real loop (core/src/agent/core.rs:726+), CI (test.yml:22-33) and 93 colocated tests put it above codel's no-loop/no-test oracle, but it sits below nanocoder on enforcement (nanocoder's jail is opt-in; coro's bash is explicitly opted out at bash.rs:466-467), session/operability, ACP, and coverage depth; lineage shape echoes in-corpus trae-agent (44.0 D), consistent ordering",
+  "strongest_dimension": "token_economy",
+  "weakest_dimension": "safety_enforcement",
+  "provenance": "original per census; no fork evidence in tree. README.md:26 claims 'Formerly known as Trae Agent Rust' and tool-spec compatibility (trae tool name str_replace_based_edit_tool at cli/src/tools/registry.rs:86) -- divergent rewrite lineage, distinct from in-corpus bytedance/trae-agent, rule (a) n/a. Shallow clone (.git/shallow): commits:1/contributors:1 artifacts; remote-verified GitHub API pushed_at 2025-10-30T09:34:18Z, archived:false, 369 stars, 24 forks, no tags -- ~11mo quiet, under 12mo dead bar, no rule-(b) cap. License: manifest MIT OR Apache-2.0 (Cargo.toml:10) but NO LICENSE file in tree (GitHub license:null).",
+  "calibration_notes": "Census corrections: test_loc 0 -> ~2,418 (25 files with colocated #[cfg(test)], 93 test fns -- census glob missed Rust colocated tests, same failure class as crush/cline artifacts); license row needs 'manifest-only, no LICENSE file'. Distribution: 42.0 sits 3 under the 45 C/D cut, consistent with trae-agent 44.0 (same shape, coro adds working CI + tiered compaction, loses ByteDance backing + enforcement is worse). No demotions applied. Boundary sensitivity noted in report (safety 2->3 or verification 4->5 still leaves it <45). Identity hygiene: only /data/samples/agents/coro-code + its manifest used; no similarly-named subject imported."
+}

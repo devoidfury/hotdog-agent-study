@@ -1,0 +1,24 @@
+{
+  "subject": "pi",
+  "tier": "T2",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 9,
+    "verification": 8,
+    "safety-enforcement": 6,
+    "token-economy": 8,
+    "orchestration": 7,
+    "interop": 6,
+    "operability": 9,
+    "originality": 9,
+    "durability": 7,
+    "docs-dx": 9
+  },
+  "weighted_total": 78.5,
+  "band": "A",
+  "closest_anchor": "cline (76.5): both have tested loop semantics and clean cores without any kernel-level safety floor; pi edges above on token economy, operability and docs, below on interop surface (no MCP/ACP)",
+  "strongest_dimension": "token-economy (tied with operability/originality) - economics-driven cache warming with a $0.05 minimum-expected-savings gate (packages/coding-agent/src/core/cache-warmer.ts:20) has no parallel in the anchor set",
+  "weakest_dimension": "safety-enforcement (tied with interop) - enforced blocking hook (packages/agent/src/agent-loop.ts:739) plus project-trust gate, but approval policy is opt-in extension territory and there is no OS-level boundary by design (SECURITY.md:50)",
+  "provenance": "independent boundary re-review, 2026-09-29; fresh full-rubric read of agent-loop.ts, compaction.ts, project-trust.ts, cache-warmer.ts, durable types, CI workflows; anchors/anchor-excerpts.md read, anchors/pi.md and scores/pi.json not read",
+  "calibration_notes": "Confirms Phase 1 total of 78.5 exactly. Band-A floor is carried by architecture=9 despite a 6852-LOC interactive-mode.ts:415 and 4023-LOC agent-session.ts - stricter god-file reading gives 8 -> 77.0 (B). No calibration demotions apply (not a fork, active at HEAD, not shallow)."
+}

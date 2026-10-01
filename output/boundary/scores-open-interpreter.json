@@ -1,0 +1,24 @@
+{
+  "subject": "open-interpreter",
+  "tier": "T3",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 9,
+    "verification": 8,
+    "safety-enforcement": 10,
+    "token-economy": 9,
+    "orchestration": 8,
+    "interop": 9,
+    "operability": 9,
+    "originality": 6,
+    "durability": 5,
+    "docs-dx": 8
+  },
+  "weighted_total": 83.0,
+  "band": "A",
+  "closest_anchor": "codex (88.5 S) - it is codex at the engine level (127-crate monorepo pinned to rust-v0.154.0 baseline, loop/compaction/sandbox unmodified), plus a ~30k-LOC fork-only provider plane (rival-harness wire emulation, ACP server, external-session import, cron scheduler) that lifts originality above the triage's 'just codex' reading but cannot close the 5.5-pt gap on originality/durability",
+  "strongest_dimension": "safety-enforcement",
+  "weakest_dimension": "originality",
+  "provenance": "divergent-fork:codex + honest attribution-preserving rebrand (README.md:47 declares fork; LICENSE/NOTICE byte-identical; FORK_BRANDING.md anti-global-rename policy; manifest still 'codex-monorepo'). NOT sync-fork: no upstream-sync automation (contrast codex-infinity daily-upstream-sync.sh); pinned tagged baseline with manual periodic rebase, own 0.0.x release line. Census rename-clone flag upheld only at manifest-identity layer.",
+  "calibration_notes": "stale-band history: census/Phase-2 triage stored band 'D' under a rename-clone POLICY cap (demotion recorded in calibration-notes), later REVERSED by dispatcher to 78.5 A; this from-scratch boundary pass independently confirms A at 83.0. Lane deltas vs triage: originality 2->6 (rival-harness-wire-emulation is ~20k LOC of tested, corpus-unique mechanism core/src/harness/, not config-plane), docs-dx 7->8 (8.9k-LOC in-repo docs + drift-gated website-docs-sync.yml; codex's 7 was stub-docs-specific); no demolitions. Rule (a) inapplicable (divergent fork) and satisfied (83.0 < 88.5); rule (b) n/a (shallow clone, no dead-activity claims from HEAD). A/B adjudication: deciding dimension verification 8 - 377k carried test LOC + 5-OS nextest CI + fork delta tested in codex idiom, so 78 floor is robust. DISTRIBUTION FLAG: 5th subject at 80+ - past the 25% sanity line, dispatcher should re-anchor before scoring another giant. Verification 8-ceiling honored (no in-CI evals, no fuzz targets)."
+}

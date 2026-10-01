@@ -1,0 +1,23 @@
+{
+  "subject": "developer",
+  "tier": "T0",
+  "lane_scores": {
+    "architecture": 3,
+    "verification": 0,
+    "safety-enforcement": 1,
+    "token-economy": 2,
+    "orchestration": 1,
+    "interop": 1,
+    "operability": 2,
+    "originality": 6,
+    "durability": 3,
+    "docs-dx": 4
+  },
+  "weighted_total": 21.0,
+  "band": "D",
+  "closest_anchor": "codel - both are loopless prompt-pipelines that write files with zero tests or enforcement; developer's edge is ancestral influence on spec-driven generation, not code",
+  "strongest_dimension": "originality",
+  "weakest_dimension": "verification",
+  "provenance": "original (smol-ai/developer), MIT; shallow clone resolved via GitHub API pushed_at 2024-04-07 = dead 29mo (HEAD date 2023-09 understated it)",
+  "calibration_notes": "Census accepted, no corrections. Historical weight deliberately not inflated into lane scores: originality 6 caps at 'pattern widely copied, mechanism is prompt text only'."
+}

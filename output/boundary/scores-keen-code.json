@@ -1,0 +1,24 @@
+{
+  "subject": "keen-code",
+  "tier": "T1",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 7.0,
+    "verification": 7.5,
+    "safety-enforcement": 6.0,
+    "token-economy": 7.5,
+    "orchestration": 5.0,
+    "interop": 6.0,
+    "operability": 6.0,
+    "originality": 5.5,
+    "durability": 5.5,
+    "docs-dx": 6.5
+  },
+  "weighted_total": 63.75,
+  "band": "C",
+  "closest_anchor": "crush - same Go solo shape: tested in-loop approval with zero OS enforcement, one auto-summarize compaction strategy; keen above crush on wire-level cache/permission assertions and no-god-file architecture, below on 3-OS matrix, loop detection, LSP",
+  "strongest_dimension": "token-economy (request-serialized per-turn trigger + wire-tested cache breakpoints + TurnMemory projection) and verification (35.9k property-asserting test LOC all blocking in race CI) - both 7.5",
+  "weakest_dimension": "orchestration - subagents only, no queue/resume/budgets/loop-detection",
+  "provenance": "original (github.com/mochow13/keen-code, MIT, solo; shallow clone, HEAD v0.57.0 2026-09-25 recent - active, rule (b) n/a)",
+  "calibration_notes": "Boundary recount vs provisional 63.0 C: total 63.75 C, B floor NOT crossed, no band change. Token-economy claim verified in code (trigger measures the serialized outbound request per tool turn, breakpoints cleared/reset with stable-turn-start + last markers and asserted at wire level, TurnMemory sidecar with per-tool retained-output compression) but placed cline-plus/pi-minus: len/3 token heuristic, no usage-feedback calibration, no warming, no realized-cache-hit validation, no tiering - below the san/jazz/waveloom/octomind measured-economics cluster, so it cannot carry the 2.0 to B. Verification 7.5: go test -race blocks on push/PR (go.yml:29-30) + govulncheck + CodeQL, tests genuinely property-assert; zero fuzz, zero evals, non-blocking coverage, single OS keeps it under the ERRATA-8 exemplars. Safety 6-rung confirmed: enforcement ships ON (build default), and unlike neovate the session allow-cache is never honored for elevated risk (requester.go:73) with danger computed independent of the model flag (bash.go:151); no OS layer. Subagent AutoApprover filed as bounded sub-floor hole (b5), no score dock. Generosity bound (verification 8 + token 8) = 65.0 exactly on the line with no mechanism upgrade - band held C per one-reviewer-final doctrine."
+}

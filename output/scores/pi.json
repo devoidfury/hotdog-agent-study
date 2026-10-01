@@ -1,0 +1,23 @@
+{
+  "subject": "pi",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 9,
+    "verification": 8,
+    "safety-enforcement": 6,
+    "token-economy": 8,
+    "orchestration": 7,
+    "interop": 6,
+    "operability": 9,
+    "originality": 9,
+    "durability": 7,
+    "docs-dx": 9
+  },
+  "weighted_total": 78.5,
+  "band": "A",
+  "closest_anchor": "n/a - is anchor",
+  "strongest_dimension": "architecture (9, tied with operability/originality/docs-dx)",
+  "weakest_dimension": "interop",
+  "provenance": "original (earendil-works/pi), MIT, full history",
+  "calibration_notes": "A-band floor reference. Census LOC sane (152k test LOC = 38% of code). Reaches A with safety 6 only because the minimalism is coherent, tested, and stated in SECURITY.md:50; a less honest no-sandbox subject must not read this row as license for 6. pi has no MCP/ACP and still cleared A - do not penalize rivals for the same gap without pi-level compensating depth."
+}

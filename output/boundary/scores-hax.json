@@ -1,0 +1,24 @@
+{
+  "subject": "hax",
+  "tier": "T1",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 8,
+    "safety-enforcement": 3,
+    "token-economy": 7,
+    "orchestration": 6,
+    "interop": 6,
+    "operability": 7,
+    "originality": 7,
+    "durability": 5,
+    "docs-dx": 7
+  },
+  "weighted_total": 66.0,
+  "band": "B",
+  "closest_anchor": "pi - solo-vision minimalism, hook-separated loop, by-philosophy no-MCP, exemplary posture honesty; but hax sits three safety rungs below pi (no enforced hook or trust gate) and its total tracks crush's shape",
+  "strongest_dimension": "verification",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "independent boundary re-review, HEAD 6753f30 (2026-09-23), full clone (no .git/shallow); read review-protocol.md, anchors/anchor-excerpts.md incl ERRATA, calibration-notes.md doctrine; subjects/hax.md, scores/hax.json, findings/hax.jsonl NOT read",
+  "calibration_notes": "SAFETY RULING (doctrine-critical): prompt-only restraint honestly labeled = rung 3, above codel's rung-2 because codel's bottom-of-2 was earned by DECEPTION (README 'fully autonomous' contradicting behavior + unauthenticated container-spawning API), while hax's disclosure (philosophy.md:83 'control and restraint, not enforcement'; README:32-34 sends permission-prompt seekers elsewhere) makes the identical absence informed. Honesty credit = exactly one rung, upward only out of the misleading band; it NEVER lifts absent mechanics above 3 (confirmed interim doctrine calibration-notes.md:698-700). Unified corpus rule with kolkrabbi: rung 2 = policy-as-prompt AND misleading; rung 3 = policy-as-prompt honestly labeled; rung 4+ requires binding machinery regardless of honesty. Shipped-default posture doctrine (octomind/forge) applied: shipped default is an unrestricted shell, scored as shipped. VERIFICATION: ASan/UBSan + TSan build dirs (scripts/check.sh:100-107) plus FreeBSD/OpenBSD QEMU jobs (ci.yml:81-86) plus real-binary e2e-through-mock-provider (tests/meson.build:151-166) all run via 'make tests' on every push/PR (ci.yml:3-5,65) - these BLOCK the commit, not advisory. 8 ceiling per ERRATA (no fuzz targets, no in-CI model evals). Durability 5 above nanocoder-4 on Homebrew/AUR + tag-gated static release; solo 377/378 commits caps it. No band movement vs provisional 65.0; B floor held."
+}

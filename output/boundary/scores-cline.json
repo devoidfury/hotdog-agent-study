@@ -1,0 +1,24 @@
+{
+  "subject": "cline",
+  "tier": "T3",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 8,
+    "safety-enforcement": 6,
+    "token-economy": 7,
+    "orchestration": 8,
+    "interop": 9,
+    "operability": 8,
+    "originality": 6,
+    "durability": 9,
+    "docs-dx": 8
+  },
+  "weighted_total": 76.5,
+  "band": "B",
+  "closest_anchor": "cline's own frozen rung (76.5, B ceiling); nearest neighbor pi (78.5) - this snapshot gained interop ground on pi (ACP server, rival-harness session import) but keeps the same tested-approval-nothing-underneath safety ceiling and lacks pi's cache warming and session-tree depth",
+  "strongest_dimension": "interop",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "independent boundary re-review, HEAD 29896ec (2026-09-25), anchors/anchor-excerpts.md only; anchors/cline.md, anchors/scores-cline.json, scores/cline.json NOT read",
+  "calibration_notes": "no OS sandbox verified (grep seatbelt/bwrap/landlock/seccomp across non-test sdk+apps = 0 hits); evals verified NOT in CI (zero grep hits in .github/workflows, evals/README.md:4 documents the workflow as off); anchor notes for ACP ('no ACP') and cache discipline ('none') are stale at this HEAD - facts corrected in report, rung assignments unchanged except interop held at 9 on the rival-harness import capability"
+}

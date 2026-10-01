@@ -1,0 +1,23 @@
+{
+  "subject": "codebuff",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 5,
+    "safety_enforcement": 5,
+    "token_economy": 9,
+    "orchestration": 7,
+    "interop": 7,
+    "operability": 6,
+    "originality": 8,
+    "durability": 6,
+    "docs_dx": 5
+  },
+  "weighted_total": 67.0,
+  "band": "B",
+  "closest_anchor": "cline",
+  "strongest_dimension": "token_economy",
+  "weakest_dimension": "verification",
+  "provenance": "original (census flag confirmed): manifest package.json name=codebuff-project, origin CodebuffAI/codebuff. Public repo is a squashed export mirror of a private tree (HEAD 'Sync public snapshot from freebuff-private'; pr-hygiene.yml:102-104 says accepted PRs are hand-ported into the private source). NOT related to the 'forge' row (forge-code-evals, antinomyhq/forge) -- no forge references in this tree; identity kept separate per brief appendix. Shallow clone: contributors=1 and commits=1 are snapshot artifacts, not bus factor; pr-hygiene.yml:63 replays 'the last 300 PRs', so a real contributor community exists around the mirror.",
+  "calibration_notes": "Rule (a) n/a (no upstream in corpus). Census correction: test_loc 122213 -> 151832 measured (find '*.test.ts|*.test.tsx|*.spec.ts'); non-test 186686 vs census 184205; T2 tier unaffected. Boundary risk: 67.0 is exactly 2 pts above the 65 B/C line; verification=5 could read 4 if the verification-8 rung's 'CI runs the corps' precondition is enforced strictly (public CI runs build+smoke only, ci.yml:33-58), and token_economy=9 could read 8 next to codex's 9. Strongest (token_economy 9): cache-expiry-gated compaction trigger (compact-history.ts:1066-1113) + mechanical/model/fallback tiering with failure-never-fails-the-run (model-compaction.ts:316-384). Weakest (verification 5): 151.8k LOC behavior-asserting tests that public CI never executes; docs/testing.md:16 describes the private CI."
+}

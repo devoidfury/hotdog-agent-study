@@ -1,0 +1,23 @@
+{
+  "subject": "waveloom",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 7,
+    "safety_enforcement": 6,
+    "token_economy": 9,
+    "orchestration": 7,
+    "interop": 7,
+    "operability": 8,
+    "originality": 8,
+    "durability": 5,
+    "docs_dx": 8
+  },
+  "weighted_total": 72.5,
+  "band": "B",
+  "closest_anchor": "crush: same shape (Go single-binary TUI agent, bwrap/seatbelt sandbox, rule-engine permissions), but waveloom's separated loop/guard/compaction modules and cache-economy depth lift it from crush's 69 toward the cline side",
+  "strongest_dimension": "token_economy",
+  "weakest_dimension": "durability",
+  "provenance": "original per census, accepted: manifest github.com/Menfre01/waveloom, Apache-2.0 file, NOTICE lists only third-party libs; Claude Code patterns (plan mode, opusplan->proplan, hooks, .claude/* compat) are behavioral borrowing, no vendored code found",
+  "calibration_notes": "census test_loc 0 -> actual 73,104 (145 colocated *_test.go); non_test_loc 109,605 -> measured Go non-test 60,954 (Go total 134,058). Shallow clone but HEAD 2026-09-14 fresh, no activity claim needed. No rule (a) relationship, no demotions. Safety-enforcement capped at 6 by untrusted-project-directory hook execution and opt-in fail-open sandbox defaults despite machinery above the 6-rung."
+}

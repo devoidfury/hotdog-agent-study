@@ -1,0 +1,24 @@
+{
+  "subject": "claw-code-agent",
+  "tier": "T1",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 5,
+    "verification": 5,
+    "safety-enforcement": 4,
+    "token-economy": 6,
+    "orchestration": 6,
+    "interop": 6,
+    "operability": 6,
+    "originality": 3,
+    "durability": 3,
+    "docs-dx": 5
+  },
+  "weighted_total": 50.0,
+  "band": "C",
+  "closest_anchor": "nanocoder (60.5): both are faux-backend behavior-tested cores with regex-denylist safety and no sandbox; claw scores below on verification (zero CI), originality (declared parity port of Claude Code internals), and durability (solo, unlicensed)",
+  "strongest_dimension": "token-economy",
+  "weakest_dimension": "originality",
+  "provenance": "Suspected port from leaked/de-obfuscated Claude Code (npm) snapshot: 32 in-code 'Ported/Mirrors from npm src/...' declarations naming unreleased TS internals (src/bash_security.py:4, src/microcompact.py:3, PARITY_CHECKLIST.md:1); no LICENSE file, GitHub license=null, while README claims open-source. License-risk; no code-adjacent portables.",
+  "calibration_notes": "Raises provisional 44.0 (D) to 50.0 (C). Verification held at 5, not 6: tests are property-proving (tests/test_agent_runtime.py:623,704,2842) but no CI exists to run them and 163/1233 test an unwired module (src/bash_security.py, zero src importers). Shallow clone neutralized via remote check (pushed_at 2026-06-22, not archived)."
+}

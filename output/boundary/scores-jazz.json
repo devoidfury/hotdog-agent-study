@@ -1,0 +1,23 @@
+{
+  "subject": "jazz",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 7.5,
+    "verification": 8,
+    "safety-enforcement": 6.5,
+    "token-economy": 8.5,
+    "orchestration": 8,
+    "interop": 7,
+    "operability": 7,
+    "originality": 8,
+    "durability": 5,
+    "docs-dx": 8
+  },
+  "weighted_total": 74.75,
+  "band": "B",
+  "closest_anchor": "pi - solo-author strong-vision system with cache discipline as a first-class feature, honest security posture, and deep in-repo docs; jazz has broader surfaces (bots/daemon/A2A) but an estimator-based rather than measured compaction trigger and thinner backing",
+  "strongest_dimension": "token-economy",
+  "weakest_dimension": "durability",
+  "provenance": "boundary re-review, fully independent: subjects/jazz.md, scores/jazz.json, findings/jazz.jsonl not read; protocol + anchors-with-ERRATA read; ~136k non-test TS, shallow clone (history evidence-limited, HEAD 2026-09-27)",
+  "calibration_notes": "Verification 8 per ERRATA ceiling: eval harness is real (evals/runner.ts, judge, A/B, memory-judgment calibration) but zero CI workflows run it (grep of .github/workflows = no eval hits; only cron is community-plugin-catalog.yml:6) and no fuzzing exists; an exists-but-never-runs harness does not break the ceiling. Interop 7 upheld: no ACP and no MCP-server exposure (MCPServerManager is client-side, mcp-server-manager.ts:1-3), but tested MCP client + A2A server door validated against @a2a-js/sdk parsing (peers/a2a.test.ts:70) + CI-provenance-published @jazz/plugin-sdk (release-plugin-sdk.yml:26-28) put jazz at/above the crush/nanocoder 7 rung; 8 not reached (no IDE surface, types-only SDK). Token-economy 8.5: trigger is a feedback-calibrated estimate (provider usage.promptTokens anchors ratio and measured request overhead, token-counter.ts:342-401) - below pi's measured-projection 8 on trigger fidelity, above it on ladder depth (4 gated rungs), overhead-in-budget, and cache-aware ephemeral nudging with tested breakpoint placement (ai-sdk-service.test.ts:1979-1998). Architecture docked below the 8 rung by surface weight (chat handler 3,326 LOC). 1.75 under A floor; provisional 76.5 not reproducible from evidence."
+}

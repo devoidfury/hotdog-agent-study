@@ -1,0 +1,23 @@
+{
+  "subject": "darce-cli",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 4,
+    "safety_enforcement": 1,
+    "token_economy": 3,
+    "orchestration": 1,
+    "interop": 2,
+    "operability": 4,
+    "originality": 4,
+    "durability": 2,
+    "docs_dx": 3
+  },
+  "weighted_total": 32.5,
+  "band": "D",
+  "closest_anchor": "codel (23.0, D): same absence profile (no enforcement layer, no CI, no interop surface), but darce has a real separated async-generator loop and 106 behavioral tests, placing it clearly above codel and far below nanocoder",
+  "strongest_dimension": "architecture",
+  "weakest_dimension": "safety_enforcement",
+  "provenance": "original (census); GitHub-verified: repo created 2026-03-31, not a fork, solo author AmerSarhan, 10 stars; no corpus fork relation; identity-hygiene list checked, no collision",
+  "calibration_notes": "No calibration rules invoked (not a fork, not remote-verified dead -- pushed_at 2026-04-01, archived:false, ~6mo thin activity only). Census corrections: test_loc 0 -> 868 (root test.ts missed by glob); non_test_loc 5763 inflated (package-lock.json 2944 counted; true src LOC 2690); true project size ~2.7k LOC is T0-range, T1 review run as dispatched. License: manifest-only MIT, no LICENSE file, GitHub license:null -> concepts-only treatment, effort_for_us assumes clean-room. Not within 2pts of any band cut."
+}

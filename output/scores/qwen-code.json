@@ -1,0 +1,23 @@
+{
+  "subject": "qwen-code",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 8,
+    "safety-enforcement": 7,
+    "token-economy": 9,
+    "orchestration": 9,
+    "interop": 9,
+    "operability": 8,
+    "originality": 8,
+    "durability": 9,
+    "docs-dx": 9
+  },
+  "weighted_total": 80.0,
+  "band": "A",
+  "closest_anchor": "codex",
+  "strongest_dimension": "token-economy",
+  "weakest_dimension": "architecture",
+  "provenance": "divergent-fork:gemini-cli v0.8.2 (README.md:214 'stopped syncing', dependabot.yml:13, Google/Qwen license-header strata, geminiChat.ts:7 deprecated shim -> llm-chat.js); Apache-2.0 attribution retained; remote QwenLM/qwen-code active (pushed 2026-09-29, 133 releases, 60 workflows)",
+  "calibration_notes": "Rule (a) not triggered: divergent fork, not sync-fork, and upstream gemini-cli unscored - may outrank, no demotion, recorded not silent. Archived/dead rule not triggered (pushed_at same-day). Census row wrong: LOC split inverted (measured ~1.58M prod / ~2.30M test vs claimed 3.77M/213k) and contributors=1 is a shallow-clone artifact (PR #12532 at head; remote-verified). S-gate: safety 7 / verification 8 both >=5 but total 80 < 88 - architecture 6 (dual tool engine Session.ts:12212, 2070-line sendMessageStream client.ts:3055-5125, turn loops in 4 hosts) and safety 7 (sandbox default-off, bwrap refuses ACP/serve/MCP hosts runtime-shell-policy.ts:74, zero CI kernel-confinement evidence) are the load-bearing gaps vs codex 88.5. token-economy chosen as strongest over the 9-way tie on evidence depth (microcompact.ts:14 + anthropicContentGenerator.ts:538-686 + llm-chat.ts:2752). Merge normalization: econ 'capability' kinds -> portable/unique(e4)/nuance(e9), safety 'gap' -> nuance (codex-10 precedent), originals kept as lane_kind; 5 econ concepts re-canonicalized to seeded ids with aliases (compaction-tiering, workflow-resume-journal, loop-detection, scheduled-agent-runs, prompt-cache-warming); no cross-lane duplicates dropped. Distribution: 4/17 at 80+ (23.5%) - under the 25% line, one more trips it. Durability 9 on Alibaba/QwenLM institutional backing + same-day push + release cadence, bus-factor unverifiable (shallow clone)."
+}

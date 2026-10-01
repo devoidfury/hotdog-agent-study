@@ -1,0 +1,23 @@
+{
+  "subject": "SWE-agent",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 6,
+    "safety_enforcement": 5,
+    "token_economy": 6,
+    "orchestration": 6,
+    "interop": 3,
+    "operability": 6,
+    "originality": 7,
+    "durability": 6,
+    "docs_dx": 7
+  },
+  "weighted_total": 59.0,
+  "band": "C",
+  "closest_anchor": "crush (69.0): cleanly engineered loop with tested error semantics and one standard token story, but no product plane (server/auth/TUI) and no MCP, landing slightly below crush; far above codel by virtue of a real tested loop",
+  "strongest_dimension": "originality",
+  "weakest_dimension": "interop",
+  "provenance": "original (census flag confirmed); origin https://github.com/SWE-agent/SWE-agent, MIT, not shallow, head 2026-07-16 active. No fork delta. Distinct from mini-swe-agent (same authors, separate repo, not in this census).",
+  "calibration_notes": "Census inflated: non_test_loc 18425 vs cloc sweagent/ = 7,714 Python; test_loc 3782 vs cloc tests/ = 1,702 Python (rest is test data). Tier stays T1. Rule (a)/(b) not triggered (original, active). Historical ACI significance verified via docs/background/aci.md + tools/windowed|search|edit_anthropic implementations, but scored on current-code merit: band C stands; synthesis should treat originality as ancestral-influence evidence, not a ranking boost. Boundary check: 59.0 is >2 pts from 65 and 45 cuts."
+}

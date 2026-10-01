@@ -1,0 +1,23 @@
+{
+  "subject": "dvalincode",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 8,
+    "safety_enforcement": 7,
+    "token_economy": 7,
+    "orchestration": 5,
+    "interop": 7,
+    "operability": 7,
+    "originality": 8,
+    "durability": 4,
+    "docs_dx": 8
+  },
+  "weighted_total": 71.0,
+  "band": "B",
+  "closest_anchor": "crush: genuinely tested safety machinery + distinctive runner-level ideas with thin orchestration; above crush on safety/originality, below on orchestration/operability, landing two points above crush's 69.0",
+  "strongest_dimension": "originality",
+  "weakest_dimension": "orchestration",
+  "provenance": "original (census flag accepted; manifest name/repo/mcpName self-consistent, no fork markers, no corpus look-alikes); shallow clone -- activity not asserted from HEAD, upstream active to PR #252 at 2026-09-22",
+  "calibration_notes": "census non_test_loc 56530 inflated ~2x: first-party code src+web+editors+integrations+eval = 28,493 (gap matches package-locks 10,241 + docs md 5,718 + html assets); test_loc 11300 ~ measured 11,559; T1 stands. Rule (a) N/A (not a fork). Verification 8 per errata ceiling (in-CI property tests + 3-OS + reference-client interop, but no model evals in CI, no fuzzing; SWE-bench harness at eval/swebench is not CI-wired). No boundary proximity (71.0 vs 65/78)."
+}

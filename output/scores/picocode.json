@@ -1,0 +1,23 @@
+{
+  "subject": "picocode",
+  "tier": "T0",
+  "lane_scores": {
+    "architecture": 5,
+    "verification": 4,
+    "safety-enforcement": 5,
+    "token-economy": 2,
+    "orchestration": 1,
+    "interop": 2,
+    "operability": 3,
+    "originality": 4,
+    "durability": 3,
+    "docs-dx": 4
+  },
+  "weighted_total": 34.0,
+  "band": "D",
+  "closest_anchor": "pi - same thin-core/provider-agnostic minimalism in aspiration, but lacks every layer of depth pi built around its loop",
+  "strongest_dimension": "safety-enforcement",
+  "weakest_dimension": "orchestration",
+  "provenance": "original (jondot/picocode), MIT; shallow clone resolved via GitHub API pushed_at 2026-01-30 (quiet 8mo at snapshot, not >12mo dead)",
+  "calibration_notes": "Census correction: test_loc 0 -> ~90; inline #[cfg(test)] tests at src/tools.rs:339-427 missed by census (Rust inline-test blind spot, same family as crush Go miss). No tier change: still <5k LOC, T0 stands."
+}

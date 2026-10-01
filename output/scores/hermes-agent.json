@@ -1,0 +1,23 @@
+{
+  "subject": "hermes-agent",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 8,
+    "safety-enforcement": 7,
+    "token-economy": 9,
+    "orchestration": 9,
+    "interop": 8.5,
+    "operability": 9,
+    "originality": 8,
+    "durability": 8,
+    "docs-dx": 9
+  },
+  "weighted_total": 83.0,
+  "band": "A",
+  "closest_anchor": "codex - its highest-scoring dimensions are codex-shaped mechanisms (content-addressed prompt_cache_key reuse, tiered compaction, budgeted delegation, guardian-LLM approvals self-declaring 'Inspired by OpenAI Codex Smart Approvals' at tools/approval_smart.py:7). Weighted anchor-distance ties with cline at 7.5 (pi 9.5, crush 16.5); codex is picked because every tie-breaking mechanism hermes adds above the cline rung (cache discipline, guardian gate, headless protocol, budget taxonomy) is codex lineage, while hermes sits at-or-above cline on all ten dimensions. Codex 88.5 S stays 5.5 ahead, chiefly on safety-enforcement 10-vs-7 and architecture 9-vs-8",
+  "strongest_dimension": "token-economy (9, tied with orchestration/operability/docs-dx; picked because its evidence is infrastructure no anchor has: nightly live-provider canaries asserting prompt-cache hits with per-test dollar guards, live-providers.yml:4-6)",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "original (Nous Research; origin https://github.com/nousresearch/hermes-agent.git matches census upstream_remote), MIT (LICENSE 'Copyright (c) 2025 Nous Research' + manifest), full non-shallow history: 43,967 commits / 3,765 authors since 2025-07-22, head 2026-09-26; scout found no fork/rename/leak markers (COMPAT_MANIFEST.md documents internal decomposition PR #102117)",
+  "calibration_notes": "No demotions: provenance original, so rule (a) (sync-fork must not outrank upstream) is inapplicable; alive and hyperactive (17,797 commits in last 30 days, git log read-only), so rule (b) archived/dead cap is inapplicable. A-band at 83.0: first non-anchor subject at 80+ - distribution check 3/12 = 25%, at but not over the 25% sanity line; held well under S by safety-enforcement 7 (zero shipped kernel enforcement - default backend host shell config_defaults.py:278, zero seccomp/landlock/seatbelt/bwrap hits) and architecture 8 (mixin state bag c7, expired compat shim c6). docs-dx 9 exceeds codex-7/cline-8 deliberately: 741 md/mdx, 4-language READMEs, install-e2e matrix incl. Termux, engineered failure copy (auth_error_copy.py:1-29) - docked only by compat-calendar rot and no reference/cli drift gate. Convergence feed: regex-denylist now x4, faux-provider-testing x4, permission-policy x5, sandbox-delegation x7, scheduled-agent-runs x2 (cline-5 + hermes-agent-e7), evals-in-ci x2, security-posture-docs x2; new candidate canonicals: session-turn-lease, wal-ofd-lockguard, rotation-stable-cache-scope, crash-recovery-posture (supersedes crush-6 crash-recovery-middleware as a distinct concept, not a merge)."
+}

@@ -1,0 +1,23 @@
+{
+  "subject": "ferrum",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 6,
+    "safety_enforcement": 7,
+    "token_economy": 7,
+    "orchestration": 4,
+    "interop": 7,
+    "operability": 7,
+    "originality": 7,
+    "durability": 4,
+    "docs_dx": 8
+  },
+  "weighted_total": 63.0,
+  "band": "C",
+  "closest_anchor": "crush - same deterministic-rejection-policy + loop-breaker + journal + honest-posture shape, but ferrum has zero CI, no orchestration surface, and a 10.2k-LOC fused loop+TUI file, landing it below crush's 69",
+  "strongest_dimension": "docs_dx",
+  "weakest_dimension": "orchestration",
+  "provenance": "original; docs/spec.md:7 states pi-inspired ideas, not a compatibility port; no fork flag, no identical-file evidence; shallow clone confirmed but HEAD 2026-09-21 with active release artifacts",
+  "calibration_notes": "No calibration rule applies (not a fork, not archived). Census correction: test_loc 1659 -> ~14.8k (62 inline #[cfg(test)] modules, ~13.0k LOC, missed by test glob; tests/ is 1752); non_test_loc 42575 -> ~26.8k (all Rust = 41,608). Tier T1 unchanged. Boundary risk: 63.0 is within 2 of B(65)."
+}

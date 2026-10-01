@@ -1,0 +1,23 @@
+{
+  "subject": "open-codex",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 5,
+    "verification": 5,
+    "safety_enforcement": 4,
+    "token_economy": 2,
+    "orchestration": 1,
+    "interop": 3,
+    "operability": 4,
+    "originality": 4,
+    "durability": 1,
+    "docs_dx": 5
+  },
+  "weighted_total": 36.0,
+  "band": "D",
+  "closest_anchor": "nanocoder (60.5): same ink/TS UI-bound loop and opt-in real-machinery sandbox shape, but minus nanocoder's test volume, context management, and ACP surface, plus verifiably dead",
+  "strongest_dimension": "verification",
+  "weakest_dimension": "orchestration",
+  "provenance": "divergent-fork:codex, TS-lineage. Fork of openai/codex (parent/source verified via GitHub API, created 2025-04-16) preserving the pre-codex-rs TypeScript codex-cli; delta verified confined to provider plane: config.ts:39-125 five-provider table + agent-loop.ts:508 chat.completions transport + agent-loop.ts:296-321 chat/responses normalization. Apache-2.0 with NOTICE preserved. Dead: remote pushed_at 2025-05-03T23:35:44Z (17mo), shallow clone notwithstanding.",
+  "calibration_notes": "Rule (b) applies (dead >12mo, remote-verified despite shallow clone) and caps at B; does not bind - 36.0 scores D on merit. Rule (a) moot: divergent fork on merits, no risk of outranking codex (88.5). Census test_loc 3527 understates measured 5,002 (51 test files) - not tier-material. Not archived (archived:false) but no pushes in 17mo. 36.0 is 9 pts from the 45 boundary; no boundary risk."
+}

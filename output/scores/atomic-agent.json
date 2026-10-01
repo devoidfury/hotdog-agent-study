@@ -1,0 +1,23 @@
+{
+  "subject": "atomic-agent",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 7.5,
+    "verification": 8,
+    "safety_enforcement": 7,
+    "token_economy": 8.5,
+    "orchestration": 7,
+    "interop": 7,
+    "operability": 7,
+    "originality": 8,
+    "durability": 5,
+    "docs_dx": 8
+  },
+  "weighted_total": 74.25,
+  "band": "B",
+  "closest_anchor": "pi - one separable turn loop behind thin frontends, prompt-cache discipline, huge property-spec test corps, honest docs, solo vision; atomic's shipped-default enforcement exceeds pi's 6-rung posture but durability/operability/interop breadth trail",
+  "strongest_dimension": "token_economy",
+  "weakest_dimension": "durability",
+  "provenance": "original (no fork/leak/lineage markers in tree; import tooling for six rival harnesses is interop, not descent; license MIT file+manifest consistent)",
+  "calibration_notes": "No demotion/promotion; rules (a)/(b) n/a (head 2026-09-24 fresh; shallow clone honored, no activity claims). Census corrections: test_loc 0 -> 217,290 (931 colocated vitest files; TS-glob blindness instance); non_test_loc 399,314 overstated ~1.7x vs 238,046 hand-written src LOC; contributors=1 shallow artifact. Verification held at ERRATA 8-ceiling: extensive eval harnesses (GAIA/LoCoMo/LongMemEval/E1-E12) deliberately outside CI (only test.yml+release.yml); no fuzzing; no verification-9 claim. CI red-test exclusions (2/931, documented, issue #203) ruled trivia per amazon-q precedent - finding filed, no dock. Shipped-default doctrine favors the subject (approvalLevel 1 = ask-everything default, config-schema.ts:2740). Safety 7 per non-kernel ladder (mocode rung); no kernel enforcement keeps it under 8. Not boundary-flagged: 3.75 under A floor, 9.25 over B floor."
+}

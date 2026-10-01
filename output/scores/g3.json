@@ -1,0 +1,23 @@
+{
+  "subject": "g3",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 5,
+    "safety_enforcement": 3,
+    "token_economy": 8,
+    "orchestration": 6,
+    "interop": 4,
+    "operability": 6,
+    "originality": 7,
+    "durability": 3,
+    "docs_dx": 6
+  },
+  "weighted_total": 55.0,
+  "band": "C",
+  "closest_anchor": "nanocoder (60.5): solo-author machinery-first agent with real token/orchestration ideas and a defect-named test culture, dragged by weak enforcement and thin durability; a notch below nanocoder because g3 has no jail at all (nanocoder at least ships opt-in seatbelt/bwrap)",
+  "strongest_dimension": "token_economy",
+  "weakest_dimension": "safety_enforcement",
+  "provenance": "original per census; single contributor, 1 commit visible (shallow clone - .git/shallow present, no activity claims from HEAD; head_date 2026-09-06). Upstream https://github.com/dhanji/g3. License: MIT declared in Cargo.toml:37 and README.md:506 but NO LICENSE file anywhere in the tree (manifest-only-license); findings kept concept-level, effort_for_us assumes clean-room.",
+  "calibration_notes": "No fork, no rule (a) interaction. Census test_loc undercount: 17,819 vs 26,635 in tests/ dirs alone (+964 test-named src files); total .rs LOC 84,040 vs census total 69,289 - tier unaffected (T1 holds either way). No dimension within 2 pts of band edges (C: 45-64; scores sit 3..8). Verification capped at 5 by zero CI (no .github/); no silent demotions."
+}

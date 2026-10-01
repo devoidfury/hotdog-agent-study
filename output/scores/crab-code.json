@@ -1,0 +1,23 @@
+{
+  "subject": "crab-code",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 7,
+    "safety_enforcement": 7,
+    "token_economy": 8,
+    "orchestration": 7,
+    "interop": 8,
+    "operability": 7,
+    "originality": 7,
+    "durability": 4,
+    "docs_dx": 7
+  },
+  "weighted_total": 72.0,
+  "band": "B",
+  "closest_anchor": "crush (69.0, B): single-author tested core with disciplined CI; crab's kernel sandbox, tiered compaction, and ACP+MCP+headless breadth lift it above crush into upper-B, short of cline/codex because the loop is never tested against a scripted provider and sandbox backends lack live confinement-violation tests",
+  "strongest_dimension": "token_economy",
+  "weakest_dimension": "durability",
+  "provenance": "original (GitHub fork:false, MIT); NOT claw-code/claw-code-agent. Caveat: systematic 'Maps to Claude Code's <internal>.ts' comments (micro_compact.rs:8, bash_classifier.rs:7, skill.rs:7, grouping.rs:10) + TS-reference architecture mapping table (docs/architecture.md:68-73) contradict README 'from scratch' and suggest source-level derivation from proprietary Claude Code; seatbelt base policy verbatim from codex Apache-2.0 with attribution (clean).",
+  "calibration_notes": "Census corrections: test_loc 2905 -> ~64k (60,876 inline #[cfg(test)] + ~3,530 tests/ dirs; glob missed inline Rust tests); commits 1 is shallow-clone artifact, remote-verified 579 commits, pushed 2026-09-29 (active, no archived cap); contributors 1 confirmed remotely (bus factor 1, repo 6 months). Rule (a) N/A (not a fork). No demotion; 72.0 is >2 pts from band edges. license-risk finding caps portables from declared-mapped modules to concepts-only."
+}

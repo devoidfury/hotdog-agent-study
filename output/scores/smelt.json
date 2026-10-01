@@ -1,0 +1,23 @@
+{
+  "subject": "smelt",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 9,
+    "safety_enforcement": 7,
+    "token_economy": 8,
+    "orchestration": 5,
+    "interop": 7,
+    "operability": 8,
+    "originality": 8,
+    "durability": 4,
+    "docs_dx": 8
+  },
+  "weighted_total": 74.5,
+  "band": "B",
+  "closest_anchor": "pi (78.5): solo-vision agent with a provider-agnostic loop separated from the product surface and policy deliberately delegated to an extension layer (smelt pushes further: compaction itself is a bundled Lua plugin); below pi on TUI god files, session-tree operability, cache warming and durability, above pi on CI fuzzing and permission depth",
+  "strongest_dimension": "verification",
+  "weakest_dimension": "orchestration",
+  "provenance": "original (census flag confirmed; remote API fork:false). Identity confirmed via manifest smelt-agent / crates smelt-*, github.com/leonardcser/smelt; NOT the 2010s Mozilla smelt build system. MIT. Single maintainer; repo created 2026-02-25, pushed 2026-09-28 (remote-verified; shallow clone does not indicate inactivity).",
+  "calibration_notes": "Census corrections: test_loc 15,571 understated ~10x (inline #[cfg(test)] ~106k + file-local test modules ~57k + tests/ 2.7k => ~166k test LOC); non_test_loc 397k inflated (all-language cloc code total 421k; Rust incl. tests 372.7k => ~206k non-test Rust). Tier T2 unaffected. No rule (a)/(b) triggered; boundary check: 74.5 is 3.5 clear of the 78 cut. Verification 9 justified by anchors-errata exception: fuzzing evidence in CI (ci.yml:269-294 replay of committed fuzz seeds); still no model evals, hence not 10."
+}

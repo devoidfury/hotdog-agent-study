@@ -1,0 +1,23 @@
+{
+  "subject": "tura",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 8,
+    "safety_enforcement": 4,
+    "token_economy": 8,
+    "orchestration": 7,
+    "interop": 6,
+    "operability": 8,
+    "originality": 8,
+    "durability": 6,
+    "docs_dx": 8
+  },
+  "weighted_total": 72.0,
+  "band": "B",
+  "closest_anchor": "crush (69.0): same profile of strong CI + honest docs with safety below the 6-rung; tura above crush on token-economy, resume journaling and operability, below on safety (crush has a working permission service, tura's approvals are vestigial)",
+  "strongest_dimension": "token_economy",
+  "weakest_dimension": "safety_enforcement",
+  "provenance": "original (census flag 'original'); manifest name tura-ai matches remote github.com/Tura-AI/tura; no fork relationship with any corpus subject detected; no identity-confusion collision (tura is unique in the listed pairs). Shallow clone with contributors=1/commits=1 treated as squashed shallow, not history.",
+  "calibration_notes": "AGPL-3.0(-or-later): findings are concepts-only and all effort_for_us values assume clean-room; no code copying recommended. Verification capped at 8 per anchors errata: real test corps + CI equivalence gate, but no in-CI model evals and zero fuzzing evidence. Safety 4 justified: denylist interceptor on-by-default and side-effect-tested, but approvals are phantom (no backend emitter; gateway hardcodes allow:[\"*\"]) and the only containment jail is opt-in; below the crush/pi 6-rung, at nanocoder-5 minus fail-open. No band boundary risk (72.0; 6 points from 78, 7 from 65). Census totals reconcile (334k census vs 335.8k cloc); test/non-test split is soft (inline mod-tests attribution) but no correction asserted."
+}

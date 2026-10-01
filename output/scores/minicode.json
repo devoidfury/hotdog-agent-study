@@ -1,0 +1,23 @@
+{
+  "subject": "minicode",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 8,
+    "safety_enforcement": 7,
+    "token_economy": 7,
+    "orchestration": 7,
+    "interop": 7,
+    "operability": 8,
+    "originality": 7,
+    "durability": 4,
+    "docs_dx": 7
+  },
+  "weighted_total": 72.5,
+  "band": "B",
+  "closest_anchor": "crush (69.0): same single-org strong-engineering CLI profile with tested permission gates, resume journal, and adversarial harnesses; minicode above crush on architecture/verification density (no fused loop file, test:src 1.25), below pi/cline on ecosystem surface",
+  "strongest_dimension": "verification",
+  "weakest_dimension": "durability",
+  "provenance": "original per census, confirmed: manifest minicode-ai, repo startupmini/minicode; NOT mini-kode/mocode/nanocoder. Not a fork; distinctive self-split: 1.6k-LOC MiniCore kernel lives in a sibling repo, vendored into vendor/minicore via #minicore subpath imports, pinned commit+hash (VENDOR.md:5-10), CI-enforced sync (ci.yml:44-46), seams additive-only. Rule (a) N/A.",
+  "calibration_notes": "No demotions. Census sane (non_test 51,743 vs cloc ~51,904; test 40,790 vs 41,214). Shallow-clone artifacts (commits=1, contributors=1) NOT read as inactivity - CHANGELOG shows 48 releases, v0.12.0 dated 2026-09-25, HEAD 2026-09-26. Verification held at 8 per frozen errata: fuzzing evidence exists (slow.yml:28-34 seeded bash fuzz) but is single-target scripted, and no model evals in CI (bench/eval-gate.ts + swebench harness exist but are not wired to CI). Safety 7: jail+guard bind even under allow-all (permission.ts:379-441,483-497) and sandbox requests fail closed (tools/bash.ts:48-56), but default bash posture is direct+guard-only with no OS-level enforcement by default - above the tested-approval 6 rung, below the 8 rung."
+}

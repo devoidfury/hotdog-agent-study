@@ -1,0 +1,23 @@
+{
+  "subject": "mimo-code",
+  "tier": "T0 (differential triage vs opencode)",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 5,
+    "safety-enforcement": 5,
+    "token-economy": 7,
+    "orchestration": 7,
+    "interop": 7,
+    "operability": 7,
+    "originality": 3,
+    "durability": 6,
+    "docs-dx": 6
+  },
+  "weighted_total": 60.0,
+  "band": "C (provisional)",
+  "closest_anchor": "crush (B 69.0) - shares opencode ancestry per calibration-notes; actual lineage is opencode itself, unscored in corpus",
+  "strongest_dimension": "architecture",
+  "weakest_dimension": "originality",
+  "provenance": "census rename-clone:opencode = detector misfire (package.json:3 name 'opencode', packages/opencode/ never renamed) - CORRECTED to divergent-fork:opencode: README.md:553 states fork openly, LICENSE retains opencode copyright + adds Xiaomi, structural delta (memory/ FTS service.ts, actor/, inbox/, workflow/ runtime, 40+ own drizzle migrations incl. 20260515010000_memory_fts, 20260603000000_workflow_run; session/prompt.ts rewritten)",
+  "calibration_notes": "Provisional: opencode has no corpus score, so rule (a) cannot be checked yet; revisit after opencode review (crush, also opencode-lineage, scored 69.0 - expect mimo to move toward B on full review). USE_RESTRICTIONS.md:5-9 adds use restrictions over MIT portions - recorded as license-risk nuance, not infringement."
+}

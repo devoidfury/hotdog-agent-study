@@ -1,0 +1,24 @@
+{
+  "subject": "mini-kode",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 5,
+    "safety-enforcement": 4,
+    "token-economy": 5,
+    "orchestration": 3,
+    "interop": 4.5,
+    "operability": 4.5,
+    "originality": 3,
+    "durability": 4,
+    "docs-dx": 5.5
+  },
+  "weighted_total": 45.25,
+  "band": "C",
+  "closest_anchor": "nanocoder (60.5 C): both have real-but-leaky permission machinery, no OS sandbox, one-standard-summarize compaction, solo-team C shape; mini-kode lower because its grant-matching layer is bypassable from inside the threat model and its orchestration/interop board is thinner",
+  "strongest_dimension": "architecture",
+  "weakest_dimension": "orchestration",
+  "provenance": "original (minmaxflow/mini-kode, MIT, no corpus lineage; rules (a)/(b) n/a - remote-verified ~11mo quiet, not archived)",
+  "calibration_notes": "Boundary recount of provisional 46.5 C. Verification 5 held: zero CI confirmed (no workflow files; only prepublishOnly local gate package.json:48) per claw-code-agent cap; runner-blind screening PASSED (vitest default include matches all 32 co-located test files, no config override, 32/32 import production code) so 4 rejected; 6 rejected (ferrum-cap requires property matrices; own doc example pathChecker.ts:33-35 is false vs code :53 and untested). Safety 4 held: default-mode approvals bind and fail closed (bash.ts:167, fileEdit.ts:122, permissionRequest.ts:101-110 fail-closed timeout) but four grant-engine breaks - sibling-prefix (pathChecker.ts:53), model self-grant via auto-approved .mini-kode dir (policyResolver.ts:143-145), clone-and-run mcp.json+permissions.json (App.tsx:52, manager.ts:429), compound-grant ride (commandParser.ts:28-36). Blacklist-laundering mechanism confirmed but not aggravating below 4: reads were never gated (fileRead.ts:75-77 documents it), so fetch adds egress to an already-open read surface rather than circumventing a denial; honest posture per hax doctrine. C floor HELD at 45.25: strict variant = 44.25-44.75 (token 4.5 / interop 4); ruled by band-coherence (no D-band disqualifier present: real tested loop, real default enforcement, published npm tool) per plandex-convention logic, disclosed not silent. Independence disclosure: concept-dedup grep incidentally surfaced original finding mini-kode-3 title (fetch egress); planned laundering finding dropped as duplicate.",
+  "boundary_review": true
+}

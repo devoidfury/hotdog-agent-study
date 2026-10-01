@@ -1,0 +1,23 @@
+{
+  "subject": "forge",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 7.5,
+    "verification": 8,
+    "safety_enforcement": 4,
+    "token_economy": 8,
+    "orchestration": 7,
+    "interop": 7,
+    "operability": 8,
+    "originality": 7,
+    "durability": 8,
+    "docs_dx": 6
+  },
+  "weighted_total": 71.25,
+  "band": "B",
+  "closest_anchor": "crush - same shape (institutionally-backed Rust agent, loop detection, MCP client without SDK, permission machinery with nothing under it), but forge's compaction/verification are pi-tier and its approval default (allow-all, opt-in) is worse than crush's always-on permission service",
+  "strongest_dimension": "verification",
+  "weakest_dimension": "safety_enforcement",
+  "provenance": "original (antinomyhq/forge, redirects to tailcallhq/forgecode; Forge for Code / forgecode.dev). Confirmed distinct from corpus subject forge-norvialabs (NorviaLabs/forge, MIT) - no shared crates, templates, or branding. Shallow clone (.git/shallow, single HEAD commit); upstream activity remote-verified via GitHub API: pushed_at 2026-09-29, org tailcallhq, 7637 stars, license apache-2.0.",
+  "calibration_notes": "Census corrections: (1) test_loc 5176 -> ~64k (inline #[cfg(test)] ~62.0k LOC in 243/474 .rs files + ~1.9k tests/ files; 2287 #[test] + 391 #[tokio::test]); census counted all .rs as non-test. (2) contributors/commits =1 are shallow-clone artifacts, not evidence of a one-person snapshot; upstream is org-run and daily-active. (3) License: LICENSE=Apache-2.0 is canonical (GitHub concurs); ISC applies only to the private npm eval wrapper (package.json name forge-code-evals) - permissive either way, no clean-room constraint. Verification held at 8 per anchors errata ceiling: real property-shaped test corps + loop specs, but model evals (benchmarks/, 14 suites) are not wired into any CI workflow and no fuzzing. Safety 4 sits below nanocoder-5: policy engine is real and tested but gated behind an undocumented opt-in (restricted=false default) whose first-run policy file is allow-all, with no OS sandbox; the 6-rung 'tested approval binds in-loop' does not hold at default config. 71.25 is >2 pts from 65/78 boundaries - no boundary flag."
+}

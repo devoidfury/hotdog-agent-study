@@ -1,0 +1,23 @@
+{
+  "subject": "openlumara",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 1,
+    "safety_enforcement": 4,
+    "token_economy": 7,
+    "orchestration": 5,
+    "interop": 5,
+    "operability": 6,
+    "originality": 7,
+    "durability": 3,
+    "docs_dx": 7
+  },
+  "weighted_total": 51.0,
+  "band": "C",
+  "closest_anchor": "crush - modular core with opt-in container jail, one summarization strategy, persistent scheduler; but no approval gate and zero automated verification put it clearly below crush (69) and below nanocoder (60.5)",
+  "strongest_dimension": "token_economy",
+  "weakest_dimension": "verification",
+  "provenance": "original (github.com/Rose22/openlumara, GPL-3.0); all portables concepts-only, effort_for_us assumes clean-room. Not a fork; rename_clone_suspect=false confirmed.",
+  "calibration_notes": "No demotions. Census test_loc=0 verified accurate (only test-named file is an interactive TTY harness, channels/turn_grouping_test.py). Census contributors=8 true but Rose22 authored 98.3% of commits - bus factor 1 reflected in durability=3. head_date fresh (17d), not shallow, 172 commits in Sept: very active, no archived cap."
+}

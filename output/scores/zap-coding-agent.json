@@ -1,0 +1,23 @@
+{
+  "subject": "zap-coding-agent",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 4,
+    "safety_enforcement": 6,
+    "token_economy": 7,
+    "orchestration": 5,
+    "interop": 5,
+    "operability": 6,
+    "originality": 7,
+    "durability": 3,
+    "docs_dx": 7
+  },
+  "weighted_total": 56.0,
+  "band": "C",
+  "closest_anchor": "nanocoder: solo-maintainer feature-dense agent with tested permission mechanics but wrong safety defaults; zap is below it on CI enforcement (tests never run) and above it on token discipline",
+  "strongest_dimension": "token_economy",
+  "weakest_dimension": "verification",
+  "provenance": "Census flag original, uncontradicted. Single contributor; .git/shallow present so commit count (1) is a clone artifact -- no activity claims made (HEAD 2026-08-19 recent; version 0.15.142 implies high patch cadence). License manifest-only: Cargo.toml:10 declares MIT but no LICENSE file exists anywhere in the tree; portables concept-only, effort assumes clean-room (finding zap-coding-agent-10). No similarly-named subject; no fork relationship asserted.",
+  "calibration_notes": "Census corrections: test_loc 1,847 -> ~5.8k (3,969 in-file cfg(test) LOC, 378 test fns, missed by test glob); non_test_loc 54,039 overcounts core -- src+tests Rust = 34,739 code (~30.8k non-test); 54k only reachable by including website/markdown/HTML repo-wide. Tier T1 unchanged. No rule (a)/(b) demotions. 56.0 not within 2 pts of any band boundary."
+}

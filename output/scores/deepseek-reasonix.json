@@ -1,0 +1,23 @@
+{
+  "subject": "deepseek-reasonix",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 9,
+    "safety-enforcement": 8,
+    "token-economy": 9,
+    "orchestration": 9,
+    "interop": 8,
+    "operability": 9,
+    "originality": 9,
+    "durability": 8,
+    "docs-dx": 9
+  },
+  "weighted_total": 86.0,
+  "band": "A",
+  "closest_anchor": "codex",
+  "strongest_dimension": "token-economy",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "original upstream (esengine/DeepSeek-Reasonix, MIT, branch studio @ af0bb11 2.x); WorkGround2 resolved as DOWNSTREAM 1.x fork of this tree, so rule (a) does not cap this score - it caps WorkGround2 against this number; shallow clone: contributors=1 is an artifact",
+  "calibration_notes": "Census test_loc 26,670 wrong >10x: measured ~325k LOC / 1672 *_test.go (root module); scored on measured figure (same errata class as crush/cline/nanocoder). All claims rest on the 2.x studio pre-release tree, not shipped-stable 1.x main-v2. Rule (b) not triggered: head 3 days pre-run, PR #11014, 25 studio releases through 2.9.0. First non-anchor above codex on verification (9 vs 8): errata 8-ceiling cleared by in-CI real-provider evals with anti-grader checkout (e2e-bot.yml:68-77, integrator-verified); held at 9 because the eval reports but never gates and fuzzing is nominal. architecture docked 9->8 for package-scale concentration (runtime/agent 23.1k + session/control 22.8k non-test LOC) with lint-with-exemptions instead of compile boundaries; at 9 the total is 87.5, still A - disagreement non-material. safety held at 8: Windows force-off (config.go:1004-1007) is absent enforcement, not a design stance; at 9 total is 87.0, still A. Highest non-anchor in corpus (prior max gemini-cli 84.5); distribution check: two dimensions below the codex anchor is consistent with codex-infinity 83.5 being carried codex - this subject earns its own number; S gates (>=88, safety>=5, verification>=5) only the total fails. Integrator spot-verified originality claims in code: compact_projection.go:216-227, compact.go:92-141, e2e-bot.yml:68-77, layers.go:13-30, approval.go:688-700. No demotions applied; nothing silent."
+}

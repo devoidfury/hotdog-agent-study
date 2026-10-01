@@ -1,0 +1,23 @@
+{
+  "subject": "dexto",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 8,
+    "safety-enforcement": 5,
+    "token-economy": 7,
+    "orchestration": 7,
+    "interop": 8,
+    "operability": 7,
+    "originality": 8,
+    "durability": 7,
+    "docs-dx": 8
+  },
+  "weighted_total": 73.5,
+  "band": "B",
+  "closest_anchor": "cline",
+  "strongest_dimension": "architecture (8, tied with verification/interop/docs-dx; chosen on weight and evidence: validated serializable turn-state union enforced at turn-executor.ts:199-247/:619-627 and pinned by a 4,456-LOC integration suite driving the real loop through its public step interface)",
+  "weakest_dimension": "safety-enforcement (auto-approve schema default at tools/schemas.ts:9 contradicting docs 'manual (Default)', metachar-blind approval-key bypass persisted to storage at command-pattern-utils.ts:49-59, dead-code zero-test regex validator as sole backstop, no sandbox, no injection defense)",
+  "provenance": "original (truffle-ai/dexto, Elastic-2.0 verbatim; scout + econ independent checks: remote matches manifest, first-party @dexto/* naming, zero rival-harness imports - the Codex touchpoint spawns the external binary over stdio at codex-app-server.ts:1243). Head 2026-09-24, v1.1.3, PR-numbered history (#924) behind a shallow clone.",
+  "calibration_notes": "Census errata applied: test_loc 4,214 is wrong - 256 test files / ~86.2k LOC measured (same *.test.ts miss as cline/crush/nanocoder); license 'other (file)' = Elastic-2.0; non_test_loc 402k inflated by 20,809-LOC generated models.generated.ts (excluded from god-file judgments); contributors=1/commits=1 are shallow-clone artifacts per standing caveat, not bus factor - activity judged from head date, changesets-publish + release-standalone-binaries CI, PR #924. Rule checks: (a) sync-fork-not-outrank-upstream - N/A, provenance original, rival-import grep clean; (b) archived/dead-caps-at-B - N/A, head 5 days pre-run with active release pipelines. No demotion or promotion occurred; nothing silent. Tension resolutions recorded in subjects-dexto.md 'Score disagreements resolved': weakest-dimension claim (lane-core crash-continuity vs lane-safety safety-enforcement=5; reported weakest is safety-enforcement, crash continuity priced inside operability 7), SECURITY.md (exists server-scoped only - docs-dx root-absence dock stands), docs-vs-defaults contradiction docked once in safety-enforcement not double-docked in docs-dx (if Phase 3 re-docks docs-dx to 7, total becomes 73.0, band unchanged), anchor-vector split (dimension-scoped anchors consistent; cline adopted overall - dexto 73.5 vs cline 76.5, consistent with the closest-anchor placement). Band margin: 73.5 is 4.5 below the A floor (78) and 8.5 above the B floor (65) - no within-2 boundary flag required. Integrator-owned dimensions scored from direct static reads at /data/samples/agents/dexto (read-only; subject never executed): originality 8 (checkpoint-union, history-unchanged retry guard turn-executor.ts:1692-1733, actuals projection manager.ts:1392-1417, pruning constants turn-executor.ts:2258-2259, A2A methods.ts:4, self-testing ESLint contract rules eslint-rules/ - all re-verified this run; docked for standard compaction design, spec-implementation not invention, and one negative novelty: the approval-key bypass shape), durability 7 (active + Truffle AI backing + 9 CI workflows, capped by ELv2 non-OSI license, server-scoped-only SECURITY.md, unverifiable bus factor). Scout errata honored: integration suites confirmed in CI via vitest.config.ts:41 + build_and_test.yml:30."
+}

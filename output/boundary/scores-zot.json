@@ -1,0 +1,24 @@
+{
+  "subject": "zot",
+  "tier": "T1",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 7,
+    "safety-enforcement": 5,
+    "token-economy": 7,
+    "orchestration": 7,
+    "interop": 6,
+    "operability": 7,
+    "originality": 7,
+    "durability": 5,
+    "docs-dx": 7
+  },
+  "weighted_total": 66.0,
+  "band": "B",
+  "closest_anchor": "crush (69.0 B) - same shape: Go solo-ish TUI agent, loop cleanly separated in packages/core (agent.go:446 runLoop), subagent plane, blocking -race 3-OS CI; below crush because zot's approval/jail layers ship disabled (crush's permission service binds) and crush carries govulncheck + funded durability",
+  "strongest_dimension": "verification - 235 files / 35,152 LOC of property-asserting tests (confirm_test.go:39-182 gate semantics, intercept_test.go:28-125 policy-without-transcript-mutation, swarm/persist_test.go 913 LOC) executed by a blocking go test -race on ubuntu/macos/windows for every push/PR (ci.yml:17-48); crush-7 rung, errata 8-ceiling uncontested (no evals, no fuzzing)",
+  "weakest_dimension": "safety-enforcement - shipped default binds NOTHING: yolo default (args.go:99-106), jail nil=disabled (config.go:71-74, build.go:615-617), sandbox starts unlocked (sandbox.go:23-24) with CheckPath/CheckCommand no-ops when unlocked (sandbox.go:43,104); the only bash control is a substring deny-list (sandbox.go:111-122) bypassable by construction, self-labeled 'a speed bump for the model, not a security boundary' (sandbox.go:131); nanocoder/octomind precedent: real machinery + wrong default = below the 6 rung; honest variant, so 5 not 4",
+  "provenance": "original; github.com/patriceckhart/zot, MIT (LICENSE present, full text), solo author (HEAD 'Patric Eckhart'), active (HEAD 2026-09-27, merged external PR #216); .git/shallow present - activity judged from HEAD + PR evidence only, no inactivity claim; independent boundary re-review 2026-09-30; subjects/zot.md, scores/zot.json, findings/zot.jsonl NOT read; anchors + ERRATA + calibration precedents (octomind shipped-default, amazon-q broken-as-configured CI, verification-9 ledger, mocode non-kernel ladder) applied",
+  "calibration_notes": "Boundary recount 66.0 B vs provisional 67.0; B floor HELD (1.0 margin). Both dispatched hinges dock: safety 6->5 (yolo args.go:95-108 + jail-off config.go:71-74/build.go:615-617 = enforcement ships disabled at every layer, nanocoder/octomind doctrine applied a third time; substring deny-list sandbox.go:111-122 is strictly weaker than the regex-denylist x15 cluster - whitespace/quote/IFS variants pass, only first-segment cd checked :134-136; honest labeling earns 5 not 4 per hax doctrine 'honesty mitigates deception penalties, never buys enforcement') and architecture 8->7 (modes/interactive.go 7,820 LOC is precisely the ERRATA >5k product/TUI-mode docking factor; cline 8 already carries a 2.7k-file dock; core-loop separation (packages/core) prevents a lower score). Verification 7 CONFIRMED: what blocks in CI = go vet + gofmt diff + go test -race on 3-OS matrix (ci.yml:26-48), no continue-on-error, corpus genuinely property-asserting (issue-numbered regressions sandbox_test.go:58, sandbox.go:63-70); no govulncheck/coverage/evals/fuzz = crush rung, errata 8-ceiling respected. Token-economy 7: anthropic 4-breakpoint cache budget with independent identity-block caching (anthropic.go:253-267) above crush-6, but len/4 token estimate (compact.go:31) and no realized-cache-hit validation bar 8. Shipped-behavior rule applied throughout; broken-as-configured CI ledger N/A (no dead gates found). No rule (a)/(b). Distribution: 80+ count unchanged."
+}

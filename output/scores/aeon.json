@@ -1,0 +1,23 @@
+{
+  "subject": "aeon",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 6,
+    "safety_enforcement": 7,
+    "token_economy": 5,
+    "orchestration": 8,
+    "interop": 8,
+    "operability": 8,
+    "originality": 8,
+    "durability": 6,
+    "docs_dx": 8
+  },
+  "weighted_total": 69.0,
+  "band": "B",
+  "closest_anchor": "crush - shared defensive-ops culture and tested helper corpus; aeon's schedule-driven no-loop shape has no true anchor, sharing only codel's queue-driven gene while inverting every quality rung of it",
+  "strongest_dimension": "interop",
+  "weakest_dimension": "token_economy",
+  "provenance": "original (census flag confirmed): manifest aeon-root, self-contained history, 1330 commits / 71 contributors verified against census, remote github.com/aeonfun/aeon, MIT file+manifest. Not a fork; it is itself the canonical upstream of its fork-fleet (aeon.yml 'Ported from derivative instances'). Peripheral apps noted per dispatcher: apps/dashboard (Next.js operator console + secrets vault), apps/mcp-server (skills-as-MCP-tools), apps/webhook (Cloudflare Worker instant Telegram), apps/cli (operator CLI). No identity collision in corpus.",
+  "calibration_notes": "Census LOC corrected: cloc total 84,030 code inflated by 28,205 Markdown (skill prompts) + 20,870 JSON (catalog/eyebrowlock); executable source ~34k. test_loc 5,340 undercounts ~40% (test corpus ~8,971 lines by wc). Tier T1 unchanged. No rule (a) applicable. No boundary proximity (69.0; nearest cuts 65/78). Rubric is calibrated for interactive harnesses; aeon deliberately has no interactive loop/compaction, scoring token-economy on cost visibility only - scored honestly, not inflated."
+}

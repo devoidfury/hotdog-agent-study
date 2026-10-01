@@ -1,0 +1,23 @@
+{
+  "subject": "octomind",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 8,
+    "safety_enforcement": 7,
+    "token_economy": 9,
+    "orchestration": 8,
+    "interop": 8,
+    "operability": 8,
+    "originality": 9,
+    "durability": 5,
+    "docs_dx": 8
+  },
+  "weighted_total": 79.5,
+  "band": "A",
+  "closest_anchor": "pi",
+  "strongest_dimension": "token_economy",
+  "weakest_dimension": "durability",
+  "provenance": "original (muvon/octomind, Apache-2.0); provider/evaluation layer lives in sibling crate octolib 0.40.0 audited only via call sites; not a fork",
+  "calibration_notes": "Census test_loc 3976 wrong: inline src/**/*_tests.rs (276 files, 101,385 LOC) counted as non-test; real tests ~105.5k, real product LOC ~111k, T2 tier stands. Shallow clone: no activity claims. Boundary: 79.5 is within 2 pts of the 78 A/B floor (durability 5 vs 4, or architecture 8 vs 7, would pin it at the floor); band A holds. No evals-in-CI and no fuzzing, verification capped at 8 per errata. Rule (a) N/A (not a sync fork)."
+}

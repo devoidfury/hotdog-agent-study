@@ -1,0 +1,23 @@
+{
+  "subject": "openharness",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 7,
+    "safety_enforcement": 6,
+    "token_economy": 7,
+    "orchestration": 7,
+    "interop": 8,
+    "operability": 7,
+    "originality": 7,
+    "durability": 3,
+    "docs_dx": 7
+  },
+  "weighted_total": 69.5,
+  "band": "B",
+  "closest_anchor": "crush (69.0): broad modern feature surface, approvals-class safety with no OS-level enforcement by default, property-leaning tests but no evals-in-CI or fuzzing; openharness trades crush's god files for small modules and Charm's funding for a thinner one-person bus factor",
+  "strongest_dimension": "interop",
+  "weakest_dimension": "durability",
+  "provenance": "original (census agrees); MIT license in file and manifest; upstream https://github.com/zhijiewong/openharness remote-verified (created 2026-03-31, pushed_at 2026-05-12 matches HEAD, not archived, 388 commits, 2 contributors); npm-scope spelling drift @zhijiewang vs owner zhijiewong noted for hygiene, not a fork signal",
+  "calibration_notes": "Census test_loc 5004 is wrong: 140 *.test.ts files = 24,017 LOC (~4.8x undercount, same glob-miss pattern as cline/crush artifacts). Shallow clone: activity remote-verified via GitHub API before any activity claim; ~4.5 months push-quiet at study date but far from the >12mo dead bar, no cap applied. Not a fork; rule (a) N/A. No boundary proximity (nearest cut 65 is 4.5 pts away)."
+}

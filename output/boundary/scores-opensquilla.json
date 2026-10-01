@@ -1,0 +1,24 @@
+{
+  "subject": "opensquilla",
+  "tier": "T3",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 8,
+    "safety-enforcement": 5.5,
+    "token-economy": 9,
+    "orchestration": 8.5,
+    "interop": 8.5,
+    "operability": 8,
+    "originality": 8,
+    "durability": 6,
+    "docs-dx": 9
+  },
+  "weighted_total": 77.5,
+  "band": "B",
+  "closest_anchor": "mechanically codex (three-tier compaction with no-LLM fallback, reserved durable queue with tested restart recovery, MCP both sides, three-platform kernel jails); default posture is the nanocoder errata shape (real jail shipped off for the owner, docs claiming Safe); weighted profile on cline's B ceiling",
+  "strongest_dimension": "token-economy",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "original - remote API at review time: TokenRhythm/opensquilla id 1231170332, fork:false, archived:false, created 2026-05-06, pushed 2026-09-30; census upstream_remote opensquilla/opensquilla resolves to the same repo id (org migration), corroborated in-tree at src/opensquilla/observability/update_check.py:58-61 (LEGACY label); calibration rule (a) not triggered",
+  "calibration_notes": "independent T2-depth pass on my own file:line reads; all ten dimensions concur with main at 77.5/B - boundary agrees, band final. Hinges pinned: safety-enforcement 5.5->6 blocked by nanocoder errata (opensquilla.toml.example:512-513,532 self-declared out-of-box bypass + sandbox/config.py:95 run_mode=full + run_mode.py:28 bypass->FULL collapse + docs/sandbox-security.md:10 falsehood + unreachable injection refusal dispatch.py:419-441, zero origin_trace producers); token-economy 9->9.5 blocked by unexercised router-accuracy marker (llm_router_acc excluded at ci.yml:1150/1305/1594, zero carrier tests). Census LOC errata: test LOC 723k recount vs census 647k, non-test includes 425 generated contract modules + webui trees (opensquilla-b3); StaleEpochError count 8 in storage.py vs main's 7 (non-scoring). Shallow clone: no dead-activity claims from HEAD, remote-only activity evidence."
+}

@@ -1,0 +1,23 @@
+{
+  "subject": "ouroboros",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 9,
+    "safety_enforcement": 6,
+    "token_economy": 8,
+    "orchestration": 8,
+    "interop": 7,
+    "operability": 8,
+    "originality": 8,
+    "durability": 6,
+    "docs_dx": 7
+  },
+  "weighted_total": 75.5,
+  "band": "B",
+  "closest_anchor": "cline: tested in-process policy over a broad product surface with no kernel-level boundary, but with a codex-class verification tail (live-model CI lanes) that cline lacks",
+  "strongest_dimension": "verification",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "original (GitHub API fork:false; MIT; created 2026-02-11; pushed_at 2026-09-29 remote-verified; sync-joi-lab-fork.yml is an outbound owner mirror). census commits=1/contributors=1 is a shallow-clone artifact (.git/shallow present); no activity claim made from HEAD.",
+  "calibration_notes": "Verification 9 per erratum gate: in-CI live-model lanes with file:line (ci.yml:9,71,631 nightly $30-capped E2E stand; ci.yml:443 paid reviewer skill flow). No fuzzing and benchmark harnesses not CI-gated, so not 10; fallback 8 would give 74, same B band. Census test_loc 535,975 verified as a real corps (1,378 test_*.py, 17,571 test functions, ~79.5k asserts; ~36 non-py files in tests/), NOT fixture bulk. 75.5 sits 2.5 below the 78 boundary: upper-B ceiling, no flag per the 2-pt rule."
+}

@@ -1,0 +1,23 @@
+{
+  "subject": "san",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 7,
+    "safety_enforcement": 7,
+    "token_economy": 8,
+    "orchestration": 7,
+    "interop": 7,
+    "operability": 8,
+    "originality": 8,
+    "durability": 6,
+    "docs_dx": 8
+  },
+  "weighted_total": 74.5,
+  "band": "B",
+  "closest_anchor": "pi — small rigorously-separated core with cache-disciplined compaction and a tested policy gate, but below pi: the exchange loop proper is vendored out-of-repo into sdk-go, no session-tree navigation, far thinner community",
+  "strongest_dimension": "token_economy",
+  "weakest_dimension": "durability",
+  "provenance": "original (census agrees); renamed twice in own history (43da333e 'initialize mycode' -> codepilot -> san); own SDK github.com/genai-io/sdk-go (same org, external module) holds the inner exchange loop -- wrapper verified in-repo, engine not reviewable from this sample; not a fork of any corpus subject",
+  "calibration_notes": "Census corrections: test_loc 3489 -> 45,585 (231 *_test.go; census glob missed package-level tests, counted only tests/ dir raw 4,387); non_test_loc 122,003 -> 79,983 non-test .go (census likely included 17k md LOC + site/assets); contributors 21 counts split emails of the dominant author (1,011/1,152 commits) -- effective ~10-12. Full history verified, no .git/shallow, head 2026-09-26 current: no archived/dead cap. Fork rule (a) N/A. Verification capped at 7 per anchors ERRATA 8-ceiling logic (no fuzz, no in-CI evals) with crush-parity infra. No silent demotions. 74.5 not within 2pts of 88/78/65/45."
+}

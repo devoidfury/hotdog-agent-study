@@ -1,0 +1,23 @@
+{
+  "subject": "mini-kode",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 5,
+    "safety_enforcement": 5,
+    "token_economy": 5,
+    "orchestration": 3,
+    "interop": 4,
+    "operability": 4,
+    "originality": 4,
+    "durability": 2,
+    "docs_dx": 5
+  },
+  "weighted_total": 46.5,
+  "band": "C",
+  "closest_anchor": "nanocoder -- same TS/Ink + approval-grant permissions + single-tier auto-summarize + MCP-client shape and solo-maintainer durability, but no CI, no resume, no ACP, no daemon; lands a notch below nanocoder's 60.5",
+  "strongest_dimension": "architecture",
+  "weakest_dimension": "durability",
+  "provenance": "original (GitHub fork:false, minmaxflow/mini-kode); MIT file+manifest; opencode/claude-code pattern lineage in prompts, no code-copy suspected; not a fork of mocode/minicode/nanocoder -- distinct manifest and repo, identity-appendix cluster checked",
+  "calibration_notes": "Census fixes: test_loc 0 -> 4851 (32 *.test.ts(x) files, glob miss per known Phase-2 pattern); src TS count 15153 vs census 16634 (minor); commits:1/contributors:1 are shallow-clone artifacts -- GitHub says created 2025-10-30, pushed_at 2025-11-04 remote-verified (head_date confirmed, ~11mo quiet, NOT archived so no B-cap rule (b) trigger). Boundary: 46.5 is within 2 pts of 45 (C/D line); verification=5 vs 4 (zero-CI weighting used for claw-code-agent) is the swing. No demotion applied."
+}

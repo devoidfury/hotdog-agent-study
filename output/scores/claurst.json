@@ -1,0 +1,23 @@
+{
+  "subject": "claurst",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 7,
+    "safety_enforcement": 4,
+    "token_economy": 6,
+    "orchestration": 7,
+    "interop": 7,
+    "operability": 7,
+    "originality": 7,
+    "durability": 5,
+    "docs_dx": 7
+  },
+  "weighted_total": 65.0,
+  "band": "B",
+  "closest_anchor": "crush - both solo-vision Rust terminal agents with a separated loop, property-pinning tests on 3-OS CI, tested-approval-with-nothing-underneath safety, and one standout original mechanism; claurst's misleading sandbox toggle and impersonation layer pull it below crush",
+  "strongest_dimension": "architecture",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "census said divergent-fork:claude-code; in-repo evidence shows no code lineage - it is a Rust behavioral reimplementation from a 27k-LOC spec (spec/) generated off the leaked Claude Code npm sourcemap (README.md:208-218 blog link), with 134 'mirrors the TypeScript' port comments (query/src/compact.rs:314, core/src/memdir.rs:3-6) and verbatim proprietary identity constants (core/src/oauth_config.rs:139). Not a fork; upstream claude-code absent from corpus so rule (a) is evidence-limited. GPL-3.0 => concepts-only.",
+  "calibration_notes": "Rule (a) not checkable locally (upstream not in corpus) - evidence-limited, flagged for synthesis; provenance family corrected to ported-proprietary-source-style rather than fork. Weighted total 65.0 sits exactly on the B/C boundary; safety-enforcement (4) is the swing dimension. Census commits/contributors=1 is a shallow-clone artifact; remote-verified active (pushed_at 2026-09-02, created 2026-03-31, 10,310 stars). No silent demotions applied."
+}

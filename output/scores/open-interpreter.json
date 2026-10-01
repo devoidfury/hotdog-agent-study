@@ -1,0 +1,23 @@
+{
+  "subject": "open-interpreter",
+  "tier": "T0 (differential triage vs codex)",
+  "lane_scores": {
+    "architecture": 9,
+    "verification": 8,
+    "safety-enforcement": 10,
+    "token-economy": 9,
+    "orchestration": 8,
+    "interop": 9,
+    "operability": 9,
+    "originality": 2,
+    "durability": 5,
+    "docs-dx": 7
+  },
+  "weighted_total": 78.5,
+  "band": "D",
+  "closest_anchor": "codex - same Rust monorepo tree rebranded; README.md:47 'Open Interpreter is a fork of OpenAI's Codex'",
+  "strongest_dimension": "safety-enforcement",
+  "weakest_dimension": "originality",
+  "provenance": "rename-clone:codex upheld at the identity layer (package.json name still 'codex-monorepo'; baseline rust-v0.154.0 per RELEASE_NOTES.md:3) - in practice a documented distribution fork: FORK_BRANDING.md, own product-info crate, provider/ACP delta (acp-server crate, anthropic_messages.rs, kimi_cron); LICENSE/NOTICE byte-identical to upstream -> Apache-2.0 attribution intact, no copyright violation found",
+  "calibration_notes": "BAND D is a POLICY CAP per dispatcher rule (rename-clone of in-corpus giant -> band D + study-integrity findings), recorded here, never silent. Honest weighted total 78.5 would be A and is rule (a)-compatible. License review found NO violation (attribution preserved), so findings carry residual provenance/trademark risk, not infringement. Recommend census-semantics discussion: detector fires on honest forks that keep internal names; possible re-review as divergent-fork after codex-side delta sizing."
+}

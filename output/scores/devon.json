@@ -1,0 +1,23 @@
+{
+  "subject": "devon",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 4,
+    "verification": 3,
+    "safety_enforcement": 2,
+    "token_economy": 2,
+    "orchestration": 4,
+    "interop": 3,
+    "operability": 5,
+    "originality": 5,
+    "durability": 1,
+    "docs_dx": 3
+  },
+  "weighted_total": 33.5,
+  "band": "D",
+  "closest_anchor": "codel (23.0): genuine event loop, git checkpoints, and sqlite persistence put devon's machinery above codel's loop-less oracle, but safety (no gate), verification (no CI), and durability sit on codel rungs, ~10pts above codel and far below nanocoder's C floor",
+  "strongest_dimension": "operability",
+  "weakest_dimension": "durability",
+  "provenance": "original (census matches GitHub: fork=false, canonical entropy-research/Devon). Shallow snapshot 8f68f1d dated 2024-07-29 is 10 months older than remote tip (pushed_at 2025-05-26); review is snapshot-bounded. AGPL-3.0.",
+  "calibration_notes": "Remote-verified activity per hygiene rule: pushed_at 2025-05-26, archived:false -- ~16 months dormant at review, dead >12mo => rule (b) cap B applied but non-binding (already 33.5/D). Census corrections: test_loc 27,571 inflated ~17x (real ~597 LOC in devon_agent/test plus ~1k swe-bench scripts; glob caught vendored devon_swe_bench_experimental incl. duplicate 'test copy/' dir); head_date is shallow-clip date not repo activity; non_test 63,886 dominated by swe-bench tree, product core ~8k LOC. AGPL: concepts-only findings, effort_for_us assumes clean-room. README badge claims Apache-2.0 while LICENSE is AGPL-3.0."
+}

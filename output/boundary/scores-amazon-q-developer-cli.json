@@ -1,0 +1,24 @@
+{
+  "subject": "amazon-q-developer-cli",
+  "tier": "T2",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 6,
+    "safety-enforcement": 6,
+    "token-economy": 6,
+    "orchestration": 4,
+    "interop": 6,
+    "operability": 7,
+    "originality": 6,
+    "durability": 6,
+    "docs-dx": 7
+  },
+  "weighted_total": 59.5,
+  "band": "C",
+  "closest_anchor": "crush",
+  "strongest_dimension": "operability",
+  "weakest_dimension": "orchestration",
+  "provenance": "original (aws/amazon-q-developer-cli upstream; remote ls-remote HEAD == snapshot 15cc8f3, 2026-04-23)",
+  "calibration_notes": "Boundary recount supersedes provisional 65.0 B. The dispatched hairline (rust.yml:76 --exclude fig_desktop-fuzz naming an absent crate) does NOT degrade verification: cargo warns-and-continues on unmatched --exclude under --workspace, so the push-gated test job covers all 10 real crates; recorded as ledger precedent for broken-as-configured CI. The B/C move comes from lane recalibration: interop 6 (no SDK/ACP/LSP/IDE surface vs provisional ~8), orchestration 4 (no shipped subagents/queue/loop-detection), durability 6 (remote-verified five-month-static head, not archived, rule (b) not triggered), originality 6. Safety scored on shipped behavior only: chat-cli approval engine binds in-loop and is tested (chat/mod.rs:2390-2406, tools/execute/mod.rs:303,377,415), zero OS sandbox -> rung 6; the unconditional-ExecuteCmd-Allow and ls/image_read-vs-fs_write flaws live in the unreachable next-gen agent framework (agent/src/main.rs:1-21 is a stub; chat-cli imports types only) and are logged as pre-ship landmines, not shipped-behavior docks. Generated-code accounting applied: 203,219 smithy LOC zero-credit/zero-blame, hand-written mass 77,127. Lenient sensitivity bound 63.0 -- still C."
+}

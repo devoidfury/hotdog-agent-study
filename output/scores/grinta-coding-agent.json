@@ -1,0 +1,23 @@
+{
+  "subject": "grinta-coding-agent",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 9,
+    "safety_enforcement": 7,
+    "token_economy": 8.5,
+    "orchestration": 8,
+    "interop": 7,
+    "operability": 8,
+    "originality": 8,
+    "durability": 5,
+    "docs_dx": 8
+  },
+  "weighted_total": 78.5,
+  "band": "A",
+  "closest_anchor": "cline - single-surface agent with tested approval loop, real-but-default-permissive enforcement and strong CI; grinta out-clines on verification (mutation+evals in CI), OS sandboxing and compaction QA, under-clines on interop (no SDK/IDE) and durability (solo vs 350 contributors)",
+  "strongest_dimension": "verification",
+  "weakest_dimension": "durability",
+  "provenance": "census original accepted; MIT (file+manifest); no openhands/opendevin code residue found (design vocabulary is lineage-flavored; docs/journey mentions are comparisons only) - flagged for synthesis, not asserted as fork; shallow clone (1 commit), head 2026-09-22 recent, no activity claims made",
+  "calibration_notes": "verification 9 per frozen errata: eval-in-CI file:line evidence run-eval.yml:4-10 (release+label-gated, not mandatory per-PR) plus every-PR mutmut (mutation-testing.yml:38); precedent openhands-2. Weighted total sits exactly on the 78 A/B boundary - flagged as boundary-risk. Census correction: test_loc 119,774 -> ~162,854 (764 test .py files). No demotions applied."
+}

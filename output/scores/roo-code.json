@@ -1,0 +1,33 @@
+{
+  "subject": "roo-code",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture":         { "score": 6, "weight": 15, "lane": "reviewer-core" },
+    "verification":         { "score": 7, "weight": 15, "lane": "reviewer-safety" },
+    "safety-enforcement":   { "score": 7, "weight": 10, "lane": "reviewer-safety" },
+    "token-economy":        { "score": 8, "weight": 10, "lane": "reviewer-econ" },
+    "orchestration":        { "score": 7, "weight": 10, "lane": "reviewer-econ" },
+    "interop":              { "score": 7, "weight": 10, "lane": "reviewer-econ" },
+    "operability":          { "score": 8, "weight": 10, "lane": "reviewer-core" },
+    "originality":          { "score": 7, "weight": 10, "lane": "integrator" },
+    "durability":           { "score": 4, "weight": 5,  "lane": "integrator" },
+    "docs-dx":              { "score": 8, "weight": 5,  "lane": "reviewer-econ" }
+  },
+  "weighted_total": 69.5,
+  "band": "B",
+  "closest_anchor": "cline (76.5, B)",
+  "strongest_dimension": "token-economy",
+  "weakest_dimension": "architecture",
+  "provenance": "Divergent lineage fork of Cline (not a sync-fork, not original as census flagged): extension package still named 'roo-cline' (src/package.json:2, publisher RooVeterinaryInc); upstream flagship class retained (src/core/webview/ClineProvider.ts, 3,149 LOC); core message type is ClineMessage (packages/types/src/message.ts:276); legacy .clinerules* still protected (src/core/protect/RooProtectedController.ts:20); README.md:68 acknowledges Cline origin. Forked pre-SDK cline and diverged substantially (apps/cli + packages/{core,ipc,types,vscode-shim}, 37 providers, condense/context-management split, skills, orchestrator/boomerang mode). Apache-2.0, same license class as upstream, no license risk. As a divergent fork it may outrank cline on merit; final total (69.5) does not.",
+  "calibration_notes": [
+    "Archive demotion applied, not silent: GitHub API reports archived=true for RooCodeInc/Roo-Code (observed 2026-09-30) and pushed_at 2026-05-15 equals the census HEAD commit, i.e. the snapshot captured the final commit; repo dead ~4.5 months. Rule 'archived/dead caps at B' is in force; the raw weighted total 69.5 was already B, so the cap did not bind numerically, but it drove the integrator's durability score to 4 (an active weekly-release org-backed profile would have earned 7-8), which is what holds the total at the low end of B. Had the raw total been A-range it would have been capped at B with the pre-cap value recorded.",
+    "Upstream-outrank rule checked: roo-code is a divergent fork, not a sync-fork derivative, so outranking cline (76.5) was permissible on merit; 69.5 < 76.5, rule satisfied without override.",
+    "Shallow-clone trap honored: durability built from in-repo release artifacts (76 releases/, CHANGELOG through 3.53.0, changesets + marketplace/nightly/cli release workflows) plus one external read-only GitHub metadata check (24,290 stars, 3,423 forks, org RooCodeInc, created 2024-10-31), not from the census 1-commit/1-contributor artifact (map rule 2).",
+    "Originality (integrator, 7) verified in code, not marketing: tree-sitter folded-file context (src/core/condense/foldedFileContext.ts:2,36), cross-turn cache-placement stability with requiredPercentageIncrease=1.2 (src/api/transform/cache-strategy/multi-point-strategy.ts:73-158) + 1,112-LOC spec, NON-DESTRUCTIVE CONDENSE tagging (src/core/condense/index.ts:459) enforced by 567-LOC rewind-after-condense.spec.ts, per-pattern shell-substitution demotion layer (src/core/auto-approval/commands.ts:22-58) with two-sided spec, real packages/vscode-shim host. Docked from 8+ because the core loop/checkpoint/persistence architecture is inherited cline, the 'whole dev team' framing maps to a sequential single-active-child stack, and two flagship novelties carry ceilings (cache strategy consumed only by bedrock.ts:852-863; condense is LLM-summarize-only).",
+    "No head-to-head numeric lane disagreements existed (dimension ownership disjoint); five evidence-territory conflicts resolved explicitly in subjects-roo-code.md: crash-handling evidence credited once under operability (c8/e8), checkpoint fail-open docked in operability only (not safety), token-economy 8 kept despite Bedrock silo (e3/e4), architecture held at 6 despite shim-host credit (c1-c3), and the three partial above/below-cline verdicts kept as dimension-local.",
+    "Findings merged 32 -> 29 (dedup by concept, stronger evidence kept, aliases recorded): c4+e1 -> rewind-safe-compaction (alias non-destructive-condense-tagging); c8+e8 -> crash-recovery-middleware (alias resume-and-crash-discipline); s10+e9 -> loop-detection (alias loop-breaker-plus-skills). Same-concept/different-fact safety findings (permission-policy x4) kept distinct.",
+    "S-gate moot at band B; safety-enforcement 7 and verification 7 both clear the >=5 floor.",
+    "Anchor consensus 3/3 reviewer lanes + scout: closest anchor cline. Strongest-dimension tie (token-economy, operability, docs-dx all 8) broken toward token-economy as the only dimension strictly above the anchor rung (tested cache-placement layer where cline records none); weakest unambiguous: architecture 6 against weight 15 (Task.ts 4,619 LOC / ~86 members, free-function state mutation, heuristic stream-tail state re-inference in the shimmed CLI).",
+    "Carried lane caveats: shallow clone (file-content evidence only), webview approval-UI paths inferred not exercised, skills auto-approve finding (s6) med confidence, e5 trigger-drift medium confidence; none band-changing."
+  ]
+}

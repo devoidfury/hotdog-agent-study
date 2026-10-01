@@ -1,0 +1,23 @@
+{
+  "subject": "groq-code-cli",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 5,
+    "verification": 3,
+    "safety_enforcement": 4,
+    "token_economy": 2,
+    "orchestration": 3,
+    "interop": 2,
+    "operability": 4,
+    "originality": 5,
+    "durability": 4,
+    "docs_dx": 5
+  },
+  "weighted_total": 36.5,
+  "band": "D",
+  "closest_anchor": "nanocoder -- same Ink/React TUI with approval-over-nothing-underneath, but below every nanocoder rung (no CI test job, no sandbox, no sessions, no interop); placement between codel (23) and nanocoder (60.5)",
+  "strongest_dimension": "architecture",
+  "weakest_dimension": "token_economy",
+  "provenance": "Original (GitHub fork=false), Groq Inc org build-with-groq, MIT license, 742 stars / 118 forks. Shallow clone (1 visible commit) masked real history: 4 contributors (36/4/2/1), ~43 commits, pushed_at 2025-12-19 vs shallow HEAD 2025-09-05. Not archived; activity within 12 months of review, so no dead-cap. No fork relation to any corpus subject (kimi-k2 reference in HEAD commit is only a Groq-hosted model selection, not kimi-code/kimi-cli lineage).",
+  "calibration_notes": "No rule (a) or (b) applied; low D is an absolute-rubric score, not a demotion. Census corrections: non_test_loc 14535 -> ~5568 actual (package-lock.json 9671 lines likely bled into count; still T1 by LOC); contributors 1 -> 4; commits 1 -> ~43; head_date stale due to shallow clone (remote-verified 2025-12-19). Weakest is a tie token_economy/interop at 2; token_economy named because absent compaction is the load-bearing gap. Not within 2 pts of any band boundary (36.5, floor band). MIT license; code-adjacent portables allowed."
+}

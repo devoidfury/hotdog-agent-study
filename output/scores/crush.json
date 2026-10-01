@@ -1,0 +1,23 @@
+{
+  "subject": "crush",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 7,
+    "safety-enforcement": 6,
+    "token-economy": 6,
+    "orchestration": 7,
+    "interop": 7,
+    "operability": 8,
+    "originality": 7,
+    "durability": 8,
+    "docs-dx": 6
+  },
+  "weighted_total": 69.0,
+  "band": "B",
+  "closest_anchor": "n/a - is anchor",
+  "strongest_dimension": "operability",
+  "weakest_dimension": "docs-dx",
+  "provenance": "census says original; review finds shared opencode lineage (internal/agent/opencode_routing_test.go). Charm continuation is divergent (herdr, channels, skills, hooks), so the no-outrank-upstream rule does not bite yet - flag for opencode's own review.",
+  "calibration_notes": "Census test_loc=0 is badly wrong: 278 *_test.go files = 61,738 LOC (census evidently only matched *.test.* / *test.ts patterns for non-JS too). B-band mid centroid: solid standard designs, nothing defended. loop-detection concept has its first real implementation here (loop_detection.go)."
+}

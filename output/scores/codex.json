@@ -1,0 +1,23 @@
+{
+  "subject": "codex",
+  "tier": "T2 (anchor; census suggests T3)",
+  "lane_scores": {
+    "architecture": 9,
+    "verification": 8,
+    "safety-enforcement": 10,
+    "token-economy": 9,
+    "orchestration": 9,
+    "interop": 9,
+    "operability": 9,
+    "originality": 9,
+    "durability": 9,
+    "docs-dx": 7
+  },
+  "weighted_total": 88.5,
+  "band": "S",
+  "closest_anchor": "n/a - is anchor",
+  "strongest_dimension": "safety-enforcement",
+  "weakest_dimension": "docs-dx",
+  "provenance": "original (openai/codex), Apache-2.0; shallow clone: contributors=1 is an artifact",
+  "calibration_notes": "Borderline S: verification 8 (no in-tree evals or fuzz targets); at verification 7 the total is 87.0 = A. Census LOC sane: *_tests.rs (439,900 LOC) correctly counted as test. In-repo docs are 206-line stubs, which caps docs-dx despite good external docs."
+}

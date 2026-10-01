@@ -1,0 +1,24 @@
+{
+  "subject": "opencode",
+  "tier": "T3",
+  "boundary_review": true,
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 8,
+    "safety-enforcement": 6,
+    "token-economy": 7,
+    "orchestration": 7,
+    "interop": 9,
+    "operability": 8,
+    "originality": 8,
+    "durability": 8,
+    "docs-dx": 8
+  },
+  "weighted_total": 77.0,
+  "band": "B",
+  "closest_anchor": "cline - same shape (TS monorepo, server-first core with thin hosts, dual-engine migration, approval-only no-sandbox safety); clears cline on interop (ACP) and CI route-contract gate, below pi on architectural unity",
+  "strongest_dimension": "interop (9, MCP+ACP+OpenAPI SDKs+5 surfaces in shipping package)",
+  "weakest_dimension": "safety-enforcement",
+  "provenance": "original (anomaly/SST), MIT, shallow clone - history evidence-limited, HEAD 2026-09-26 v1.18.32",
+  "calibration_notes": "Scored V1 shipping loop (server prompt route imports packages/opencode/src/session/prompt.ts:11; V2 core loop not yet product traffic) crediting V2 only where wired into the server graph (httpapi/server.ts:301). ERRATA applied: verification capped 8 (no in-CI evals/fuzzing in any of 27 workflows); no >5k-LOC product-mode file in agent core so arch god-file rule neutral. Integrator-flagged lanes arch/verification/originality independently re-scored 8 each - none survives 9 (dual engines; evals ceiling; code-mode is codex's idea reimplemented). Token-economy 7->8 examined and declined: trigger reads last-turn usage, no projected-context measure, no cache warming. 77.0 sits between cline 76.5 and pi 78.5; A floor not crossed. Safety 6 justified by tested-binding approvals + exemplary SECURITY.md:15-17 no-sandbox honesty, per pi calibration row."
+}

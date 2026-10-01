@@ -1,0 +1,23 @@
+{
+  "subject": "hotdog",
+  "tier": "T1-sized (45k non-test LOC) scored on the full rubric",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 7,
+    "safety-enforcement": 5,
+    "token-economy": 7,
+    "orchestration": 8,
+    "interop": 5,
+    "originality": 8,
+    "operability": 7,
+    "durability": 4,
+    "docs-dx": 8
+  },
+  "weighted_total": 68.5,
+  "band": "B",
+  "closest_anchor": "pi",
+  "strongest_dimension": "originality",
+  "weakest_dimension": "durability",
+  "provenance": "original",
+  "calibration_notes": "SELF-REVIEW of our own harness (hotdog = the host of this study), scored against the frozen anchor ladder with the same strictness applied to other subjects: the pi errata god-file docking was applied (none needed, max file 1660 LOC), the verification-8 errata ceiling applied and not reached (single ubuntu CI job, coverage run-not-gated, no in-CI evals, no fuzzing, no subprocess e2e), and absent machinery scored absent (approvals off by default, no OS sandbox, no ACP, no cloud cache breakpoints) with no 'simplicity' substitute accepted. Anchor question: closer to pi (solo-vision thin-core extension-everywhere harness, honest security writing, cache warmth as first-class concern) though ~10 pts below it on interop/verification-breadth/durability. Closest-anchor check within 2 pts of boundaries: none - 68.5 sits 3.5 above the 65 B/C boundary and 9.5 below 78; safety-enforcement 5 is one below the pi/cline/crush 6 rung per the nanocoder 'real machinery + wrong default' precedent (minus the deception: hotdog's honesty is exemplary and it retains an always-on tested workspace containment). Doc-vs-code mismatches: 3 minor, none misleading - (a) docs/supply-chain.md:3 'no published artifact' vs package.json:26 publishConfig.provenance; (b) CONTEXT.md 'the agent's log property' vs actual @internal context.log seam; (c) CONTEXT.md compaction summary 'injected as system message' vs harness-role message that rides user/system per wire format. No capability claimed in AGENTS.md/CONTEXT.md/docs failed to verify in code; every scored claim carries file:line in subjects/hotdog.md. Census sanity: non-test src LOC 45,001 and test LOC 72,758/197 files verified by find+wc; reads T1-sized; repo original (created 2026-05-31, not archived, pushed 2026-09-30, 19 stars, ~944/954 commits single author). Score-distribution rule respected: lands below every anchor except nanocoder/codel."
+}

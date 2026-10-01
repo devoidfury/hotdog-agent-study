@@ -1,0 +1,23 @@
+{
+  "subject": "claude-engineer",
+  "tier": "T0",
+  "lane_scores": {
+    "architecture": 4,
+    "verification": 0,
+    "safety-enforcement": 1,
+    "token-economy": 3,
+    "orchestration": 2,
+    "interop": 2,
+    "operability": 3,
+    "originality": 6,
+    "durability": 2,
+    "docs-dx": 3
+  },
+  "weighted_total": 25.5,
+  "band": "D",
+  "closest_anchor": "codel - same zero-tests/zero-enforcement demo grade; delta is a real tool-use loop plus runtime self-authored tools",
+  "strongest_dimension": "originality",
+  "weakest_dimension": "verification",
+  "provenance": "original (Doriandarko/claude-engineer); census accepted; shallow clone resolved via GitHub API pushed_at 2024-12-12 = dead 21mo; no license -> pure-concepts porting only per protocol rule 3",
+  "calibration_notes": "No census correction: test.py is a generated demo artifact, not harness tests, so test_loc 0 is accurate. No fork/death demotions needed (already D)."
+}

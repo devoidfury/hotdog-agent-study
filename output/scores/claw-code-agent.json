@@ -1,0 +1,23 @@
+{
+  "subject": "claw-code-agent",
+  "tier": "T0 (leaked-lineage triage)",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 5,
+    "safety-enforcement": 5,
+    "token-economy": 5,
+    "orchestration": 5,
+    "interop": 4,
+    "operability": 5,
+    "originality": 1,
+    "durability": 2,
+    "docs-dx": 3
+  },
+  "weighted_total": 44.0,
+  "band": "D",
+  "closest_anchor": "crush - terminal agent with permission service + summarization; claw's design is entirely Claude Code's shape",
+  "strongest_dimension": "architecture",
+  "weakest_dimension": "originality",
+  "provenance": "census leaked-snapshot:claude-code CORRECTED to port-from-leaked-source: own Python code (72 modules, 1,233 test fns) but src/__init__.py:1 'Python porting workspace for the Claude Code rewrite effort', bash_security.py:3 'Ported from npm src/tools/BashTool/bashSecurity.ts', compact.py:3 'Mirrors the npm ... compact.ts'; verbatim proprietary prompt strings at prompt_constants.py:46-49; no LICENSE",
+  "calibration_notes": "Not a renamed snapshot - genuinely reimplemented, but not clean-room (explicit port-of-proprietary-source declarations), so protocol rule 3 applies: license-risk findings, no code-adjacent portables. Shallow-clone caveat honored: git HEAD is 'Merge pull request #43' -> small real contribution flow, durability 2 not 1. Borderline D/C (44.0): held at D by originality 1 + legal cloud + no CI; if boundary re-review lifts verification (1,233 behavior tests) to 6, total 45.5 = C."
+}

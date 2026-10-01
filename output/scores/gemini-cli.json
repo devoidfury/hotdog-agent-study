@@ -1,0 +1,23 @@
+{
+  "subject": "gemini-cli",
+  "tier": "T3",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 9,
+    "safety-enforcement": 8,
+    "token-economy": 8,
+    "orchestration": 8,
+    "interop": 9,
+    "operability": 8,
+    "originality": 9,
+    "durability": 9,
+    "docs-dx": 9
+  },
+  "weighted_total": 84.5,
+  "band": "A",
+  "closest_anchor": "codex",
+  "strongest_dimension": "verification",
+  "weakest_dimension": "architecture",
+  "provenance": "original upstream (@google/gemini-cli, package.json:2/12-13, google-gemini remote, uniform Google LLC Apache-2.0 headers, nightly version hash); parent of qwen-code (census divergent-fork confirms direction). Shallow clone remote-verified active: ls-remote origin HEAD 38700b4 ahead of snapshot head 2fe7c2d (2026-09-25).",
+  "calibration_notes": "Source lanes: architecture+operability=reviewer-core; safety-enforcement+verification=reviewer-safety; token-economy+orchestration+interop+docs-dx=reviewer-econ; originality+durability=integrator (filed with code evidence, not marketing: probe-verified snapshot pass chatCompressionService.ts:616-638, inflation veto client.ts:696-703, policy control-plane hardening policy/config.ts:238-257 + integrity.ts:31-56, eval-gate CI eval-pr.yml:87-92, docs-audit.yml:30-40; durability = Google institutional backing + 47 workflows + remote-verified activity, bus-factor unverifiable (shallow)). Closest-anchor split resolved to codex (reviewer-core's cline call kept as the architecture rung reference only). ACP duplicate-policy path (c3) ruled a divergence hazard not an enforcement hole (fail-closed at acpSession.ts:108-110) -> docked in architecture, safety 8 unchanged. Interop 9 kept despite unverified SDK publish CI (publish-release/action.yml:12-18 covers cli/core/a2a); demoting to 8 would give 83.5, band-irrelevant, recorded not silent. Verification 9 is a legitimate ERRATA-ceiling break (in-CI evals with workflow file:line); enters the verification-9 ledger as evals-in-CI variant, weakest blocker of the four 9s (eval-gate is human-approved, USUALLY_* skips unless RUN_EVALS, test-helper.ts:380-387), strongest mass (976 files / 387,651 LOC; census test_loc 4854 is the *.test.ts miscount, corrected per cline/nanocoder precedent). ERRATA arch check: no product/TUI-mode file >5k LOC, no cross-side docking applies. Weakest=architecture on weighted shortfall (-3.0) and lane's own call: 6 entry-path drivers + 4249-LOC Config hub; safety 8 (opt-in defaults, yolo-no-floor) is the most S-relevant gap. Rules: (a) n/a - upstream not a fork, qwen-code 80.0 < 84.5 consistent; (b) n/a - active. No demotions. S-gate: safety 8 / verification 9 both >=5 but 84.5 < 88; the S distance is codex's two deltas (default-on enforcement, queue/fork plane). Distribution: 5/82 at 80+ (6.1%), under the 25% line. Merge: 36 findings -> 34 (dedupes: c9 into e2 usage-measured-compact-trigger, s12 into c6 crash-recovery-middleware, aliases recorded); 8 concepts re-canonicalized to seeded/established ids; lane kinds normalized to schema with lane_kind preserved."
+}

@@ -1,0 +1,23 @@
+{
+  "subject": "zot",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 8,
+    "verification": 7,
+    "safety_enforcement": 5,
+    "token_economy": 7,
+    "orchestration": 7,
+    "interop": 6,
+    "operability": 7,
+    "originality": 7,
+    "durability": 4,
+    "docs_dx": 7
+  },
+  "weighted_total": 67.0,
+  "band": "B",
+  "closest_anchor": "crush (69.0, B): Go harness with separated provider plane and heavy host files, tested-but-not-kernel approval, 3-OS race CI; zot edges it on cache discipline and distribution originality, trails on safety defaults and durability",
+  "strongest_dimension": "architecture",
+  "weakest_dimension": "durability",
+  "provenance": "original (census flag upheld); MIT license; not a fork; no copied-source indicators; shallow clone so contributors=1/commits=1 are artifacts -- external PR merges present at HEAD (41873f6 = merge of PR #216)",
+  "calibration_notes": "census test_loc 47 -> 35,152 (235 colocated *_test.go); census non_test_loc 91,666 overstated vs ~69,874 wc-based; tier unchanged. No rule (a) applicable. Weighted total sits exactly 2.0 above the 65 band boundary -- flagged for synthesis."
+}

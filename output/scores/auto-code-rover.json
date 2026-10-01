@@ -1,0 +1,23 @@
+{
+  "subject": "auto-code-rover",
+  "tier": "T2 (dispatcher-assigned; census-corrected size is T1 ~13.9k LOC, and dead >12mo would protocol-triage it to T0 - full T2 review done anyway)",
+  "lane_scores": {
+    "architecture": 6,
+    "verification": 6,
+    "safety_enforcement": 2,
+    "token_economy": 3,
+    "orchestration": 4,
+    "interop": 4,
+    "operability": 4,
+    "originality": 7,
+    "durability": 2,
+    "docs_dx": 5
+  },
+  "weighted_total": 45.5,
+  "band": "C",
+  "closest_anchor": "crush (69.0): real mechanism harness with CI-tested tooling and whole-container isolation posture, unlike codel's no-loop oracle - but none of crush's permission service, compaction, resume, or interop; sits just above the already-scored sibling trae-agent (44.0 D) on verification/originality, below it on safety",
+  "strongest_dimension": "originality",
+  "weakest_dimension": "safety_enforcement",
+  "provenance": "original (census correct): origin == upstream_remote AutoCodeRoverSG/auto-code-rover, not a fork; README image links to old org nus-apr = relocation, not rename-clone. SONAR Source-Available 1.0 (non-OSI): all findings concepts-only, effort_for_us clean-room. Activity remote-verified before any rule (b) claim (shallow clone, head_date 17mo old): pushed_at 2025-04-24T07:58:24Z, archived:false - shallow clone was NOT hiding recent activity; contributors census '1' is a shallow artifact (remote: ~14, top-3 carry).",
+  "calibration_notes": "Census corrections: (1) non_test_loc 2,614,283 / primary_language 'diff' are 927MB of checked-in results/ run blobs (3,161 .diff files) - real code: app 6,968 + test 6,141 + scripts 814 Python LOC; suggested_tier T3 -> actually T1 size. Filed as test-fixture-loc-inflation (concept seeded by deepagents). (2) census test_loc 6,141 verified correct. Rule (b): dead >12mo remote-verified -> B cap applies, moot at 45.5. Boundary-risk: 45.5 is 0.5 above the 45 C/D cut; verification 6->7 lift (to 47.0) and architecture 6->5 drop (to 44.0) both defensible - sensitivity documented in report, no silent adjustment. Rule (a) n/a (no fork relation to any corpus subject). Identity hygiene: worked only from /data/samples/agents/auto-code-rover; no similar-named corpus subject."
+}

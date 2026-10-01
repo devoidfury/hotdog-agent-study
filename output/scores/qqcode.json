@@ -1,0 +1,23 @@
+{
+  "subject": "qqcode",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 6,
+    "safety-enforcement": 6,
+    "token-economy": 6,
+    "orchestration": 5,
+    "interop": 7,
+    "operability": 6,
+    "originality": 6,
+    "durability": 4,
+    "docs-dx": 5
+  },
+  "weighted_total": 60.0,
+  "band": "C",
+  "closest_anchor": "nanocoder (60.5 C): comparable property-tested-but-thin verification and approval-only safety; qqcode's core/surface separation is cleaner and ACP/IDE breadth wider, offset by weaker orchestration and docs",
+  "strongest_dimension": "interop",
+  "weakest_dimension": "durability",
+  "provenance": "divergent-fork:mistral-vibe CONFIRMED with independent delta measurement: exactly 21/145 shared files byte-identical to the mistral-vibe sample tree (census figure verified), 124 shared files differ, 70 qqcode-only files (plan mode, oauth/, anthropic_sdk backend, update_notifier, full tests/acp suite, vscode-extension, zed dist, GitHub Action), 494 upstream-only files (upstream restructured post-fork; upstream characterization is T3's). Apache-2.0 both sides.",
+  "calibration_notes": "Divergent fork: scored on own merits, no sync-fork cap; rule (a) reconciliation with mistral-vibe (T3, in flight) deferred to synthesis. Census test_loc 9211 undercount -> tests/**/*.py = 10,977 (64 files); non_test_loc 31458 vs 31,763 measured *.py; no tier impact. Shallow clone: no activity claim made, durability 4 is evidence-limited (1 visible commit), no archived cap applied. Not within 2 pts of 65 boundary."
+}

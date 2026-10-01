@@ -1,0 +1,23 @@
+{
+  "subject": "prime-agent",
+  "tier": "T2",
+  "lane_scores": {
+    "architecture": 5,
+    "verification": 9,
+    "safety_enforcement": 6,
+    "token_economy": 6,
+    "orchestration": 8,
+    "interop": 8,
+    "operability": 8,
+    "originality": 8,
+    "durability": 6,
+    "docs_dx": 8
+  },
+  "weighted_total": 72.0,
+  "band": "B",
+  "closest_anchor": "pi -- direct parent fork: 91 hash-identical files vs frozen pi anchor, same three-layer core (packages/agent loop / packages/ai / packages/coding-agent), README:120 credits pi; all ten dimensions anchored on the pi ladder with the fork delta as the differentiator",
+  "strongest_dimension": "verification",
+  "weakest_dimension": "architecture",
+  "provenance": "divergent-fork:pi (census flag confirmed and understated): full-tree hash diff vs /data/samples/agents/pi = 91 identical, 435 modified, 713 prime-only (532 in packages/coding-agent: daemon plane, kernel REPL, MCP, ACP, refinement, RLM, semantic-edges, cron), 1394 pi-only files absent. Fork-point predates pi's project-trust gate, cache-warmer, and projected-context compaction -- none present in prime. Shallow clone (.git/shallow, 1 commit citing PR #2708): contributors=1/commits=1 are census artifacts; no activity claims. MIT dual-copyright (pi author + Prime Intellect, LICENSE:4) -- clean provenance, no license risk.",
+  "calibration_notes": "Rule (a) not binding: divergent fork scored on merit lands 72.0 < upstream pi 78.5, so no cap or demotion recorded. Verification 9 breaks the frozen 8 ceiling per errata permission -- in-CI behavioral eval gate at .github/workflows/behavioral-evals.yml:430 (fail-closed verdict on 28-task base-vs-head SWE comparison, scripts/evals/short_swe/README.md); no fuzzing, so not 10. Architecture 5 applies the errata >5k-LOC product-file docking factor twice: agent-session.ts 15,101 LOC (:1518) and interactive-mode.ts 12,614 LOC (:1211). No boundary risk: 72.0 is >2 from 65 and 78."
+}

@@ -1,0 +1,23 @@
+{
+  "subject": "ob-1",
+  "tier": "T1",
+  "lane_scores": {
+    "architecture": 7,
+    "verification": 7,
+    "safety_enforcement": 6,
+    "token_economy": 7,
+    "orchestration": 7,
+    "interop": 6,
+    "operability": 7,
+    "originality": 8,
+    "durability": 4,
+    "docs_dx": 7
+  },
+  "weighted_total": 67.5,
+  "band": "B",
+  "closest_anchor": "crush (69.0) - property-asserting CI down to a live on-host sandbox-enforcement test, loop-breaker + worktree parallelism, docked below the cline rung for non-default enforcement and no SDK/IDE surface; ob-1 exceeds crush on originality/cache discipline, undercuts on test-corpus scale, multi-OS CI and backing",
+  "strongest_dimension": "originality",
+  "weakest_dimension": "durability",
+  "provenance": "census 'original' holds for code (own TypeScript, Apache-2.0); however 11 src modules declare 'parity with claw-code's X' feature lineage (e.g. src/safety/policy.ts:1, src/eval/parity.ts:1) - claw-code is itself flagged as a Claude Code derivative (claw-code-1), so synthesis should record concept genealogy. Not a sync-fork: calibration rule (a) does not bind. No facts imported from similarly-named subjects.",
+  "calibration_notes": "Census test_loc 0 corrected to ~9.5k (6 colocated *.test.ts + 71 CI-gated smokes in scripts/ + 2 pyte PTY scripts) - same glob-miss family as crush/cline. Shallow clone: no activity claims made. Verification capped at 7 per errata (eval harness exists but eval.yml is workflow_dispatch-only; no fuzzing; corpus ~9.5k LOC single-OS). Safety at the 6 rung 'tested approval, real-but-off-by-default sandbox': autopilot default (config.ts:706) + sandbox off (config.ts:708), mitigated by default-on folder-trust gate (index.ts:2433-2455); above nanocoder's 5 on the trust gate, policy engine, loud degradation and CI enforcement proof. Not within 2 pts of any band boundary (67.5)."
+}
